@@ -16,6 +16,9 @@
 		A50D56F4295A044D00034A19 /* AffirmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56F3295A044D00034A19 /* AffirmaTests.swift */; };
 		A50D56FE295A044D00034A19 /* AffirmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56FD295A044D00034A19 /* AffirmaUITests.swift */; };
 		A50D5700295A044D00034A19 /* AffirmaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */; };
+		A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A50D570C295A04ED00034A19 /* affirmaIcon.png */; };
+		A50D5711295A074400034A19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50D5710295A074400034A19 /* Colors.xcassets */; };
+		A50D5713295A078E00034A19 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5712295A078E00034A19 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A50D56F9295A044D00034A19 /* AffirmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AffirmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50D56FD295A044D00034A19 /* AffirmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUITests.swift; sourceTree = "<group>"; };
 		A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A50D570C295A04ED00034A19 /* affirmaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = affirmaIcon.png; sourceTree = "<group>"; };
+		A50D5710295A074400034A19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A50D5712295A078E00034A19 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,14 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A50D570F295A072B00034A19 /* Extensions */,
+				A50D570E295A071F00034A19 /* Utility */,
 				A50D56DC295A044B00034A19 /* AppDelegate.swift */,
 				A50D56DE295A044B00034A19 /* SceneDelegate.swift */,
 				A50D56E0295A044B00034A19 /* ViewController.swift */,
 				A50D56E2295A044B00034A19 /* Main.storyboard */,
 				A50D56E5295A044D00034A19 /* Assets.xcassets */,
+				A50D570C295A04ED00034A19 /* affirmaIcon.png */,
 				A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */,
 				A50D56EA295A044D00034A19 /* Info.plist */,
 			);
@@ -125,6 +134,22 @@
 				A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */,
 			);
 			path = AffirmaUITests;
+			sourceTree = "<group>";
+		};
+		A50D570E295A071F00034A19 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A50D5710295A074400034A19 /* Colors.xcassets */,
+				A50D5712295A078E00034A19 /* Colors.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A50D570F295A072B00034A19 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
+				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
 				A50D56E4295A044B00034A19 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
+				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
 			);
@@ -445,6 +473,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +502,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
