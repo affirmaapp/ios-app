@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56DC295A044B00034A19 /* AppDelegate.swift */; };
+		A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56DE295A044B00034A19 /* SceneDelegate.swift */; };
+		A50D56E1295A044B00034A19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56E0295A044B00034A19 /* ViewController.swift */; };
+		A50D56E4295A044B00034A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50D56E2295A044B00034A19 /* Main.storyboard */; };
+		A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50D56E5295A044D00034A19 /* Assets.xcassets */; };
+		A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */; };
+		A50D56F4295A044D00034A19 /* AffirmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56F3295A044D00034A19 /* AffirmaTests.swift */; };
+		A50D56FE295A044D00034A19 /* AffirmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56FD295A044D00034A19 /* AffirmaUITests.swift */; };
+		A50D5700295A044D00034A19 /* AffirmaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A50D56F0295A044D00034A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50D56D1295A044B00034A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50D56D8295A044B00034A19;
+			remoteInfo = Affirma;
+		};
+		A50D56FA295A044D00034A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A50D56D1295A044B00034A19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50D56D8295A044B00034A19;
+			remoteInfo = Affirma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A50D56D9295A044B00034A19 /* Affirma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affirma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50D56DC295A044B00034A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A50D56DE295A044B00034A19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A50D56E0295A044B00034A19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A50D56E3295A044B00034A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A50D56E5295A044D00034A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A50D56E8295A044D00034A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A50D56EA295A044D00034A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A50D56EF295A044D00034A19 /* AffirmaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AffirmaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50D56F3295A044D00034A19 /* AffirmaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaTests.swift; sourceTree = "<group>"; };
+		A50D56F9295A044D00034A19 /* AffirmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AffirmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50D56FD295A044D00034A19 /* AffirmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUITests.swift; sourceTree = "<group>"; };
+		A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A50D56D6295A044B00034A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56EC295A044D00034A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56F6295A044D00034A19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50D56D0295A044B00034A19 = {
+			isa = PBXGroup;
+			children = (
+				A50D56DB295A044B00034A19 /* Affirma */,
+				A50D56F2295A044D00034A19 /* AffirmaTests */,
+				A50D56FC295A044D00034A19 /* AffirmaUITests */,
+				A50D56DA295A044B00034A19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A50D56DA295A044B00034A19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A50D56D9295A044B00034A19 /* Affirma.app */,
+				A50D56EF295A044D00034A19 /* AffirmaTests.xctest */,
+				A50D56F9295A044D00034A19 /* AffirmaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50D56DB295A044B00034A19 /* Affirma */ = {
+			isa = PBXGroup;
+			children = (
+				A50D56DC295A044B00034A19 /* AppDelegate.swift */,
+				A50D56DE295A044B00034A19 /* SceneDelegate.swift */,
+				A50D56E0295A044B00034A19 /* ViewController.swift */,
+				A50D56E2295A044B00034A19 /* Main.storyboard */,
+				A50D56E5295A044D00034A19 /* Assets.xcassets */,
+				A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */,
+				A50D56EA295A044D00034A19 /* Info.plist */,
+			);
+			path = Affirma;
+			sourceTree = "<group>";
+		};
+		A50D56F2295A044D00034A19 /* AffirmaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A50D56F3295A044D00034A19 /* AffirmaTests.swift */,
+			);
+			path = AffirmaTests;
+			sourceTree = "<group>";
+		};
+		A50D56FC295A044D00034A19 /* AffirmaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A50D56FD295A044D00034A19 /* AffirmaUITests.swift */,
+				A50D56FF295A044D00034A19 /* AffirmaUITestsLaunchTests.swift */,
+			);
+			path = AffirmaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50D56D8295A044B00034A19 /* Affirma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50D5703295A044D00034A19 /* Build configuration list for PBXNativeTarget "Affirma" */;
+			buildPhases = (
+				A50D56D5295A044B00034A19 /* Sources */,
+				A50D56D6295A044B00034A19 /* Frameworks */,
+				A50D56D7295A044B00034A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Affirma;
+			productName = Affirma;
+			productReference = A50D56D9295A044B00034A19 /* Affirma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A50D56EE295A044D00034A19 /* AffirmaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50D5706295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaTests" */;
+			buildPhases = (
+				A50D56EB295A044D00034A19 /* Sources */,
+				A50D56EC295A044D00034A19 /* Frameworks */,
+				A50D56ED295A044D00034A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A50D56F1295A044D00034A19 /* PBXTargetDependency */,
+			);
+			name = AffirmaTests;
+			productName = AffirmaTests;
+			productReference = A50D56EF295A044D00034A19 /* AffirmaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A50D56F8295A044D00034A19 /* AffirmaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A50D5709295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaUITests" */;
+			buildPhases = (
+				A50D56F5295A044D00034A19 /* Sources */,
+				A50D56F6295A044D00034A19 /* Frameworks */,
+				A50D56F7295A044D00034A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A50D56FB295A044D00034A19 /* PBXTargetDependency */,
+			);
+			name = AffirmaUITests;
+			productName = AffirmaUITests;
+			productReference = A50D56F9295A044D00034A19 /* AffirmaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50D56D1295A044B00034A19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A50D56D8295A044B00034A19 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A50D56EE295A044D00034A19 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A50D56D8295A044B00034A19;
+					};
+					A50D56F8295A044D00034A19 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A50D56D8295A044B00034A19;
+					};
+				};
+			};
+			buildConfigurationList = A50D56D4295A044B00034A19 /* Build configuration list for PBXProject "Affirma" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50D56D0295A044B00034A19;
+			productRefGroup = A50D56DA295A044B00034A19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50D56D8295A044B00034A19 /* Affirma */,
+				A50D56EE295A044D00034A19 /* AffirmaTests */,
+				A50D56F8295A044D00034A19 /* AffirmaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A50D56D7295A044B00034A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
+				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
+				A50D56E4295A044B00034A19 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56ED295A044D00034A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56F7295A044D00034A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A50D56D5295A044B00034A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
+				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56EB295A044D00034A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50D56F4295A044D00034A19 /* AffirmaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A50D56F5295A044D00034A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A50D56FE295A044D00034A19 /* AffirmaUITests.swift in Sources */,
+				A50D5700295A044D00034A19 /* AffirmaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A50D56F1295A044D00034A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50D56D8295A044B00034A19 /* Affirma */;
+			targetProxy = A50D56F0295A044D00034A19 /* PBXContainerItemProxy */;
+		};
+		A50D56FB295A044D00034A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50D56D8295A044B00034A19 /* Affirma */;
+			targetProxy = A50D56FA295A044D00034A19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A50D56E2295A044B00034A19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50D56E3295A044B00034A19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A50D56E8295A044D00034A19 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A50D5701295A044D00034A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A50D5702295A044D00034A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A50D5704295A044D00034A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Affirma/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.Affirma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A50D5705295A044D00034A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Affirma/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.Affirma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A50D5707295A044D00034A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.AffirmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Affirma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Affirma";
+			};
+			name = Debug;
+		};
+		A50D5708295A044D00034A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.AffirmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Affirma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Affirma";
+			};
+			name = Release;
+		};
+		A50D570A295A044D00034A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.AffirmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Affirma;
+			};
+			name = Debug;
+		};
+		A50D570B295A044D00034A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.AffirmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Affirma;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A50D56D4295A044B00034A19 /* Build configuration list for PBXProject "Affirma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50D5701295A044D00034A19 /* Debug */,
+				A50D5702295A044D00034A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A50D5703295A044D00034A19 /* Build configuration list for PBXNativeTarget "Affirma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50D5704295A044D00034A19 /* Debug */,
+				A50D5705295A044D00034A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A50D5706295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50D5707295A044D00034A19 /* Debug */,
+				A50D5708295A044D00034A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A50D5709295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A50D570A295A044D00034A19 /* Debug */,
+				A50D570B295A044D00034A19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A50D56D1295A044B00034A19 /* Project object */;
+}
