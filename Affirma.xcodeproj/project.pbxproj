@@ -19,6 +19,9 @@
 		A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A50D570C295A04ED00034A19 /* affirmaIcon.png */; };
 		A50D5711295A074400034A19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A50D5710295A074400034A19 /* Colors.xcassets */; };
 		A50D5713295A078E00034A19 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5712295A078E00034A19 /* Colors.swift */; };
+		A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */; };
+		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
+		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		A50D570C295A04ED00034A19 /* affirmaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = affirmaIcon.png; sourceTree = "<group>"; };
 		A50D5710295A074400034A19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A50D5712295A078E00034A19 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
+		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A50D5719295A0D2400034A19 /* Base */,
+				A50D5714295A0CD700034A19 /* Onboarding */,
 				A50D570F295A072B00034A19 /* Extensions */,
 				A50D570E295A071F00034A19 /* Utility */,
 				A50D56DC295A044B00034A19 /* AppDelegate.swift */,
@@ -150,6 +158,23 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A50D5714295A0CD700034A19 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */,
+				A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A50D5719295A0D2400034A19 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A50D571A295A0D3400034A19 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +284,7 @@
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
+				A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
 				A50D56E4295A044B00034A19 /* Main.storyboard in Resources */,
 			);
@@ -288,7 +314,9 @@
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
+				A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
