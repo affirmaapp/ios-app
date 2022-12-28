@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericGifView" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="genericGifView" destination="iN0-l3-epB" id="C5Z-gV-M6r"/>
+                <outlet property="gifImageView" destination="FgT-6U-wL4" id="ol0-g9-Fhu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgT-6U-wL4" customClass="GIFImageView" customModule="Gifu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FgT-6U-wL4" secondAttribute="trailing" id="3SI-13-cXW"/>
+                <constraint firstItem="FgT-6U-wL4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hm1-jg-w9L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FgT-6U-wL4" secondAttribute="bottom" id="KEv-LV-ext"/>
+                <constraint firstItem="FgT-6U-wL4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="woy-jZ-4FG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="5.343511450381679" y="-129.92957746478874"/>
+        </view>
+    </objects>
+</document>

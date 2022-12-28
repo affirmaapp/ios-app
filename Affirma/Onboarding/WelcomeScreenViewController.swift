@@ -20,7 +20,7 @@ class WelcomeScreenViewController: BaseViewController {
     @IBOutlet private weak var subtextLabel: UILabel!
     @IBOutlet private weak var arrowDownImage: UIImageView!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var mediaView: GenericMediaView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,6 +33,7 @@ class WelcomeScreenViewController: BaseViewController {
             self.subtextLabel.alpha = 1
         }
         
+        mediaView.render(withImage: nil, withVideo: nil, withGif: "logoGif")
         
         UIView.animate(withDuration: 1, delay: 0, options: [.curveLinear, .repeat, .autoreverse]) {
             

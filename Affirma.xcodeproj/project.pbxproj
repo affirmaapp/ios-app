@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AD0BAF9D379AB6BC83C3313 /* Pods_Affirma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED61EEAC95BE37EAB38F89 /* Pods_Affirma.framework */; };
 		A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56DC295A044B00034A19 /* AppDelegate.swift */; };
 		A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56DE295A044B00034A19 /* SceneDelegate.swift */; };
 		A50D56E1295A044B00034A19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D56E0295A044B00034A19 /* ViewController.swift */; };
@@ -22,6 +23,21 @@
 		A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */; };
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
+		A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */; };
+		A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */; };
+		A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */; };
+		A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAEE295C8FEF0033E65A /* GenericVideoView.swift */; };
+		A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAF0295C90CC0033E65A /* GenericGifView.swift */; };
+		A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAF2295C90DB0033E65A /* GenericGifView.xib */; };
+		A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAF5295C93110033E65A /* ImageDownloadManager.swift */; };
+		A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAF7295C970E0033E65A /* VideoManager.swift */; };
+		A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAF9295C973E0033E65A /* AudioManager.swift */; };
+		A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAFB295C9B2B0033E65A /* ViewExtensions.swift */; };
+		A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAFD295CDD300033E65A /* GenericMediaView.swift */; };
+		A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAFF295CDD810033E65A /* GenericMediaView.xib */; };
+		A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BB05295CE40C0033E65A /* logoGif.gif */; };
+		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
+		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C20EFA4B7F318D3E15EF06E /* Pods-Affirma-AffirmaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.release.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2717EEAB6C13F9D6399612AC /* Pods-AffirmaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.debug.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CED61EEAC95BE37EAB38F89 /* Pods_Affirma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4344E33E93F5CB400C67C6 /* Pods-Affirma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma.release.xcconfig"; path = "Target Support Files/Pods-Affirma/Pods-Affirma.release.xcconfig"; sourceTree = "<group>"; };
+		52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AffirmaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A4BD14822638589AA63364 /* Pods-Affirma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma.debug.xcconfig"; path = "Target Support Files/Pods-Affirma/Pods-Affirma.debug.xcconfig"; sourceTree = "<group>"; };
 		A50D56D9295A044B00034A19 /* Affirma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affirma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50D56DC295A044B00034A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A50D56DE295A044B00034A19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +83,22 @@
 		A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
+		A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericImageView.xib; sourceTree = "<group>"; };
+		A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericVideoView.xib; sourceTree = "<group>"; };
+		A5A9BAEE295C8FEF0033E65A /* GenericVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericVideoView.swift; sourceTree = "<group>"; };
+		A5A9BAF0295C90CC0033E65A /* GenericGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericGifView.swift; sourceTree = "<group>"; };
+		A5A9BAF2295C90DB0033E65A /* GenericGifView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericGifView.xib; sourceTree = "<group>"; };
+		A5A9BAF5295C93110033E65A /* ImageDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
+		A5A9BAF7295C970E0033E65A /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		A5A9BAF9295C973E0033E65A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		A5A9BAFB295C9B2B0033E65A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		A5A9BAFD295CDD300033E65A /* GenericMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericMediaView.swift; sourceTree = "<group>"; };
+		A5A9BAFF295CDD810033E65A /* GenericMediaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericMediaView.xib; sourceTree = "<group>"; };
+		A5A9BB05295CE40C0033E65A /* logoGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = logoGif.gif; sourceTree = "<group>"; };
+		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD0BAF9D379AB6BC83C3313 /* Pods_Affirma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +122,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E3F785B5DF54FDBF35F7121 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97A4BD14822638589AA63364 /* Pods-Affirma.debug.xcconfig */,
+				4D4344E33E93F5CB400C67C6 /* Pods-Affirma.release.xcconfig */,
+				B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */,
+				0C20EFA4B7F318D3E15EF06E /* Pods-Affirma-AffirmaUITests.release.xcconfig */,
+				2717EEAB6C13F9D6399612AC /* Pods-AffirmaTests.debug.xcconfig */,
+				ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6458AE618B82F4B6F1D98661 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CED61EEAC95BE37EAB38F89 /* Pods_Affirma.framework */,
+				CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */,
+				52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A50D56D0295A044B00034A19 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +159,8 @@
 				A50D56F2295A044D00034A19 /* AffirmaTests */,
 				A50D56FC295A044D00034A19 /* AffirmaUITests */,
 				A50D56DA295A044B00034A19 /* Products */,
+				3E3F785B5DF54FDBF35F7121 /* Pods */,
+				6458AE618B82F4B6F1D98661 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +177,8 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5A9BAF4295C93000033E65A /* Managers */,
+				A5A9BAE7295C8F940033E65A /* ReusableViews */,
 				A50D5719295A0D2400034A19 /* Base */,
 				A50D5714295A0CD700034A19 /* Onboarding */,
 				A50D570F295A072B00034A19 /* Extensions */,
@@ -156,6 +224,7 @@
 		A50D570F295A072B00034A19 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A5A9BAFB295C9B2B0033E65A /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +232,7 @@
 		A50D5714295A0CD700034A19 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A5A9BB05295CE40C0033E65A /* logoGif.gif */,
 				A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */,
 				A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */,
 			);
@@ -177,6 +247,31 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A5A9BAE7295C8F940033E65A /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */,
+				A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */,
+				A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */,
+				A5A9BAEE295C8FEF0033E65A /* GenericVideoView.swift */,
+				A5A9BAF0295C90CC0033E65A /* GenericGifView.swift */,
+				A5A9BAF2295C90DB0033E65A /* GenericGifView.xib */,
+				A5A9BAFD295CDD300033E65A /* GenericMediaView.swift */,
+				A5A9BAFF295CDD810033E65A /* GenericMediaView.xib */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		A5A9BAF4295C93000033E65A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A5A9BAF5295C93110033E65A /* ImageDownloadManager.swift */,
+				A5A9BAF7295C970E0033E65A /* VideoManager.swift */,
+				A5A9BAF9295C973E0033E65A /* AudioManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A50D5703295A044D00034A19 /* Build configuration list for PBXNativeTarget "Affirma" */;
 			buildPhases = (
+				AE93CE05075CED3E2C612A29 /* [CP] Check Pods Manifest.lock */,
 				A50D56D5295A044B00034A19 /* Sources */,
 				A50D56D6295A044B00034A19 /* Frameworks */,
 				A50D56D7295A044B00034A19 /* Resources */,
+				F174C8C70F33675536008A93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +298,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A50D5706295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaTests" */;
 			buildPhases = (
+				8D67A82AC3A025CC21907897 /* [CP] Check Pods Manifest.lock */,
 				A50D56EB295A044D00034A19 /* Sources */,
 				A50D56EC295A044D00034A19 /* Frameworks */,
 				A50D56ED295A044D00034A19 /* Resources */,
@@ -219,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A50D5709295A044D00034A19 /* Build configuration list for PBXNativeTarget "AffirmaUITests" */;
 			buildPhases = (
+				9B25BCA5D29CC12757DE2389 /* [CP] Check Pods Manifest.lock */,
 				A50D56F5295A044D00034A19 /* Sources */,
 				A50D56F6295A044D00034A19 /* Frameworks */,
 				A50D56F7295A044D00034A19 /* Resources */,
+				D903A321CED5EBE077B9A40E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,9 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */,
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
+				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
+				A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */,
+				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
+				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
 				A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
 				A50D56E4295A044B00034A19 /* Main.storyboard in Resources */,
@@ -306,14 +411,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D67A82AC3A025CC21907897 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AffirmaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B25BCA5D29CC12757DE2389 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Affirma-AffirmaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE93CE05075CED3E2C612A29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Affirma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D903A321CED5EBE077B9A40E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F174C8C70F33675536008A93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Affirma/Pods-Affirma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Affirma/Pods-Affirma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Affirma/Pods-Affirma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A50D56D5295A044B00034A19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
+				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
+				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
+				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
+				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
+				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
+				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
 				A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */,
@@ -488,6 +704,7 @@
 		};
 		A50D5704295A044D00034A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A4BD14822638589AA63364 /* Pods-Affirma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -517,6 +734,7 @@
 		};
 		A50D5705295A044D00034A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4344E33E93F5CB400C67C6 /* Pods-Affirma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,6 +764,7 @@
 		};
 		A50D5707295A044D00034A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2717EEAB6C13F9D6399612AC /* Pods-AffirmaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +785,7 @@
 		};
 		A50D5708295A044D00034A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -586,6 +806,7 @@
 		};
 		A50D570A295A044D00034A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +825,7 @@
 		};
 		A50D570B295A044D00034A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C20EFA4B7F318D3E15EF06E /* Pods-Affirma-AffirmaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

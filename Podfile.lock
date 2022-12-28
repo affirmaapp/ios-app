@@ -1,0 +1,24 @@
+PODS:
+  - Gifu (3.3.1)
+  - Kingfisher (7.4.1)
+  - Player (0.14.0)
+
+DEPENDENCIES:
+  - Gifu
+  - Kingfisher
+  - Player
+
+SPEC REPOS:
+  trunk:
+    - Gifu
+    - Kingfisher
+    - Player
+
+SPEC CHECKSUMS:
+  Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  Player: 37e0acc16ea1495fc241df88fe9f089367513331
+
+PODFILE CHECKSUM: c84459d754ae8501b74de1842b16f04e0379dc63
+
+COCOAPODS: 1.11.3

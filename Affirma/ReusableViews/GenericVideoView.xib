@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericVideoView" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="genericVideoView" destination="iN0-l3-epB" id="LOY-af-vs0"/>
+                <outlet property="placeholderImage" destination="lED-YF-cox" id="MvZ-oj-VCD"/>
+                <outlet property="playPauseButton" destination="tx1-vF-IK0" id="ZjM-s0-bQU"/>
+                <outlet property="videoView" destination="NXy-JD-ToE" id="vAx-Uq-adv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-XV-ATD">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXy-JD-ToE">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lED-YF-cox">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+                        </imageView>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-vF-IK0">
+                            <rect key="frame" x="176.66666666666666" y="96" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="XJ4-4l-0Pu"/>
+                                <constraint firstAttribute="height" constant="40" id="e8I-21-k3g"/>
+                            </constraints>
+                            <color key="tintColor" name="White_E5E5E5"/>
+                            <state key="normal" image="play.fill" catalog="system"/>
+                            <connections>
+                                <action selector="playPressed:" destination="-1" eventType="touchUpInside" id="lMs-eA-rkX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="NXy-JD-ToE" secondAttribute="bottom" id="17l-Ox-ydN"/>
+                        <constraint firstAttribute="bottom" secondItem="lED-YF-cox" secondAttribute="bottom" id="2Vh-A5-2ew"/>
+                        <constraint firstItem="lED-YF-cox" firstAttribute="top" secondItem="v7c-XV-ATD" secondAttribute="top" id="E4E-xO-IIj"/>
+                        <constraint firstItem="lED-YF-cox" firstAttribute="leading" secondItem="v7c-XV-ATD" secondAttribute="leading" id="GH2-36-h7y"/>
+                        <constraint firstItem="tx1-vF-IK0" firstAttribute="centerX" secondItem="v7c-XV-ATD" secondAttribute="centerX" id="YYc-dg-GkS"/>
+                        <constraint firstAttribute="trailing" secondItem="lED-YF-cox" secondAttribute="trailing" id="bGQ-Ef-sv9"/>
+                        <constraint firstItem="NXy-JD-ToE" firstAttribute="leading" secondItem="v7c-XV-ATD" secondAttribute="leading" id="mcg-5d-HXQ"/>
+                        <constraint firstItem="NXy-JD-ToE" firstAttribute="top" secondItem="v7c-XV-ATD" secondAttribute="top" id="tfQ-wU-gOa"/>
+                        <constraint firstAttribute="trailing" secondItem="NXy-JD-ToE" secondAttribute="trailing" id="tug-oG-uJb"/>
+                        <constraint firstItem="tx1-vF-IK0" firstAttribute="centerY" secondItem="v7c-XV-ATD" secondAttribute="centerY" id="wgf-ar-bLJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="v7c-XV-ATD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="974-bE-k1d"/>
+                <constraint firstItem="v7c-XV-ATD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FzB-eT-y5d"/>
+                <constraint firstAttribute="bottom" secondItem="v7c-XV-ATD" secondAttribute="bottom" id="X0v-Wp-fAI"/>
+                <constraint firstAttribute="trailing" secondItem="v7c-XV-ATD" secondAttribute="trailing" id="ZuB-pZ-Uan"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="5.343511450381679" y="-197.88732394366198"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="White_E5E5E5">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="genericGifView" destination="kbp-6F-Xpe" id="Ehd-ta-LVk"/>
+                <outlet property="genericImageView" destination="WDn-Rz-UFM" id="W08-hM-fac"/>
+                <outlet property="genericMediaView" destination="iN0-l3-epB" id="tL9-Be-AAh"/>
+                <outlet property="genericVideoView" destination="Plb-zu-zc2" id="bmS-p4-8wY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="231"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbp-6F-Xpe" customClass="GenericGifView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="231"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-zu-zc2" customClass="GenericVideoView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="231"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDn-Rz-UFM" customClass="GenericImageView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="231"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Plb-zu-zc2" secondAttribute="bottom" id="0wj-Mt-tzF"/>
+                <constraint firstItem="Plb-zu-zc2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1WH-1D-AVL"/>
+                <constraint firstItem="kbp-6F-Xpe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9aw-7E-rFP"/>
+                <constraint firstItem="WDn-Rz-UFM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ASc-e4-LCX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WDn-Rz-UFM" secondAttribute="bottom" id="NaZ-aP-mMP"/>
+                <constraint firstItem="kbp-6F-Xpe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ama-b8-Cia"/>
+                <constraint firstItem="WDn-Rz-UFM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="egE-4C-0EQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kbp-6F-Xpe" secondAttribute="trailing" id="h9A-SH-Rq8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kbp-6F-Xpe" secondAttribute="bottom" id="l4w-qd-cVi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WDn-Rz-UFM" secondAttribute="trailing" id="m4p-YH-PJb"/>
+                <constraint firstItem="Plb-zu-zc2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tI2-mM-Cyc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Plb-zu-zc2" secondAttribute="trailing" id="tqr-KC-WoM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-14.503816793893129" y="-198.94366197183101"/>
+        </view>
+    </objects>
+</document>
