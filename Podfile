@@ -10,6 +10,7 @@ target 'Affirma' do
  pod 'Gifu'
  pod 'Kingfisher'
  pod "Player"
+ pod 'IQKeyboardManagerSwift'
 
 
   target 'AffirmaTests' do

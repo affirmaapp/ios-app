@@ -41,4 +41,13 @@ extension UIView {
                            multiplier: 1.0,
                            constant: 0).isActive = true
     }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set {
+            self.layer.cornerRadius = newValue
+        }
+    }
 }

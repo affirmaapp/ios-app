@@ -26,6 +26,27 @@ class WelcomeScreenViewController: BaseViewController {
         super.viewWillAppear(animated)
         setUI()
 
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
+            self.view.addGestureRecognizer(swipeUp)
+    }
+    
+    @objc
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.up:
+                //right view controller
+                let newViewController = LoginViewControllerFactory.produce()
+                let navigation = UINavigationController(rootViewController: newViewController)
+                navigation.isNavigationBarHidden = true
+                navigation.isModalInPresentation = true
+                navigation.modalPresentationStyle = .fullScreen
+                self.present(navigation, animated: true)
+            default:
+                break
+            }
+        }
     }
     
     private func setUI() {
