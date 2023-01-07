@@ -21,6 +21,11 @@ class WelcomeScreenViewController: BaseViewController {
     @IBOutlet private weak var arrowDownImage: UIImageView!
     @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var mediaView: GenericMediaView!
+    @IBOutlet weak var gradientView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +34,15 @@ class WelcomeScreenViewController: BaseViewController {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
             self.view.addGestureRecognizer(swipeUp)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientView.applyGradient(withColours: [Colors.black_2E302F.value,
+                                                 Colors.black_131415.value],
+                                   gradientOrientation: .topLeftBottomRight)
+        
+        
     }
     
     @objc
@@ -41,6 +55,8 @@ class WelcomeScreenViewController: BaseViewController {
                 let navigation = UINavigationController(rootViewController: newViewController)
                 navigation.isNavigationBarHidden = true
                 navigation.isModalInPresentation = true
+                navigation.interactivePopGestureRecognizer?.isEnabled = true
+                navigation.interactivePopGestureRecognizer?.delegate = nil 
                 navigation.modalPresentationStyle = .fullScreen
                 self.present(navigation, animated: true)
             default:

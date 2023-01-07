@@ -50,4 +50,15 @@ extension UIView {
             self.layer.cornerRadius = newValue
         }
     }
+    
+    func applyGradient(withColours colours: [UIColor],
+                       gradientOrientation orientation: Utility.GradientOrientation) {
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.name = "gradient"
+        gradient.colors = colours.map { $0.cgColor }
+        gradient.startPoint = orientation.startPoint
+        gradient.endPoint = orientation.endPoint
+        self.layer.insertSublayer(gradient, at: 0)
+    }
 }

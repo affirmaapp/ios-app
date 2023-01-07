@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Affirma" customModuleProvider="target">
             <connections>
                 <outlet property="cta" destination="KrS-VU-rI4" id="MRe-Y8-Rrd"/>
+                <outlet property="gradientView" destination="NDT-CW-jMX" id="Uux-NR-2sC"/>
                 <outlet property="mediaView" destination="EWk-Uf-env" id="rcV-1L-7SV"/>
                 <outlet property="subtextLabel" destination="7Bo-3K-Z4f" id="41n-5J-Ipb"/>
                 <outlet property="textField" destination="9xd-In-38L" id="vi6-VU-Y8U"/>
@@ -23,6 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDT-CW-jMX">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWk-Uf-env" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="96.666666666666686" y="109" width="200" height="200"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,14 +76,16 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" name="Black_131415"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Zd0-bG-DMO" firstAttribute="top" secondItem="9xd-In-38L" secondAttribute="bottom" constant="2" id="1h4-Wt-KCT"/>
                 <constraint firstItem="9xd-In-38L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="8a9-HD-lCu"/>
+                <constraint firstItem="NDT-CW-jMX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="B8b-gi-JSu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9xd-In-38L" secondAttribute="trailing" constant="20" id="Btw-Kb-pTj"/>
                 <constraint firstItem="7Bo-3K-Z4f" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-50" id="EeZ-Eo-HA5"/>
                 <constraint firstItem="EWk-Uf-env" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GZU-3i-KFq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7Bo-3K-Z4f" secondAttribute="trailing" constant="20" id="HUQ-Yg-kt9"/>
+                <constraint firstAttribute="bottom" secondItem="NDT-CW-jMX" secondAttribute="bottom" id="Hnz-K0-edY"/>
                 <constraint firstItem="9xd-In-38L" firstAttribute="top" secondItem="Nw1-pw-H1o" secondAttribute="bottom" constant="8" id="NOW-Gr-xOk"/>
                 <constraint firstItem="9xd-In-38L" firstAttribute="leading" secondItem="Nw1-pw-H1o" secondAttribute="leading" id="Ovt-sb-wIp"/>
                 <constraint firstItem="Nw1-pw-H1o" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="S5T-dQ-Krc"/>
@@ -86,19 +93,18 @@
                 <constraint firstItem="Zd0-bG-DMO" firstAttribute="trailing" secondItem="9xd-In-38L" secondAttribute="trailing" id="Y99-lo-IDP"/>
                 <constraint firstItem="7Bo-3K-Z4f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="arZ-Eh-U9g"/>
                 <constraint firstItem="9xd-In-38L" firstAttribute="trailing" secondItem="Nw1-pw-H1o" secondAttribute="trailing" id="fje-TQ-YkJ"/>
+                <constraint firstItem="NDT-CW-jMX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="glo-BE-tWN"/>
                 <constraint firstItem="KrS-VU-rI4" firstAttribute="top" secondItem="Zd0-bG-DMO" secondAttribute="bottom" constant="40" id="iUk-of-Lbg"/>
                 <constraint firstItem="Nw1-pw-H1o" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="kgn-mF-yA6"/>
                 <constraint firstItem="EWk-Uf-env" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="nhw-WL-lOi"/>
                 <constraint firstItem="7Bo-3K-Z4f" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tnq-ar-8Wp"/>
                 <constraint firstItem="KrS-VU-rI4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uj1-St-DYb"/>
+                <constraint firstItem="NDT-CW-jMX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vo6-ZT-teT"/>
             </constraints>
             <point key="canvasLocation" x="61.832061068702288" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="Black_131415">
-            <color red="0.075000002980232239" green="0.078000001609325409" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Black_2E302F">
             <color red="0.18000000715255737" green="0.18799999356269836" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

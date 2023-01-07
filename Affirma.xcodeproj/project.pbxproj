@@ -23,6 +23,7 @@
 		A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */; };
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
+		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */; };
 		A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */; };
 		A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */; };
@@ -45,6 +46,9 @@
 		A5A9BB24295E2E770033E65A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BB23295E2E770033E65A /* Utility.swift */; };
 		A5A9BB26295EC96D0033E65A /* LabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BB25295EC96D0033E65A /* LabelExtensions.swift */; };
 		A5A9BB2A29600DBC0033E65A /* secondStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BB2929600DBC0033E65A /* secondStep.gif */; };
+		A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BB2C2960D38B0033E65A /* OTPViewController.swift */; };
+		A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BB2E2960D3940033E65A /* OTPViewController.xib */; };
+		A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BB302960D3E50033E65A /* GradientView.swift */; };
 		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
 		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +96,7 @@
 		A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
 		A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericImageView.xib; sourceTree = "<group>"; };
 		A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericVideoView.xib; sourceTree = "<group>"; };
@@ -114,6 +119,9 @@
 		A5A9BB23295E2E770033E65A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A5A9BB25295EC96D0033E65A /* LabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExtensions.swift; sourceTree = "<group>"; };
 		A5A9BB2929600DBC0033E65A /* secondStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = secondStep.gif; sourceTree = "<group>"; };
+		A5A9BB2C2960D38B0033E65A /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		A5A9BB2E2960D3940033E65A /* OTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPViewController.xib; sourceTree = "<group>"; };
+		A5A9BB302960D3E50033E65A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -253,6 +261,7 @@
 		A50D5714295A0CD700034A19 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A5A9BB2B2960D2640033E65A /* OTP */,
 				A5A9BB07295CE5290033E65A /* Login */,
 				A5A9BB05295CE40C0033E65A /* logoGif.gif */,
 				A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */,
@@ -274,6 +283,7 @@
 			children = (
 				A5A9BB1A295E21740033E65A /* Button */,
 				A5A9BB19295E21650033E65A /* Media */,
+				A5A9BB302960D3E50033E65A /* GradientView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -321,6 +331,16 @@
 				A5A9BB1F295E23EB0033E65A /* ButtonConfig.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		A5A9BB2B2960D2640033E65A /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				A5A9BB2C2960D38B0033E65A /* OTPViewController.swift */,
+				A5A9BB2E2960D3940033E65A /* OTPViewController.xib */,
+				A5A1A8D22967DADE00F23482 /* thirdStep.gif */,
+			);
+			path = OTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +460,9 @@
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */,
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
+				A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
+				A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */,
 				A5A9BB09295CE54E0033E65A /* LoginViewController.xib in Resources */,
 				A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
@@ -575,6 +597,7 @@
 			files = (
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
+				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
@@ -585,6 +608,7 @@
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
+				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,

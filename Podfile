@@ -11,6 +11,7 @@ target 'Affirma' do
  pod 'Kingfisher'
  pod "Player"
  pod 'IQKeyboardManagerSwift'
+ pod 'OTPFieldView'
 
 
   target 'AffirmaTests' do
