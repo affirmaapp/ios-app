@@ -56,7 +56,7 @@
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zd0-bG-DMO">
                     <rect key="frame" x="30" y="541.66666666666663" width="343" height="1"/>
-                    <color key="backgroundColor" name="Black_2E302F"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89800000190734863" blue="0.89800000190734863" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" identifier="0" id="02U-Z1-Jln"/>
                     </constraints>
@@ -105,9 +105,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="Black_2E302F">
-            <color red="0.18000000715255737" green="0.18799999356269836" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="White_E5E5E5">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

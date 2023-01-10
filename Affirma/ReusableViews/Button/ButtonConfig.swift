@@ -16,6 +16,7 @@ class ButtonConfig: NSObject {
     var image: UIImage?
     var isUserInteractionEnabled: Bool?
     var corderRadius: CGFloat?
+    var isImageInRight: Bool?
     
     init(withTextColor textColor: UIColor?,
          withFont font: UIFont? = Font(.installed(.avenirLight),
@@ -24,7 +25,8 @@ class ButtonConfig: NSObject {
          withBorderColor borderColor: UIColor? = .clear,
          withImage image: UIImage? = nil,
          isUserInteractionEnabled: Bool? = true,
-         withCornerRadius cornerRadius: CGFloat? = 27.0) {
+         withCornerRadius cornerRadius: CGFloat? = 27.0,
+         isImageInRight: Bool = false) {
         self.textColor = textColor
         self.font = font
         self.backgroundColor = backgroundColor
@@ -32,5 +34,6 @@ class ButtonConfig: NSObject {
         self.image = image
         self.isUserInteractionEnabled = isUserInteractionEnabled
         self.corderRadius = cornerRadius
+        self.isImageInRight = isImageInRight
     }
 }

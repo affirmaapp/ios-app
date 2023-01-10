@@ -30,6 +30,7 @@ class OTPViewController: BaseViewController {
         super.viewDidLoad()
         
         setUI()
+        handleTap()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +69,15 @@ class OTPViewController: BaseViewController {
                          withVideo: nil,
                          withGif: "thirdStep")
         
-        cta.render(withType: .primaryCta, withText: "Continue")
+        cta.render(withType: .primaryCta, withText: "Let's roll")
+    }
+    
+    private func handleTap() {
+        cta.primaryCtaClicked = {
+            let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+            let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+            appDelegate.window?.rootViewController = UINavigationController(rootViewController: firstQuesVC)
+        }
     }
 }
 

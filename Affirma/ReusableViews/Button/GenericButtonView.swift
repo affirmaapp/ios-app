@@ -66,7 +66,12 @@ class GenericButtonView: UIView {
         self.cta.titleLabel?.font = config?.font
         self.cta.layer.borderWidth = 1
         self.cta.cornerRadius = config?.corderRadius ?? 4.0
-
+        if let isImageInRight = config?.isImageInRight,
+           isImageInRight == true {
+            self.cta.semanticContentAttribute = .forceRightToLeft
+        } else {
+            self.cta.semanticContentAttribute = .forceLeftToRight
+        }
        
         if let image = config?.image {
             text = "  " + text

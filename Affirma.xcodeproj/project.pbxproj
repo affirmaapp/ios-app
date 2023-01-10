@@ -24,6 +24,9 @@
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
+		A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */; };
+		A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */; };
+		A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED72969BE4B00B710A9 /* fourthStep.gif */; };
 		A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */; };
 		A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */; };
 		A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */; };
@@ -97,6 +100,9 @@
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
+		A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewController.swift; sourceTree = "<group>"; };
+		A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstQuestionViewController.xib; sourceTree = "<group>"; };
+		A5A86ED72969BE4B00B710A9 /* fourthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fourthStep.gif; sourceTree = "<group>"; };
 		A5A9BAE8295C8FBB0033E65A /* GenericImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageView.swift; sourceTree = "<group>"; };
 		A5A9BAEA295C8FC50033E65A /* GenericImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericImageView.xib; sourceTree = "<group>"; };
 		A5A9BAEC295C8FE60033E65A /* GenericVideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericVideoView.xib; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 		A50D5714295A0CD700034A19 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A5A86ED22969B85F00B710A9 /* FirstQuestion */,
 				A5A9BB2B2960D2640033E65A /* OTP */,
 				A5A9BB07295CE5290033E65A /* Login */,
 				A5A9BB05295CE40C0033E65A /* logoGif.gif */,
@@ -276,6 +283,16 @@
 				A50D571A295A0D3400034A19 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A5A86ED22969B85F00B710A9 /* FirstQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */,
+				A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */,
+				A5A86ED72969BE4B00B710A9 /* fourthStep.gif */,
+			);
+			path = FirstQuestion;
 			sourceTree = "<group>";
 		};
 		A5A9BAE7295C8F940033E65A /* ReusableViews */ = {
@@ -458,8 +475,10 @@
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
+				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
 				A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */,
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
+				A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */,
 				A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
 				A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */,
@@ -604,6 +623,7 @@
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
 				A5A9BB24295E2E770033E65A /* Utility.swift in Sources */,
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
+				A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,

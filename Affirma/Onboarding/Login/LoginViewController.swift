@@ -55,7 +55,7 @@ class LoginViewController: BaseViewController {
             .getAttributedString(font: Font(.installed(.avenirLight),
                                             size: .custom(24.0)).instance,
                                  color: Colors.white_E5E5E5.withAlpha(0.5),
-                                 text: "+91 012345678")
+                                 text: "+91 0123456789")
         
     }
     
