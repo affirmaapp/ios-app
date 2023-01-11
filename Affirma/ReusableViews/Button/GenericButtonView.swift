@@ -22,9 +22,11 @@ class GenericButtonView: UIView {
     @IBOutlet private weak var cta: UIButton!
     
     var type: ButtonType = .primaryCta
+    var buttonTag: Int = 0
     
     var primaryCtaClicked: (() -> Void)?
     var secondayCtaClicked: (() -> Void)?
+    var customCtaCtaClicked: ((Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,9 +52,11 @@ class GenericButtonView: UIView {
     }
     
     func render(withConfig config: ButtonConfig?,
-                withText text: String?) {
+                withText text: String?,
+                withTag tag: Int = 0) {
         self.type = .custom
         self.setButtonUI(withConfig: config, withText: text)
+        self.buttonTag = tag
     }
     
     private func setButtonUI(withConfig config: ButtonConfig?,
@@ -94,7 +98,7 @@ class GenericButtonView: UIView {
         case .inactive:
             print("")
         case .custom:
-            print("")
+            self.customCtaCtaClicked?(buttonTag)
         }
     }
     

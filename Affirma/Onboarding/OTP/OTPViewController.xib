@@ -28,7 +28,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2S-Ow-0Zi" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
-                    <rect key="frame" x="71.666666666666686" y="109" width="250" height="250"/>
+                    <rect key="frame" x="71.666666666666686" y="60" width="250" height="250"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="ub2-4g-yiS"/>
@@ -74,7 +74,7 @@
                 <constraint firstItem="Mxr-RS-Vv7" firstAttribute="top" secondItem="arC-7n-Q5Z" secondAttribute="bottom" constant="40" id="OTX-fZ-Ug5"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="Pds-OI-8de"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Z7k-ft-jp7"/>
-                <constraint firstItem="R2S-Ow-0Zi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="aXR-ik-65I"/>
+                <constraint firstItem="R2S-Ow-0Zi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="aXR-ik-65I"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="top" secondItem="dHM-kb-rL5" secondAttribute="bottom" constant="20" id="bHf-Gh-TFv"/>
                 <constraint firstItem="R2S-Ow-0Zi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dOd-rN-t37"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ap2-9D-Wqj" secondAttribute="trailing" id="k9c-ej-KaT"/>

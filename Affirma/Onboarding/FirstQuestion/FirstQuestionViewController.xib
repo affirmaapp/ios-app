@@ -54,7 +54,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drG-n3-zCH" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
-                    <rect key="frame" x="46.666666666666657" y="109" width="300" height="300"/>
+                    <rect key="frame" x="46.666666666666657" y="60" width="300" height="300"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="1tB-9w-V2M"/>
@@ -82,7 +82,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EIE-c1-WR5" secondAttribute="trailing" constant="20" id="Qvv-1j-4wU"/>
                 <constraint firstItem="vTG-Xo-HLD" firstAttribute="top" secondItem="pLh-T3-a60" secondAttribute="bottom" constant="2" id="VzB-7u-SFB"/>
                 <constraint firstItem="HeC-Hu-f5Y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YFY-R7-1VH"/>
-                <constraint firstItem="drG-n3-zCH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="ae3-2E-hAQ"/>
+                <constraint firstItem="drG-n3-zCH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="ae3-2E-hAQ"/>
                 <constraint firstItem="iXy-ks-bvZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aw7-Kj-62d"/>
                 <constraint firstItem="iXy-ks-bvZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="jlz-bu-QEv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iXy-ks-bvZ" secondAttribute="trailing" constant="20" id="m2i-VT-h1e"/>

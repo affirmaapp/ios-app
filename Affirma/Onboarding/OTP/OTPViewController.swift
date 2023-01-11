@@ -76,7 +76,9 @@ class OTPViewController: BaseViewController {
         cta.primaryCtaClicked = {
             let firstQuesVC = FirstQuestionViewControllerFactory.produce()
             let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-            appDelegate.window?.rootViewController = UINavigationController(rootViewController: firstQuesVC)
+            let nav = UINavigationController(rootViewController: firstQuesVC)
+            nav.isNavigationBarHidden = true
+            appDelegate.window?.rootViewController = nav
         }
     }
 }

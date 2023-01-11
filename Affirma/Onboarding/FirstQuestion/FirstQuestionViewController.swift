@@ -27,6 +27,7 @@ class FirstQuestionViewController: BaseViewController {
         super.viewDidLoad()
         
         setUI()
+        handleTap()
     }
     
     override func viewDidLayoutSubviews() {
@@ -55,5 +56,12 @@ class FirstQuestionViewController: BaseViewController {
                                   withImage: UIImage(named: "arrowForward"),
                                   isImageInRight: true)
         cta.render(withConfig: config, withText: "Next ")
+    }
+    
+    private func handleTap() {
+        cta.customCtaCtaClicked = { tag in
+            let secondQuesVC = SecondQuestionViewControllerFactory.produce(withName: "Vidushi")
+            self.navigationController?.pushViewController(secondQuesVC, animated: true)
+        }
     }
 }

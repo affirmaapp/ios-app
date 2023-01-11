@@ -24,6 +24,9 @@
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
+		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
+		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
+		A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA32296E36CB00CC727C /* fifthStep.gif */; };
 		A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */; };
 		A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */; };
 		A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED72969BE4B00B710A9 /* fourthStep.gif */; };
@@ -100,6 +103,9 @@
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
+		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
+		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
+		A5A1AA32296E36CB00CC727C /* fifthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fifthStep.gif; sourceTree = "<group>"; };
 		A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewController.swift; sourceTree = "<group>"; };
 		A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A86ED72969BE4B00B710A9 /* fourthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fourthStep.gif; sourceTree = "<group>"; };
@@ -267,6 +273,7 @@
 		A50D5714295A0CD700034A19 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A5A1AA2D296E319300CC727C /* SecondQuestion */,
 				A5A86ED22969B85F00B710A9 /* FirstQuestion */,
 				A5A9BB2B2960D2640033E65A /* OTP */,
 				A5A9BB07295CE5290033E65A /* Login */,
@@ -283,6 +290,16 @@
 				A50D571A295A0D3400034A19 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A5A1AA2D296E319300CC727C /* SecondQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */,
+				A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */,
+				A5A1AA32296E36CB00CC727C /* fifthStep.gif */,
+			);
+			path = SecondQuestion;
 			sourceTree = "<group>";
 		};
 		A5A86ED22969B85F00B710A9 /* FirstQuestion */ = {
@@ -471,6 +488,7 @@
 			files = (
 				A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */,
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
+				A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
@@ -485,6 +503,7 @@
 				A5A9BB09295CE54E0033E65A /* LoginViewController.xib in Resources */,
 				A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
+				A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */,
 				A5A9BB2A29600DBC0033E65A /* secondStep.gif in Resources */,
 				A50D56E4295A044B00034A19 /* Main.storyboard in Resources */,
 			);
@@ -630,6 +649,7 @@
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,
