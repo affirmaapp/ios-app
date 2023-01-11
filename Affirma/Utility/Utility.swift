@@ -26,7 +26,7 @@ class Utility {
                                             withBackgroundColor: .clear)
             case .inactive:
                 buttonConfig = ButtonConfig(withTextColor: Colors.black_1A1B1C.value,
-                                            withBackgroundColor: Colors.white_E5E5E5.value)
+                                            withBackgroundColor: Colors.white_E5E5E5.withAlpha(0.5))
             case .custom:
                 return nil
             }

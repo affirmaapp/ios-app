@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Foundation
 import UIKit
 
 class SecondQuestionViewControllerFactory: NSObject {
@@ -32,6 +31,7 @@ class SecondQuestionViewController: BaseViewController {
         super.viewDidLoad()
         
         setUI()
+        handleTap()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,13 +54,24 @@ class SecondQuestionViewController: BaseViewController {
                                   withBackgroundColor: Colors.white_E5E5E5.value,
                                   withImage: UIImage(named: "arrowForward"),
                                   isImageInRight: true)
-        forwardButton.render(withConfig: config, withText: "Next ")
+        forwardButton.render(withConfig: config, withText: "Next ", withTag: 0)
         
         
         let backButtonConfig = ButtonConfig(withTextColor: Colors.white_E5E5E5.value,
                                   withBackgroundColor: .clear,
                                   withImage: UIImage(named: "backButton"))
-        backButton.render(withConfig: backButtonConfig, withText: "Back ")
+        backButton.render(withConfig: backButtonConfig, withText: "Back ", withTag: 1)
+    }
+    
+    private func handleTap() {
+        forwardButton.customCtaCtaClicked = { tag in
+            let introScreenVC = IntroScreenViewControllerFactory.produce()
+            self.navigationController?.pushViewController(introScreenVC, animated: true)
+        }
+        
+        backButton.customCtaCtaClicked = { tag in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 }

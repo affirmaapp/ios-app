@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroScreenViewController" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="animatableText" destination="wd9-0x-T6x" id="kSo-Ds-EK4"/>
+                <outlet property="genericButton" destination="xlk-oZ-ENs" id="3rU-BL-ZHp"/>
+                <outlet property="gradientView" destination="QZF-NG-rgT" id="4Nv-d4-2PY"/>
+                <outlet property="mediaView" destination="faW-CN-aaj" id="Crs-E4-Rfr"/>
+                <outlet property="subtitleText" destination="DD5-Hm-ksj" id="HLR-hY-cC5"/>
+                <outlet property="titleText" destination="VCr-4C-I8L" id="UZo-oB-wrj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="JYg-ld-hnj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZF-NG-rgT">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faW-CN-aaj" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="-3.6666666666666572" y="0.0" width="400.33333333333326" height="400"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="1zq-wi-63A"/>
+                        <constraint firstAttribute="width" constant="400" id="mSO-UO-zDH"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have affirmations for every person!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCr-4C-I8L">
+                    <rect key="frame" x="20" y="440" width="353" height="57.666666666666686"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                    <color key="textColor" name="White_E5E5E5"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DD5-Hm-ksj">
+                    <rect key="frame" x="20" y="527.66666666666663" width="353" height="29"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                    <color key="textColor" name="White_E5E5E5"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd9-0x-T6x">
+                    <rect key="frame" x="20" y="561.66666666666663" width="353" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                    <color key="textColor" name="White_E5E5E5"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlk-oZ-ENs" customClass="GenericButtonView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="20" y="753" width="353" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="ohn-wi-7jR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QZF-NG-rgT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Rw-3B-e6e"/>
+                <constraint firstItem="DD5-Hm-ksj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="431-JS-8gT"/>
+                <constraint firstAttribute="bottom" secondItem="QZF-NG-rgT" secondAttribute="bottom" id="4PY-Ly-6NA"/>
+                <constraint firstItem="QZF-NG-rgT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5ns-aC-30H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wd9-0x-T6x" secondAttribute="trailing" constant="20" id="6yL-Q8-6wG"/>
+                <constraint firstItem="DD5-Hm-ksj" firstAttribute="top" secondItem="VCr-4C-I8L" secondAttribute="bottom" constant="30" id="CLX-aH-K9D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xlk-oZ-ENs" secondAttribute="trailing" constant="20" id="JaJ-b9-sxC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QZF-NG-rgT" secondAttribute="trailing" id="MEY-9r-G2b"/>
+                <constraint firstItem="faW-CN-aaj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="O0l-ly-zvc"/>
+                <constraint firstItem="xlk-oZ-ENs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SmW-g9-Fbn"/>
+                <constraint firstItem="wd9-0x-T6x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="TXd-tF-zZE"/>
+                <constraint firstItem="faW-CN-aaj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZMW-1J-zgZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xlk-oZ-ENs" secondAttribute="bottom" constant="10" id="ahY-S9-zxk"/>
+                <constraint firstItem="VCr-4C-I8L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="bIK-yx-Uwo"/>
+                <constraint firstItem="wd9-0x-T6x" firstAttribute="top" secondItem="DD5-Hm-ksj" secondAttribute="bottom" constant="5" id="jSw-4U-l43"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VCr-4C-I8L" secondAttribute="trailing" constant="20" id="l8c-pS-Rza"/>
+                <constraint firstItem="VCr-4C-I8L" firstAttribute="top" secondItem="faW-CN-aaj" secondAttribute="bottom" constant="40" id="wvW-Eu-RoS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DD5-Hm-ksj" secondAttribute="trailing" constant="20" id="xtB-6M-mgz"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="White_E5E5E5">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
