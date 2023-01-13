@@ -29,7 +29,7 @@
 		A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA32296E36CB00CC727C /* fifthStep.gif */; };
 		A5A1AA36296E93EB00CC727C /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA35296E93EB00CC727C /* IntroScreenViewController.swift */; };
 		A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA37296E93F400CC727C /* IntroScreenViewController.xib */; };
-		A5A1AA3A296E9CE800CC727C /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA39296E9CE800CC727C /* sixthStep.gif */; };
+		A5A1AA3C296EEA5D00CC727C /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA3B296EEA5D00CC727C /* sixthStep.gif */; };
 		A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */; };
 		A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */; };
 		A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED72969BE4B00B710A9 /* fourthStep.gif */; };
@@ -111,7 +111,7 @@
 		A5A1AA32296E36CB00CC727C /* fifthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fifthStep.gif; sourceTree = "<group>"; };
 		A5A1AA35296E93EB00CC727C /* IntroScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
 		A5A1AA37296E93F400CC727C /* IntroScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroScreenViewController.xib; sourceTree = "<group>"; };
-		A5A1AA39296E9CE800CC727C /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
+		A5A1AA3B296EEA5D00CC727C /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
 		A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewController.swift; sourceTree = "<group>"; };
 		A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A86ED72969BE4B00B710A9 /* fourthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fourthStep.gif; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 			children = (
 				A5A1AA35296E93EB00CC727C /* IntroScreenViewController.swift */,
 				A5A1AA37296E93F400CC727C /* IntroScreenViewController.xib */,
-				A5A1AA39296E9CE800CC727C /* sixthStep.gif */,
+				A5A1AA3B296EEA5D00CC727C /* sixthStep.gif */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -512,9 +512,9 @@
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
-				A5A1AA3A296E9CE800CC727C /* sixthStep.gif in Resources */,
 				A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */,
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
+				A5A1AA3C296EEA5D00CC727C /* sixthStep.gif in Resources */,
 				A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */,
 				A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,

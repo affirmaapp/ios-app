@@ -21,8 +21,11 @@ class IntroScreenViewController: BaseViewController {
     @IBOutlet weak private var mediaView: GenericMediaView!
     @IBOutlet weak private var subtitleText: UILabel!
     @IBOutlet weak private var genericButton: GenericButtonView!
-    @IBOutlet weak private var animatableText: UILabel!
+    @IBOutlet weak private var firstText: UILabel!
+    @IBOutlet weak private var thirdText: UILabel!
+    @IBOutlet weak private var secondText: UILabel!
     @IBOutlet weak private var titleText: UILabel!
+    @IBOutlet weak private var fourthText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,23 +63,23 @@ class IntroScreenViewController: BaseViewController {
     }
     
     func animateText() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.animatableText.setTextWithTypeAnimation(typedText: "chronically sarastic")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.firstText.setTextWithTypeAnimation(typedText: "chronically sarcastic 💛")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             
-            self.animatableText.setTextWithTypeAnimation(typedText: "snarky and sassy")
+            self.secondText.setTextWithTypeAnimation(typedText: "snarky and sassy 💚")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             
-            self.animatableText.setTextWithTypeAnimation(typedText: "stubbornly skeptical")
+            self.thirdText.setTextWithTypeAnimation(typedText: "stubbornly skeptical 💜")
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
             
-            self.animatableText.setTextWithTypeAnimation(typedText: "affirmation additcts 🫶")
+            self.fourthText.setTextWithTypeAnimation(typedText: "affirmation additcts 🫶")
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
