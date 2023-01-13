@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LastStepViewController" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="cta" destination="W48-U0-Svl" id="voA-Gq-Mkc"/>
+                <outlet property="gradientView" destination="qQc-n8-G09" id="2da-JZ-yhd"/>
+                <outlet property="label" destination="cut-CN-qta" id="jha-1r-vUp"/>
+                <outlet property="mediaView" destination="nht-gV-LDU" id="UQE-7E-Fu6"/>
+                <outlet property="view" destination="iN0-l3-epB" id="t8B-az-IQJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-n8-G09">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W48-U0-Svl" customClass="GenericButtonView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="20" y="743" width="353" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="OnA-vL-MSR"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nht-gV-LDU" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="-68.666666666666686" y="0.0" width="530.33333333333348" height="530"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="530" id="R2s-tM-eiP"/>
+                        <constraint firstAttribute="height" constant="530" id="Wx1-kK-11O"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additionally,  Send your friends some positive affirmations and pretend they're not rolling their eyes at you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-CN-qta">
+                    <rect key="frame" x="20" y="560" width="353" height="143.66666666666663"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                    <color key="textColor" name="White_E5E5E5"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qQc-n8-G09" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9n2-rI-3QU"/>
+                <constraint firstAttribute="trailing" secondItem="qQc-n8-G09" secondAttribute="trailing" id="AjQ-Yj-xYR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cut-CN-qta" secondAttribute="trailing" constant="20" id="BQA-zJ-3JY"/>
+                <constraint firstItem="W48-U0-Svl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Dpm-AR-61t"/>
+                <constraint firstItem="cut-CN-qta" firstAttribute="top" secondItem="nht-gV-LDU" secondAttribute="bottom" constant="30" id="JRF-Iz-tUg"/>
+                <constraint firstItem="nht-gV-LDU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Onn-YS-hHP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W48-U0-Svl" secondAttribute="bottom" constant="20" id="RSF-jd-SVM"/>
+                <constraint firstItem="qQc-n8-G09" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WrC-EQ-CU2"/>
+                <constraint firstAttribute="trailing" secondItem="W48-U0-Svl" secondAttribute="trailing" constant="20" id="aCQ-xf-obX"/>
+                <constraint firstItem="nht-gV-LDU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eYJ-eg-0lm"/>
+                <constraint firstAttribute="bottom" secondItem="qQc-n8-G09" secondAttribute="bottom" id="pJV-6h-bAl"/>
+                <constraint firstItem="cut-CN-qta" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tZH-Mz-qPF"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="White_E5E5E5">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

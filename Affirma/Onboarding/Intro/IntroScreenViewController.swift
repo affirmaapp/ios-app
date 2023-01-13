@@ -31,6 +31,7 @@ class IntroScreenViewController: BaseViewController {
         super.viewDidLoad()
         
         setUI()
+        handleTap()
     }
     
     override func viewDidLayoutSubviews() {
@@ -92,5 +93,12 @@ class IntroScreenViewController: BaseViewController {
     func enableCTA() {
         genericButton.isUserInteractionEnabled = true
         genericButton.render(withType: .primaryCta, withText: "Let's do this!")
+    }
+    
+    private func handleTap() {
+        genericButton.primaryCtaClicked = {
+            let lastStepVC = LastStepViewControllerFactory.produce()
+            self.navigationController?.pushViewController(lastStepVC, animated: true)
+        }
     }
 }
