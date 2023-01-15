@@ -61,6 +61,8 @@
 		A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A762971507500DFE95D /* LastStepViewController.xib */; };
 		A5B06A79297150F400DFE95D /* lastStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A78297150F300DFE95D /* lastStep.gif */; };
 		A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A7A2971565800DFE95D /* sixthStep.gif */; };
+		A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */; };
+		A5FF7F222973273000754178 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5FF7F212973273000754178 /* Supabase */; };
 		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
 		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
@@ -146,6 +148,7 @@
 		A5B06A762971507500DFE95D /* LastStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastStepViewController.xib; sourceTree = "<group>"; };
 		A5B06A78297150F300DFE95D /* lastStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lastStep.gif; sourceTree = "<group>"; };
 		A5B06A7A2971565800DFE95D /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
+		A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5FF7F222973273000754178 /* Supabase in Frameworks */,
 				6AD0BAF9D379AB6BC83C3313 /* Pods_Affirma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +245,7 @@
 				A50D570C295A04ED00034A19 /* affirmaIcon.png */,
 				A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */,
 				A50D56EA295A044D00034A19 /* Info.plist */,
+				A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */,
 			);
 			path = Affirma;
 			sourceTree = "<group>";
@@ -429,6 +434,9 @@
 			dependencies = (
 			);
 			name = Affirma;
+			packageProductDependencies = (
+				A5FF7F212973273000754178 /* Supabase */,
+			);
 			productName = Affirma;
 			productReference = A50D56D9295A044B00034A19 /* Affirma.app */;
 			productType = "com.apple.product-type.application";
@@ -504,6 +512,9 @@
 				Base,
 			);
 			mainGroup = A50D56D0295A044B00034A19;
+			packageReferences = (
+				A5FF7F202973273000754178 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = A50D56DA295A044B00034A19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -683,6 +694,7 @@
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
 				A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
+				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
@@ -1046,6 +1058,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5FF7F202973273000754178 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5FF7F212973273000754178 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5FF7F202973273000754178 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A50D56D1295A044B00034A19 /* Project object */;
 }

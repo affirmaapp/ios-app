@@ -31,6 +31,7 @@ class LoginViewController: BaseViewController {
         
         setUI()
         handleTap()
+        textField.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,7 +46,8 @@ class LoginViewController: BaseViewController {
     private func setUI() {
         subtextLabel.setTextWithTypeAnimation(typedText: "It’s about time you showed up!")
         
-        cta.render(withType: .primaryCta, withText: "Continue")
+        cta.isUserInteractionEnabled = false
+        cta.render(withType: .inactive, withText: "Continue")
         
         mediaView.render(withImage: nil,
                          withVideo: nil,
@@ -60,9 +62,60 @@ class LoginViewController: BaseViewController {
     }
     
     private func handleTap() {
+ 
         cta.primaryCtaClicked = {
+            Task {
+                try await self.signIn()
+            }
             let otpVC = OTPViewControllerFactory.produce(withNumber: self.number)
             self.navigationController?.pushViewController(otpVC, animated: true)
         }
+    }
+    
+    private func signIn() async {
+        if let number = self.number {
+            await SupabaseManager.shared.signIn(withNumber: number)
+        }
+    }
+    
+    
+    
+    func enableCta() {
+        cta.isUserInteractionEnabled = true
+        cta.render(withType: .primaryCta, withText: "Continue")
+    }
+    
+    func disableCTA() {
+        cta.isUserInteractionEnabled = false
+        cta.render(withType: .inactive, withText: "Continue")
+    }
+    
+    func checkToEnableCTA(withLength length: Int) {
+        if length >= 10 {
+            enableCta()
+        } else {
+            disableCTA()
+        }
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let currentCharacterCount = textField.text?.count ?? 0
+        if range.length + range.location > currentCharacterCount {
+            return false
+        }
+        let newLength = currentCharacterCount + string.count - range.length
+
+        if let text = textField.text as NSString? {
+            let txtAfterUpdate = text.replacingCharacters(in: range, with: string)
+            self.number = txtAfterUpdate
+        }
+        
+        checkToEnableCTA(withLength: newLength)
+        return newLength <= 20
     }
 }
