@@ -2,6 +2,7 @@ PODS:
   - Gifu (3.3.1)
   - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (7.4.1)
+  - ObjectMapper (4.2.0)
   - OTPFieldView (1.0.1)
   - Player (0.14.0)
 
@@ -9,6 +10,7 @@ DEPENDENCIES:
   - Gifu
   - IQKeyboardManagerSwift
   - Kingfisher
+  - ObjectMapper
   - OTPFieldView
   - Player
 
@@ -17,6 +19,7 @@ SPEC REPOS:
     - Gifu
     - IQKeyboardManagerSwift
     - Kingfisher
+    - ObjectMapper
     - OTPFieldView
     - Player
 
@@ -24,9 +27,10 @@ SPEC CHECKSUMS:
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
 
-PODFILE CHECKSUM: 42e5f4a1fe3c08c513b646bca61bc2850122bd27
+PODFILE CHECKSUM: 1e25e393ef0896dbd1d4124433761f5c95c5fe7b
 
 COCOAPODS: 1.11.3

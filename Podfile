@@ -12,6 +12,7 @@ target 'Affirma' do
  pod "Player"
  pod 'IQKeyboardManagerSwift'
  pod 'OTPFieldView'
+ pod 'ObjectMapper'
 
 
   target 'AffirmaTests' do

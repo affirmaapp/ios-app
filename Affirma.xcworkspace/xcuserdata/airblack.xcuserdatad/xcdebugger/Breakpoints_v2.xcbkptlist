@@ -7,49 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B7F5EED-ED31-429B-85E3-40B392B5D4D2"
+            uuid = "0FEDCB74-BA8E-44B5-A561-1C28FC7ADB27"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Affirma/Onboarding/WelcomeScreenViewController.swift"
+            filePath = "Affirma/Onboarding/CountryList/CountryListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "respondToSwipeGesture(gesture:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2B7F5EED-ED31-429B-85E3-40B392B5D4D2 - ff2b4deeecafa8ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Affirma.WelcomeScreenViewController.respondToSwipeGesture(gesture: __C.UIGestureRecognizer) -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/WelcomeScreenViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "2B7F5EED-ED31-429B-85E3-40B392B5D4D2 - ff2b4deeecafa8ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Affirma.WelcomeScreenViewController.respondToSwipeGesture(gesture: __C.UIGestureRecognizer) -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/WelcomeScreenViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "164">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F872E09-C517-4F81-A427-8E0E05F393F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Onboarding/CountryList/CountryListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE6D2411-9EAB-4774-97BA-90CCFC64D10B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Onboarding/CountryList/CountryListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "setupViewModel()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

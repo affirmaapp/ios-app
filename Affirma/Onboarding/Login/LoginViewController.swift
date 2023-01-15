@@ -24,8 +24,10 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var subtextLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var cta: GenericButtonView!
+    @IBOutlet weak var countryCodeButton: UIButton!
     
     fileprivate var number: String?
+    fileprivate var countryCode: String = "+91"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +59,7 @@ class LoginViewController: BaseViewController {
             .getAttributedString(font: Font(.installed(.avenirLight),
                                             size: .custom(24.0)).instance,
                                  color: Colors.white_E5E5E5.withAlpha(0.5),
-                                 text: "+91 0123456789")
+                                 text: "0123456789")
         
     }
     
@@ -73,12 +75,22 @@ class LoginViewController: BaseViewController {
     }
     
     private func signIn() async {
-        if let number = self.number {
-            await SupabaseManager.shared.signIn(withNumber: number)
+        if let number = self.number?.filter("0123456789.".contains) {
+            let fullNumber = countryCode + number
+            await SupabaseManager.shared.signIn(withNumber: fullNumber)
         }
     }
     
     
+    private func openBottomSheet() {
+        let countryVC = CountryListViewControllerFactory.produce(title: "Select Country")
+        countryVC.selectedCountry = { model in
+            self.countryCode = model?.phoneCode ?? "+91"
+            print("selected code: \(self.countryCode)")
+            self.countryCodeButton.setTitle(" \(self.countryCode)", for: .normal)
+        }
+        self.present(countryVC, animated: true, completion: nil)
+    }
     
     func enableCta() {
         cta.isUserInteractionEnabled = true
@@ -96,6 +108,10 @@ class LoginViewController: BaseViewController {
         } else {
             disableCTA()
         }
+    }
+    
+    @IBAction func countryCodeTapped(_ sender: Any) {
+        openBottomSheet()
     }
 }
 

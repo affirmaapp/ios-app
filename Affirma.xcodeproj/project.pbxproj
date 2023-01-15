@@ -63,6 +63,16 @@
 		A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A7A2971565800DFE95D /* sixthStep.gif */; };
 		A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */; };
 		A5FF7F222973273000754178 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5FF7F212973273000754178 /* Supabase */; };
+		A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F242973EE5400754178 /* CountryListViewController.swift */; };
+		A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF7F262973EE6600754178 /* CountryListViewController.xib */; };
+		A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F28297404BD00754178 /* CountryModel.swift */; };
+		A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F29297404BD00754178 /* CountryListViewModel.swift */; };
+		A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F2A297404BD00754178 /* CountryListTableViewCell.swift */; };
+		A5FF7F30297404BD00754178 /* CountryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5FF7F2B297404BD00754178 /* CountryListTableViewCell.xib */; };
+		A5FF7F31297404BD00754178 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = A5FF7F2C297404BD00754178 /* countries.json */; };
+		A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F32297411D600754178 /* TableViewExtensions.swift */; };
+		A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F342974123300754178 /* BaseViewModel.swift */; };
+		A5FF7F372974134500754178 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F362974134500754178 /* StringExtensions.swift */; };
 		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
 		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
@@ -149,6 +159,16 @@
 		A5B06A78297150F300DFE95D /* lastStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lastStep.gif; sourceTree = "<group>"; };
 		A5B06A7A2971565800DFE95D /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
 		A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
+		A5FF7F242973EE5400754178 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		A5FF7F262973EE6600754178 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
+		A5FF7F28297404BD00754178 /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		A5FF7F29297404BD00754178 /* CountryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		A5FF7F2A297404BD00754178 /* CountryListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListTableViewCell.swift; sourceTree = "<group>"; };
+		A5FF7F2B297404BD00754178 /* CountryListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryListTableViewCell.xib; sourceTree = "<group>"; };
+		A5FF7F2C297404BD00754178 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		A5FF7F32297411D600754178 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		A5FF7F342974123300754178 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A5FF7F362974134500754178 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +303,8 @@
 			children = (
 				A5A9BAFB295C9B2B0033E65A /* ViewExtensions.swift */,
 				A5A9BB25295EC96D0033E65A /* LabelExtensions.swift */,
+				A5FF7F32297411D600754178 /* TableViewExtensions.swift */,
+				A5FF7F362974134500754178 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +312,7 @@
 		A50D5714295A0CD700034A19 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF7F232973EE4100754178 /* CountryList */,
 				A5B06A732971505400DFE95D /* LastStep */,
 				A5A1AA34296E938300CC727C /* Intro */,
 				A5A1AA2D296E319300CC727C /* SecondQuestion */,
@@ -307,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				A50D571A295A0D3400034A19 /* BaseViewController.swift */,
+				A5FF7F342974123300754178 /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -414,6 +438,20 @@
 				A5B06A78297150F300DFE95D /* lastStep.gif */,
 			);
 			path = LastStep;
+			sourceTree = "<group>";
+		};
+		A5FF7F232973EE4100754178 /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF7F2C297404BD00754178 /* countries.json */,
+				A5FF7F2A297404BD00754178 /* CountryListTableViewCell.swift */,
+				A5FF7F2B297404BD00754178 /* CountryListTableViewCell.xib */,
+				A5FF7F29297404BD00754178 /* CountryListViewModel.swift */,
+				A5FF7F28297404BD00754178 /* CountryModel.swift */,
+				A5FF7F242973EE5400754178 /* CountryListViewController.swift */,
+				A5FF7F262973EE6600754178 /* CountryListViewController.xib */,
+			);
+			path = CountryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,12 +574,14 @@
 				A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */,
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
 				A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */,
+				A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
+				A5FF7F31297404BD00754178 /* countries.json in Resources */,
 				A5A9BAEB295C8FC50033E65A /* GenericImageView.xib in Resources */,
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
 				A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */,
@@ -550,6 +590,7 @@
 				A5B06A79297150F400DFE95D /* lastStep.gif in Resources */,
 				A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */,
 				A5A9BB09295CE54E0033E65A /* LoginViewController.xib in Resources */,
+				A5FF7F30297404BD00754178 /* CountryListTableViewCell.xib in Resources */,
 				A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */,
 				A50D56E6295A044D00034A19 /* Assets.xcassets in Resources */,
 				A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */,
@@ -685,16 +726,20 @@
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
+				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
+				A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */,
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
 				A5A9BB24295E2E770033E65A /* Utility.swift in Sources */,
 				A5A1AA36296E93EB00CC727C /* IntroScreenViewController.swift in Sources */,
+				A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */,
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
 				A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
+				A5FF7F372974134500754178 /* StringExtensions.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
@@ -702,6 +747,9 @@
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
+				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,
+				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
+				A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A5B06A752971506C00DFE95D /* LastStepViewController.swift in Sources */,
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,
