@@ -25,6 +25,7 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var cta: GenericButtonView!
     
     fileprivate var number: String?
+    fileprivate var otp: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class OTPViewController: BaseViewController {
     }
     
     private func setUI() {
-        self.otpView.fieldsCount = 4
+        self.otpView.fieldsCount = 6
         self.otpView.fieldBorderWidth = 2
         self.otpView.defaultBorderColor = Colors.white_E5E5E5.value
         self.otpView.filledBorderColor = Colors.white_E5E5E5.value
@@ -69,11 +70,33 @@ class OTPViewController: BaseViewController {
                          withVideo: nil,
                          withGif: "thirdStep")
         
+    }
+    
+    private func verifyOTP(withNumber number: String?, otp: String?) async {
+        if let number = number,
+           let otp = otp {
+            await SupabaseManager.shared.verify(withPhoneNumber: number,
+                                                witToken: otp)
+        }
+    }
+    
+    
+    private func enableCTA() {
+        self.cta.isUserInteractionEnabled = true
         cta.render(withType: .primaryCta, withText: "Let's roll")
+    }
+    
+    private func disableCTA() {
+        self.cta.isUserInteractionEnabled = false
+        cta.render(withType: .inactive, withText: "Let's roll")
     }
     
     private func handleTap() {
         cta.primaryCtaClicked = {
+            Task {
+                try await self.verifyOTP(withNumber: self.number,
+                                         otp: self.otp)
+            }
             let firstQuesVC = FirstQuestionViewControllerFactory.produce()
             let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
             let nav = UINavigationController(rootViewController: firstQuesVC)
@@ -91,14 +114,15 @@ extension OTPViewController: OTPFieldViewDelegate {
     }
     
     func enteredOTP(otp: String) {
-        
+        self.otp = otp
     }
     
     func hasEnteredAllOTP(hasEnteredAll: Bool) -> Bool {
+        
         if hasEnteredAll == true {
-            // verify
+            self.enableCTA()
         } else {
-            // disable button
+            self.disableCTA()
         }
         return false
     }

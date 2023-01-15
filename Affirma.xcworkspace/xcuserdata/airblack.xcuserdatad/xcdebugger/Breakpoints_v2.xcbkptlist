@@ -52,5 +52,161 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9D6703A-172F-49F3-867A-31E48177F8E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/SupabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "verify(withPhoneNumber:witToken:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9D6703A-172F-49F3-867A-31E48177F8E9 - f6579f2f9ddeabd1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Affirma.SupabaseManager.verify(withPhoneNumber: Swift.String, witToken: Swift.String) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "B9D6703A-172F-49F3-867A-31E48177F8E9 - db10875b5a91a9e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Affirma.SupabaseManager.verify(withPhoneNumber: Swift.String, witToken: Swift.String) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "B9D6703A-172F-49F3-867A-31E48177F8E9 - 3818d9f625bdebd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Affirma.SupabaseManager.verify(withPhoneNumber: Swift.String, witToken: Swift.String) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "B9D6703A-172F-49F3-867A-31E48177F8E9 - 9df97b6a116c8bd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Affirma.SupabaseManager.verify(withPhoneNumber: Swift.String, witToken: Swift.String) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32994323-DFF5-47BE-B1F9-F3A98C956128"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Onboarding/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "signIn(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "32994323-DFF5-47BE-B1F9-F3A98C956128 - a370ce57c96982a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Affirma.LoginViewController.signIn(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "32994323-DFF5-47BE-B1F9-F3A98C956128 - b37bb7cde5860990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Affirma.LoginViewController.signIn(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "32994323-DFF5-47BE-B1F9-F3A98C956128 - 522daed24a8ec06f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Affirma.LoginViewController.signIn(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "32994323-DFF5-47BE-B1F9-F3A98C956128 - 522daed24a8ec0a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Affirma.LoginViewController.signIn(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Onboarding/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

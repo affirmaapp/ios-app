@@ -7,6 +7,7 @@
 
 import Foundation
 import Supabase
+import SupabaseStorage
 
 
 class SupabaseManager: NSObject {
@@ -28,6 +29,16 @@ class SupabaseManager: NSObject {
     func signIn(withNumber number: String) async {
         do {
             try await client?.auth.signInWithOTP(phone: number)
+        } catch {
+            print("error in sign in")
+        }
+    }
+    
+    func verify(withPhoneNumber number: String, witToken token: String) async {
+        do {
+            let response = try await client?.auth.verifyOTP(phone: number, token: token, type: .sms)
+                print("response: \(response)")
+            
         } catch {
             print("error in sign in")
         }

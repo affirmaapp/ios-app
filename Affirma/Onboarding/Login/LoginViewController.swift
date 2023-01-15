@@ -28,6 +28,7 @@ class LoginViewController: BaseViewController {
     
     fileprivate var number: String?
     fileprivate var countryCode: String = "+91"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,17 +68,21 @@ class LoginViewController: BaseViewController {
  
         cta.primaryCtaClicked = {
             Task {
-                try await self.signIn()
+                try await self.signIn { fullNumber in
+                    
+                    let otpVC = OTPViewControllerFactory.produce(withNumber: fullNumber)
+                    self.navigationController?.pushViewController(otpVC, animated: true)
+                }
             }
-            let otpVC = OTPViewControllerFactory.produce(withNumber: self.number)
-            self.navigationController?.pushViewController(otpVC, animated: true)
         }
     }
     
-    private func signIn() async {
+    private func signIn(completion: @escaping ((String?) -> Void)) async {
         if let number = self.number?.filter("0123456789.".contains) {
             let fullNumber = countryCode + number
             await SupabaseManager.shared.signIn(withNumber: fullNumber)
+    
+            completion(fullNumber)
         }
     }
     
