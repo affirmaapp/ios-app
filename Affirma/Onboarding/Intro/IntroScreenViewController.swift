@@ -34,6 +34,14 @@ class IntroScreenViewController: BaseViewController {
         handleTap()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Task {
+            try await self.updateState(withState: "ACTIVE")
+        }
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientView.applyGradient(withColours: [Colors.black_2E302F.value,
@@ -88,6 +96,17 @@ class IntroScreenViewController: BaseViewController {
             self.enableCTA()
         }
         
+    }
+    
+    private func updateState(withState state: String) async {
+        await SupabaseManager.shared.setState(to: state) { isSaved in
+            if isSaved {
+                DispatchQueue.main.async {
+                }
+            } else {
+                print("error in logging in")
+            }
+        }
     }
     
     func enableCTA() {

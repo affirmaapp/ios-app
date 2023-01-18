@@ -146,10 +146,34 @@ extension SupabaseManager {
         }
     }
     
-    func setUserNotificationTime(time: Int,
-                     completion: @escaping ((Bool) -> Void)) async {
+    func setUserNotificationTime(hour: Int,
+                                 minute: Int,
+                                 completion: @escaping ((Bool) -> Void)) async {
         do {
-            let data: [String: Int] = ["notificationTime": time]
+            let data: [String: Int] = ["notificationHour": hour,
+                                       "notificationMinute": minute]
+            
+            if let userID = AffirmaStateManager.shared.activeUser?.userId {
+                let query = client?.database.from("user_metadata")
+                    .update(values: try JSONEncoder().encode(data))
+                    .equals(column: "userId", value: "\(userID)")
+                
+                Task {
+                    let _ = try? await query?.execute()
+                    completion(true)
+                }
+            }
+           
+        } catch {
+            completion(false)
+        }
+    }
+    
+    func setState(to state: String,
+                  completion: @escaping ((Bool) -> Void)) async {
+        do {
+            let data: [String: String] = ["state": state]
+            
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))

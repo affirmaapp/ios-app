@@ -26,6 +26,8 @@ class SecondQuestionViewController: BaseViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     
     fileprivate var name: String?
+    fileprivate var notificationHour: Int = 16
+    fileprivate var notificationMinute: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,18 +64,46 @@ class SecondQuestionViewController: BaseViewController {
                                   withImage: UIImage(named: "backButton"))
         backButton.render(withConfig: backButtonConfig, withText: "Back ", withTag: 1)
         
-        Task {
-            try await self.updateTest()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "HH:mm"
+        let date = dateFormatter.date(from: "16:00")
+        if let date = date {
+            datePicker.date = date
         }
     }
     
-    private func updateTest() async {
+    private func updateNotificationTime(withHour hour: Int,
+                                        withMinute minute: Int) async {
+        await SupabaseManager.shared.setUserNotificationTime(hour: hour,
+                                                             minute: minute) { isSaved in
+            if isSaved {
+                DispatchQueue.main.async {
+                    let introVC = IntroScreenViewControllerFactory.produce()
+                    self.navigationController?.pushViewController(introVC, animated: true)
+                }
+            } else {
+                print("error in logging in")
+            }
+        }
+    }
+
+    @IBAction func dateChanged(_ sender: Any) {
+        print("Selected Date: \(datePicker.date)")
+        let components = Calendar.current.dateComponents([.hour, .minute], from: datePicker.date)
+        let hour = components.hour
+        let minute = components.minute
+        
+        print("Hour: \(String(describing: hour)), \(String(describing: minute))")
+        self.notificationHour = hour ?? 16
+        self.notificationMinute = minute ?? 0
     }
     
     private func handleTap() {
         forwardButton.customCtaCtaClicked = { tag in
-            let introScreenVC = IntroScreenViewControllerFactory.produce()
-            self.navigationController?.pushViewController(introScreenVC, animated: true)
+            Task {
+                try await self.updateNotificationTime(withHour: self.notificationHour,
+                                                      withMinute: self.notificationMinute)
+            }
         }
         
         backButton.customCtaCtaClicked = { tag in
