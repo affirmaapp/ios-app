@@ -23,6 +23,7 @@
 		A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */; };
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
+		A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530BB6A29788F7400CEB77C /* ExploreViewController.swift */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
 		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
@@ -75,6 +76,9 @@
 		A5FF7F372974134500754178 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F362974134500754178 /* StringExtensions.swift */; };
 		A5FF7F3A2974491B00754178 /* AffirmaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F392974491B00754178 /* AffirmaUser.swift */; };
 		A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */; };
+		A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F3F2978029D00754178 /* HomeViewController.swift */; };
+		A5FF7F442978065000754178 /* TabBarWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F432978065000754178 /* TabBarWithCorners.swift */; };
+		A5FF7F462978116600754178 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FF7F452978116600754178 /* Home.storyboard */; };
 		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
 		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +126,7 @@
 		A50D5715295A0CF400034A19 /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A530BB6A29788F7400CEB77C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +178,9 @@
 		A5FF7F362974134500754178 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A5FF7F392974491B00754178 /* AffirmaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUser.swift; sourceTree = "<group>"; };
 		A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaStateManager.swift; sourceTree = "<group>"; };
+		A5FF7F3F2978029D00754178 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A5FF7F432978065000754178 /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
+		A5FF7F452978116600754178 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +263,7 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF7F3E2978025A00754178 /* Home */,
 				A5FF7F382974490C00754178 /* User */,
 				A5A9BAF4295C93000033E65A /* Managers */,
 				A5A9BAE7295C8F940033E65A /* ReusableViews */,
@@ -376,6 +385,7 @@
 				A5A9BB1A295E21740033E65A /* Button */,
 				A5A9BB19295E21650033E65A /* Media */,
 				A5A9BB302960D3E50033E65A /* GradientView.swift */,
+				A5FF7F432978065000754178 /* TabBarWithCorners.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -466,6 +476,16 @@
 				A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A5FF7F3E2978025A00754178 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF7F3F2978029D00754178 /* HomeViewController.swift */,
+				A5FF7F452978116600754178 /* Home.storyboard */,
+				A530BB6A29788F7400CEB77C /* ExploreViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +610,7 @@
 				A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */,
 				A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
+				A5FF7F462978116600754178 /* Home.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
@@ -740,6 +761,7 @@
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
+				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
@@ -759,7 +781,9 @@
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
+				A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A5FF7F442978065000754178 /* TabBarWithCorners.swift in Sources */,
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,

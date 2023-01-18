@@ -25,6 +25,14 @@ class WelcomeScreenViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Task {
+            _ = try? await SupabaseManager.shared.fetchUser()
+            
+        }
+        
+        AffirmaStateManager.shared.fetchLoggedInUser()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,18 +59,73 @@ class WelcomeScreenViewController: BaseViewController {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.up:
                 //right view controller
-                let newViewController = LoginViewControllerFactory.produce()
-                let navigation = UINavigationController(rootViewController: newViewController)
-                navigation.isNavigationBarHidden = true
-                navigation.isModalInPresentation = true
-                navigation.interactivePopGestureRecognizer?.isEnabled = true
-                navigation.interactivePopGestureRecognizer?.delegate = nil 
-                navigation.modalPresentationStyle = .fullScreen
-                self.present(navigation, animated: true)
+                self.checkAndOpen()
             default:
                 break
             }
         }
+    }
+    
+    private func checkAndOpen() {
+        // if a user is not present - open login
+        // if a user is present and state is PRE_OB - take them to name
+        // if state is active - take them to home
+        Task {
+            _ = try? await SupabaseManager.shared.isUserPresent(completion: { isUserLoggedIn in
+                if isUserLoggedIn {
+                    if AffirmaStateManager.shared.activeUser != nil {
+                        if let state = AffirmaStateManager.shared.activeUser?.metaData?.state ,
+                           state == "ACTIVE" {
+                            DispatchQueue.main.async {
+                                let newViewController = HomeViewControllerFactory.produce()
+                                let navigation = UINavigationController(rootViewController: newViewController)
+                                navigation.isNavigationBarHidden = true
+                                navigation.isModalInPresentation = true
+                                navigation.interactivePopGestureRecognizer?.isEnabled = true
+                                navigation.interactivePopGestureRecognizer?.delegate = nil
+                                navigation.modalPresentationStyle = .fullScreen
+                                self.present(navigation, animated: true)
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                let newViewController = FirstQuestionViewControllerFactory.produce()
+                                let navigation = UINavigationController(rootViewController: newViewController)
+                                navigation.isNavigationBarHidden = true
+                                navigation.isModalInPresentation = true
+                                navigation.interactivePopGestureRecognizer?.isEnabled = true
+                                navigation.interactivePopGestureRecognizer?.delegate = nil
+                                navigation.modalPresentationStyle = .fullScreen
+                                self.present(navigation, animated: true)
+                            }
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            let newViewController = LoginViewControllerFactory.produce()
+                            let navigation = UINavigationController(rootViewController: newViewController)
+                            navigation.isNavigationBarHidden = true
+                            navigation.isModalInPresentation = true
+                            navigation.interactivePopGestureRecognizer?.isEnabled = true
+                            navigation.interactivePopGestureRecognizer?.delegate = nil
+                            navigation.modalPresentationStyle = .fullScreen
+                            self.present(navigation, animated: true)
+                        }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        let newViewController = LoginViewControllerFactory.produce()
+                        let navigation = UINavigationController(rootViewController: newViewController)
+                        navigation.isNavigationBarHidden = true
+                        navigation.isModalInPresentation = true
+                        navigation.interactivePopGestureRecognizer?.isEnabled = true
+                        navigation.interactivePopGestureRecognizer?.delegate = nil
+                        navigation.modalPresentationStyle = .fullScreen
+                        self.present(navigation, animated: true)
+                    }
+                }
+            })
+        }
+
+        
     }
     
     private func setUI() {

@@ -99,10 +99,41 @@ extension SupabaseManager {
             completion(false)
         }
     }
+    
+    func logout() async {
+        do {
+            let response = try await client?.auth.signOut()
+            AffirmaStateManager.shared.logout()
+        } catch {
+            print("error in sign in")
+        }
+    }
 }
 
 // Set User functions
 extension SupabaseManager {
+    
+    func isUserPresent(completion: @escaping ((Bool) -> Void)) async {
+        do {
+            let user = try? await client?.auth.session.user
+            if user?.id == nil {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        } catch {
+           completion(false)
+        }
+    }
+    
+    func isUserActive(completion: @escaping ((Bool) -> Void)) {
+        if let state = AffirmaStateManager.shared.activeUser?.metaData?.state,
+           state == "ACTIVE" {
+            completion(true)
+        } else {
+            completion(false)
+        }
+    }
     
     func setUser(completion: @escaping ((Bool) -> Void)) async {
         do {
@@ -130,6 +161,11 @@ extension SupabaseManager {
                      completion: @escaping ((Bool) -> Void)) async {
         do {
             let data: [String: String] = ["name": name]
+            var metaData = AffirmaUserMetaData()
+            metaData.name = name
+
+            AffirmaStateManager.shared.activeUser?.metaData = metaData
+            AffirmaStateManager.shared.saveActiveUser()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
@@ -152,7 +188,9 @@ extension SupabaseManager {
         do {
             let data: [String: Int] = ["notificationHour": hour,
                                        "notificationMinute": minute]
-            
+            AffirmaStateManager.shared.activeUser?.metaData?.notificationHour = hour
+            AffirmaStateManager.shared.activeUser?.metaData?.notificationMinute = minute
+            AffirmaStateManager.shared.saveActiveUser()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
@@ -173,7 +211,8 @@ extension SupabaseManager {
                   completion: @escaping ((Bool) -> Void)) async {
         do {
             let data: [String: String] = ["state": state]
-            
+            AffirmaStateManager.shared.activeUser?.metaData?.state = state
+            AffirmaStateManager.shared.saveActiveUser()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
@@ -187,6 +226,42 @@ extension SupabaseManager {
            
         } catch {
             completion(false)
+        }
+    }
+    
+    func fetchUser() async {
+        do {
+            let user = try await client?.auth.session.user
+            print("User present: \(user?.id)")
+            // fetch meta
+            Task {
+                _ = try? await fetchUserMetaData(forId: user?.id.uuidString)
+            }
+        } catch {
+            print("User not present")
+        }
+    }
+    
+    func fetchUserMetaData(forId userId: String?) async {
+        guard let userId = userId else {
+            return
+        }
+        do {
+            let query = client?.database.from("user_metadata").select()
+            
+            Task {
+                let queryResponse = try? await query?.execute()
+                let decoder = JSONDecoder()
+                if let data = queryResponse?.underlyingResponse.data {
+                    let myStruct = try! decoder.decode([UserData].self, from: data)
+//                    let json = try! JSONSerialization.jsonObject(with: data,
+//                                                                 options: JSONSerialization.ReadingOptions.allowFragments) as! Any
+                    print("QueryResponse: \(myStruct)")
+                }
+               
+            }
+        } catch {
+            
         }
     }
 }

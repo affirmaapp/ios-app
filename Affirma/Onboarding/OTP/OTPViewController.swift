@@ -79,11 +79,21 @@ class OTPViewController: BaseViewController {
                                                 witToken: otp) { isVerified in
                 if isVerified {
                     DispatchQueue.main.async {
-                        let firstQuesVC = FirstQuestionViewControllerFactory.produce()
-                        let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-                        let nav = UINavigationController(rootViewController: firstQuesVC)
-                        nav.isNavigationBarHidden = true
-                        appDelegate.window?.rootViewController = nav
+                        SupabaseManager.shared.isUserActive(completion: { isOnboardingComplete in
+                            if isOnboardingComplete {
+                                let homeVC = HomeViewControllerFactory.produce()
+                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                let nav = UINavigationController(rootViewController: homeVC)
+                                nav.isNavigationBarHidden = true
+                                appDelegate.window?.rootViewController = nav
+                            } else {
+                                let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                let nav = UINavigationController(rootViewController: firstQuesVC)
+                                nav.isNavigationBarHidden = true
+                                appDelegate.window?.rootViewController = nav
+                            }
+                        })
                     }
                 } else {
                     print("error in logging in")

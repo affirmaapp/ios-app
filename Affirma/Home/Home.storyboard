@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="hFu-qU-bhY">
+            <objects>
+                <viewController storyboardIdentifier="ExploreViewController" id="yg4-Uy-X3L" customClass="ExploreViewController" customModule="Affirma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VXd-2s-PxC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAv-Q6-hMV">
+                                <rect key="frame" x="150" y="396.66666666666669" width="93" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LOGOUT"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="yg4-Uy-X3L" eventType="touchUpInside" id="AzS-8b-uM9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alW-AU-Pnm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KAv-Q6-hMV" firstAttribute="centerX" secondItem="alW-AU-Pnm" secondAttribute="centerX" id="Cmk-vc-R0w"/>
+                            <constraint firstItem="KAv-Q6-hMV" firstAttribute="centerY" secondItem="alW-AU-Pnm" secondAttribute="centerY" id="cE6-pa-fiy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="cXS-zD-JPu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO7-YG-mhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1448" y="-123"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="4cs-07-q7I">
+            <objects>
+                <viewController id="N6g-hq-kbd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oX2-m7-zWi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cAo-bR-S3m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="MYf-ps-CxJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1f-lX-xNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-123"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="XPV-1G-KVK">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeViewController" id="Eeg-bk-Fcx" customClass="HomeViewController" customModule="Affirma" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Cpb-aJ-Iy0" customClass="TabBarWithCorners" customModule="Affirma" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="N6g-hq-kbd" kind="relationship" relationship="viewControllers" id="Uad-1I-F7v"/>
+                        <segue destination="yg4-Uy-X3L" kind="relationship" relationship="viewControllers" id="w7s-Qb-7be"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QY-fF-vCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408" y="-712"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Cpb-aJ-Iy0">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -62,7 +62,8 @@ class AffirmaUser: NSObject, Mappable, NSCoding {
 
 class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     var name: String?
-    var notificationTime: String?
+    var notificationHour: Int?
+    var notificationMinute: Int?
     var state: String?
     
     override init() {}
@@ -70,20 +71,23 @@ class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     
     func mapping(map: Map) {
         name <- map["name"]
-        notificationTime <- map["notificationTime"]
+        notificationHour <- map["notificationHour"]
+        notificationMinute <- map["notificationMinute"]
         state <- map["state"]
     }
     
     func encode(with coder: NSCoder) {
         coder.encode(self.name, forKey: "name")
-        coder.encode(self.notificationTime, forKey: "notificationTime")
-        coder.encode(self.notificationTime, forKey: "state")
+        coder.encode(self.notificationHour, forKey: "notificationHour")
+        coder.encode(self.notificationMinute, forKey: "notificationMinute")
+        coder.encode(self.state, forKey: "state")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
-        self.notificationTime = aDecoder.decodeObject(forKey: "notificationTime") as? String ?? ""
+        self.notificationHour = aDecoder.decodeObject(forKey: "notificationHour") as? Int ?? 0
+        self.notificationMinute = aDecoder.decodeObject(forKey: "notificationMinute") as? Int ?? 0
         self.state = aDecoder.decodeObject(forKey: "state") as? String ?? ""
     }
 }

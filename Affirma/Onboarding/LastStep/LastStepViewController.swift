@@ -26,6 +26,7 @@ class LastStepViewController: BaseViewController {
         super.viewDidLoad()
         
         setUI()
+        handleTap()
     }
     
     override func viewDidLayoutSubviews() {
@@ -49,5 +50,10 @@ class LastStepViewController: BaseViewController {
         cta.render(withType: .primaryCta, withText: "Let's do this!")
     }
     
-    
+    private func handleTap() {
+        cta.primaryCtaClicked = {
+            let homeVC = HomeViewControllerFactory.produce()
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }
+    }
 }

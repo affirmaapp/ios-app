@@ -51,5 +51,13 @@ class AffirmaStateManager: NSObject {
 //            NetworkManager.shared.setAuthorizationHeader(withToken: accessToken)
 //        }
     }
+    
+    func logout() {
+        activeUser = nil
+        UserDefaults.standard.removeObject(forKey: "loggedInUser")
+        let domain = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: domain)
+        UserDefaults.standard.synchronize()
+    }
 }
 
