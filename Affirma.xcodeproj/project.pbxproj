@@ -73,6 +73,8 @@
 		A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F32297411D600754178 /* TableViewExtensions.swift */; };
 		A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F342974123300754178 /* BaseViewModel.swift */; };
 		A5FF7F372974134500754178 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F362974134500754178 /* StringExtensions.swift */; };
+		A5FF7F3A2974491B00754178 /* AffirmaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F392974491B00754178 /* AffirmaUser.swift */; };
+		A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */; };
 		B057A562A3DBA7D4E67CAA6F /* Pods_Affirma_AffirmaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */; };
 		B26FE31D4ECC19A76229EDC4 /* Pods_AffirmaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3D0500DC6D594858BFEB1 /* Pods_AffirmaTests.framework */; };
 /* End PBXBuildFile section */
@@ -169,6 +171,8 @@
 		A5FF7F32297411D600754178 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 		A5FF7F342974123300754178 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		A5FF7F362974134500754178 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A5FF7F392974491B00754178 /* AffirmaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaUser.swift; sourceTree = "<group>"; };
+		A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaStateManager.swift; sourceTree = "<group>"; };
 		B283559CB993D9431F00E040 /* Pods-Affirma-AffirmaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Affirma-AffirmaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEEBF68161C13340DD552532 /* Pods_Affirma_AffirmaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Affirma_AffirmaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7EF4CE966C3E3E5174461A /* Pods-AffirmaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AffirmaTests.release.xcconfig"; path = "Target Support Files/Pods-AffirmaTests/Pods-AffirmaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5FF7F382974490C00754178 /* User */,
 				A5A9BAF4295C93000033E65A /* Managers */,
 				A5A9BAE7295C8F940033E65A /* ReusableViews */,
 				A50D5719295A0D2400034A19 /* Base */,
@@ -452,6 +457,15 @@
 				A5FF7F262973EE6600754178 /* CountryListViewController.xib */,
 			);
 			path = CountryList;
+			sourceTree = "<group>";
+		};
+		A5FF7F382974490C00754178 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A5FF7F392974491B00754178 /* AffirmaUser.swift */,
+				A5FF7F3B29744DD500754178 /* AffirmaStateManager.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,6 +743,7 @@
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
+				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
 				A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */,
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
@@ -755,6 +770,7 @@
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,
 				A5A9BB26295EC96D0033E65A /* LabelExtensions.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
+				A5FF7F3A2974491B00754178 /* AffirmaUser.swift in Sources */,
 				A5A9BB20295E23EB0033E65A /* ButtonConfig.swift in Sources */,
 				A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */,
 			);

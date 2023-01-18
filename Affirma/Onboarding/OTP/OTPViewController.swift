@@ -76,7 +76,19 @@ class OTPViewController: BaseViewController {
         if let number = number,
            let otp = otp {
             await SupabaseManager.shared.verify(withPhoneNumber: number,
-                                                witToken: otp)
+                                                witToken: otp) { isVerified in
+                if isVerified {
+                    DispatchQueue.main.async {
+                        let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+                        let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                        let nav = UINavigationController(rootViewController: firstQuesVC)
+                        nav.isNavigationBarHidden = true
+                        appDelegate.window?.rootViewController = nav
+                    }
+                } else {
+                    print("error in logging in")
+                }
+            }
         }
     }
     
@@ -97,11 +109,6 @@ class OTPViewController: BaseViewController {
                 try await self.verifyOTP(withNumber: self.number,
                                          otp: self.otp)
             }
-            let firstQuesVC = FirstQuestionViewControllerFactory.produce()
-            let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-            let nav = UINavigationController(rootViewController: firstQuesVC)
-            nav.isNavigationBarHidden = true
-            appDelegate.window?.rootViewController = nav
         }
     }
 }

@@ -61,6 +61,13 @@ class SecondQuestionViewController: BaseViewController {
                                   withBackgroundColor: .clear,
                                   withImage: UIImage(named: "backButton"))
         backButton.render(withConfig: backButtonConfig, withText: "Back ", withTag: 1)
+        
+        Task {
+            try await self.updateTest()
+        }
+    }
+    
+    private func updateTest() async {
     }
     
     private func handleTap() {

@@ -23,11 +23,14 @@ class FirstQuestionViewController: BaseViewController {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var cta: GenericButtonView!
     
+    fileprivate var name: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUI()
         handleTap()
+        disableCTA()
+        nameTextField.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,6 +54,43 @@ class FirstQuestionViewController: BaseViewController {
                                  color: Colors.white_E5E5E5.withAlpha(0.5),
                                  text: "John")
         
+    }
+    
+    private func handleTap() {
+        cta.customCtaCtaClicked = { tag in
+            Task {
+                try await self.updateName(withName:self.name?
+                    .trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+            
+        }
+    }
+    
+    private func updateName(withName name: String?) async {
+        if let name = name {
+            await SupabaseManager.shared.setUserName(name: name) { isSaved in
+                if isSaved {
+                    DispatchQueue.main.async {
+                        let secondQuesVC = SecondQuestionViewControllerFactory.produce(withName: name)
+                        self.navigationController?.pushViewController(secondQuesVC, animated: true)
+                    }
+                } else {
+                    print("error in logging in")
+                }
+            }
+        }
+    }
+    
+    func checkToEnableCTA(withLength length: Int) {
+        if length >= 0 {
+            enableCta()
+        } else {
+            disableCTA()
+        }
+    }
+    
+    func enableCta() {
+        cta.isUserInteractionEnabled = true
         let config = ButtonConfig(withTextColor: Colors.black_1A1B1C.value,
                                   withBackgroundColor: Colors.white_E5E5E5.value,
                                   withImage: UIImage(named: "arrowForward"),
@@ -58,10 +98,39 @@ class FirstQuestionViewController: BaseViewController {
         cta.render(withConfig: config, withText: "Next ")
     }
     
-    private func handleTap() {
-        cta.customCtaCtaClicked = { tag in
-            let secondQuesVC = SecondQuestionViewControllerFactory.produce(withName: "Vidushi")
-            self.navigationController?.pushViewController(secondQuesVC, animated: true)
+    func disableCTA() {
+        cta.isUserInteractionEnabled = false
+        let config = ButtonConfig(withTextColor: Colors.black_1A1B1C.value,
+                                  withBackgroundColor: Colors.white_E5E5E5.value.withAlphaComponent(0.5),
+                                  withImage: UIImage(named: "arrowForward"),
+                                  isImageInRight: true)
+        cta.render(withConfig: config, withText: "Next ")
+    }
+}
+extension FirstQuestionViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let currentCharacterCount = textField.text?.count ?? 0
+        if range.length + range.location > currentCharacterCount {
+            return false
         }
+        let newLength = currentCharacterCount + string.count - range.length
+
+        if let text = textField.text as NSString? {
+            let txtAfterUpdate = text.replacingCharacters(in: range, with: string)
+            self.name = txtAfterUpdate
+        }
+        
+        checkToEnableCTA(withLength: newLength)
+        return true
+    }
+}
+
+extension String {
+    func toJSON() -> Any? {
+        guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
+        return try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
     }
 }
