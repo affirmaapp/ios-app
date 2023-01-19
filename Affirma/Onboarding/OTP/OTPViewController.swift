@@ -79,21 +79,35 @@ class OTPViewController: BaseViewController {
                                                 witToken: otp) { isVerified in
                 if isVerified {
                     DispatchQueue.main.async {
-                        SupabaseManager.shared.isUserActive(completion: { isOnboardingComplete in
-                            if isOnboardingComplete {
-                                let homeVC = HomeViewControllerFactory.produce()
-                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-                                let nav = UINavigationController(rootViewController: homeVC)
-                                nav.isNavigationBarHidden = true
-                                appDelegate.window?.rootViewController = nav
-                            } else {
-                                let firstQuesVC = FirstQuestionViewControllerFactory.produce()
-                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-                                let nav = UINavigationController(rootViewController: firstQuesVC)
-                                nav.isNavigationBarHidden = true
-                                appDelegate.window?.rootViewController = nav
-                            }
-                        })
+                        Task {
+                            _ = try? await SupabaseManager.shared.fetchUser(completion: { isUserSet in
+                                if isUserSet {
+                                    SupabaseManager.shared.isUserActive(completion: { isOnboardingComplete in
+                                        DispatchQueue.main.async {
+                                            if isOnboardingComplete {
+                                                let homeVC = HomeViewControllerFactory.produce()
+                                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                                let nav = UINavigationController(rootViewController: homeVC)
+                                                nav.isNavigationBarHidden = true
+                                                appDelegate.window?.rootViewController = nav
+                                            } else {
+                                                let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+                                                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                                let nav = UINavigationController(rootViewController: firstQuesVC)
+                                                nav.isNavigationBarHidden = true
+                                                appDelegate.window?.rootViewController = nav
+                                            }
+                                        }
+                                    })
+                                } else {
+                                    let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+                                    let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                    let nav = UINavigationController(rootViewController: firstQuesVC)
+                                    nav.isNavigationBarHidden = true
+                                    appDelegate.window?.rootViewController = nav
+                                }
+                            })
+                        }
                     }
                 } else {
                     print("error in logging in")

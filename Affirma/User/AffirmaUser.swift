@@ -12,6 +12,9 @@ class UserData: NSObject, Mappable, Codable {
     var name: String?
     var userId: UUID?
     var id: Int?
+    var state: String?
+    var notificationHour: Int?
+    var notificationMinute: Int?
     
     override init() {}
     required convenience init?(map: Map) { self.init() }
@@ -20,6 +23,9 @@ class UserData: NSObject, Mappable, Codable {
         name <- map["name"]
         userId <- map["userId"]
         id <- map["id"]
+        state <- map["state"]
+        notificationHour <- map["notificationHour"]
+        notificationMinute <- map["notificationMinute"]
     }
     
     init(withName name: String,

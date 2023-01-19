@@ -229,20 +229,34 @@ extension SupabaseManager {
         }
     }
     
-    func fetchUser() async {
+    func fetchUser(completion: @escaping ((Bool) -> Void)) async {
         do {
             let user = try await client?.auth.session.user
             print("User present: \(user?.id)")
+            
+            let affirmaUser = AffirmaUser()
+            affirmaUser.userId = user?.id
+            affirmaUser.phoneNumber = user?.phone
+            AffirmaStateManager.shared.saveActiveUser()
             // fetch meta
             Task {
-                _ = try? await fetchUserMetaData(forId: user?.id.uuidString)
+                _ = try? await fetchUserMetaData(forId: user?.id.uuidString, completion: { isMetaDataSet in
+                    if isMetaDataSet {
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                })
+                
             }
         } catch {
             print("User not present")
+            completion(false)
         }
     }
     
-    func fetchUserMetaData(forId userId: String?) async {
+    func fetchUserMetaData(forId userId: String?,
+                           completion: @escaping ((Bool) -> Void)) async {
         guard let userId = userId else {
             return
         }
@@ -256,12 +270,27 @@ extension SupabaseManager {
                     let myStruct = try! decoder.decode([UserData].self, from: data)
 //                    let json = try! JSONSerialization.jsonObject(with: data,
 //                                                                 options: JSONSerialization.ReadingOptions.allowFragments) as! Any
+                    
+                    if myStruct.count > 0 {
+                        let user = myStruct[0]
+                        var metaData = AffirmaUserMetaData()
+                        metaData.name = user.name
+                        metaData.state = user.state
+                        metaData.notificationHour = user.notificationHour
+                        metaData.notificationMinute = user.notificationMinute
+                        
+                        AffirmaStateManager.shared.activeUser?.metaData = metaData
+                        AffirmaStateManager.shared.saveActiveUser()
+                        completion(true)
+                    }
                     print("QueryResponse: \(myStruct)")
+                } else {
+                    completion(false)
                 }
                
             }
         } catch {
-            
+            completion(false)
         }
     }
 }

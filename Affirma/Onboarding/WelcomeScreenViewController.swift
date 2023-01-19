@@ -27,7 +27,9 @@ class WelcomeScreenViewController: BaseViewController {
         super.viewDidLoad()
         
         Task {
-            _ = try? await SupabaseManager.shared.fetchUser()
+            _ = try? await SupabaseManager.shared.fetchUser(completion: { _ in
+                
+            })
             
         }
         

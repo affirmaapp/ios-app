@@ -16,9 +16,10 @@ class ExploreViewController: BaseViewController {
             
             DispatchQueue.main.async {
                 let loginVC = LoginViewControllerFactory.produce()
-
-                let appDel = self.view.window?.windowScene?.delegate as! SceneDelegate
-                appDel.window?.rootViewController = loginVC
+                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                let nav = UINavigationController(rootViewController: loginVC)
+                nav.isNavigationBarHidden = true
+                appDelegate.window?.rootViewController = nav
             }
         }
     }

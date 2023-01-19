@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4E884D7-B8C9-4749-802F-0990C5912CB7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirma/Onboarding/WelcomeScreenViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "checkAndOpen()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8CB9D34B-E408-44B5-AD19-9FAB30522FF7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -97,6 +81,85 @@
             startingLineNumber = "168"
             endingLineNumber = "168"
             landmarkName = "setUserName(name:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "677E3171-1AFE-4E6F-B302-CD7E18148242"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/SupabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "fetchUserMetaData(forId:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "677E3171-1AFE-4E6F-B302-CD7E18148242 - dec4095fce3545e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Affirma.SupabaseManager.fetchUserMetaData(forId: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "1856">
+               </Location>
+               <Location
+                  uuid = "677E3171-1AFE-4E6F-B302-CD7E18148242 - 60854466699485ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Affirma.SupabaseManager.fetchUserMetaData(forId: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "1800">
+               </Location>
+               <Location
+                  uuid = "677E3171-1AFE-4E6F-B302-CD7E18148242 - c665e59a455b65ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Affirma.SupabaseManager.fetchUserMetaData(forId: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "1700">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B0BBF42-DC19-4C28-8AF2-1C937632E83C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Onboarding/OTP/OTPViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "verifyOTP(withNumber:otp:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
