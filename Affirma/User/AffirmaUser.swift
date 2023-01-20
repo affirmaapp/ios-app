@@ -21,11 +21,11 @@ class UserData: NSObject, Mappable, Codable {
     
     func mapping(map: Map) {
         name <- map["name"]
-        userId <- map["userId"]
+        userId <- map["user_id"]
         id <- map["id"]
         state <- map["state"]
-        notificationHour <- map["notificationHour"]
-        notificationMinute <- map["notificationMinute"]
+        notificationHour <- map["notification_hour"]
+        notificationMinute <- map["notification_minute"]
     }
     
     init(withName name: String,
@@ -59,7 +59,7 @@ class AffirmaUser: NSObject, Mappable, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
-        self.userId = aDecoder.decodeObject(forKey: "userId") as? UUID
+        self.userId = aDecoder.decodeObject(forKey: "user_id") as? UUID
         self.phoneNumber = aDecoder.decodeObject(forKey: "phone") as? String ?? ""
         self.metaData = aDecoder.decodeObject(forKey: "data") as? AffirmaUserMetaData
     }
@@ -77,23 +77,23 @@ class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     
     func mapping(map: Map) {
         name <- map["name"]
-        notificationHour <- map["notificationHour"]
-        notificationMinute <- map["notificationMinute"]
+        notificationHour <- map["notification_hour"]
+        notificationMinute <- map["notification_minute"]
         state <- map["state"]
     }
     
     func encode(with coder: NSCoder) {
         coder.encode(self.name, forKey: "name")
-        coder.encode(self.notificationHour, forKey: "notificationHour")
-        coder.encode(self.notificationMinute, forKey: "notificationMinute")
+        coder.encode(self.notificationHour, forKey: "notification_hour")
+        coder.encode(self.notificationMinute, forKey: "notification_minute")
         coder.encode(self.state, forKey: "state")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
-        self.notificationHour = aDecoder.decodeObject(forKey: "notificationHour") as? Int ?? 0
-        self.notificationMinute = aDecoder.decodeObject(forKey: "notificationMinute") as? Int ?? 0
+        self.notificationHour = aDecoder.decodeObject(forKey: "notification_hour") as? Int ?? 0
+        self.notificationMinute = aDecoder.decodeObject(forKey: "notification_minute") as? Int ?? 0
         self.state = aDecoder.decodeObject(forKey: "state") as? String ?? ""
     }
 }

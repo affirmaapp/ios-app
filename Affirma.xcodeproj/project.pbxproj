@@ -26,6 +26,11 @@
 		A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530BB6A29788F7400CEB77C /* ExploreViewController.swift */; };
 		A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE92F297A6E180038A09D /* SendLoveViewController.swift */; };
 		A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */; };
+		A53EE934297A70FF0038A09D /* ExploreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE933297A70FF0038A09D /* ExploreManager.swift */; };
+		A53EE936297A82840038A09D /* ExploreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE935297A82840038A09D /* ExploreModel.swift */; };
+		A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE937297A97600038A09D /* ExploreViewModel.swift */; };
+		A53EE93B297A9B240038A09D /* SelfAffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE93A297A9B240038A09D /* SelfAffirmationTableViewCell.swift */; };
+		A53EE93D297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE93C297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
 		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
@@ -131,6 +136,11 @@
 		A530BB6A29788F7400CEB77C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		A53EE92F297A6E180038A09D /* SendLoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveViewController.swift; sourceTree = "<group>"; };
 		A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesViewController.swift; sourceTree = "<group>"; };
+		A53EE933297A70FF0038A09D /* ExploreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreManager.swift; sourceTree = "<group>"; };
+		A53EE935297A82840038A09D /* ExploreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreModel.swift; sourceTree = "<group>"; };
+		A53EE937297A97600038A09D /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		A53EE93A297A9B240038A09D /* SelfAffirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAffirmationTableViewCell.swift; sourceTree = "<group>"; };
+		A53EE93C297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfAffirmationTableViewCell.xib; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +363,19 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A53EE939297A9AFF0038A09D /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				A530BB6A29788F7400CEB77C /* ExploreViewController.swift */,
+				A53EE933297A70FF0038A09D /* ExploreManager.swift */,
+				A53EE935297A82840038A09D /* ExploreModel.swift */,
+				A53EE937297A97600038A09D /* ExploreViewModel.swift */,
+				A53EE93A297A9B240038A09D /* SelfAffirmationTableViewCell.swift */,
+				A53EE93C297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		A5A1AA2D296E319300CC727C /* SecondQuestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,9 +508,9 @@
 		A5FF7F3E2978025A00754178 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A53EE939297A9AFF0038A09D /* Explore */,
 				A5FF7F3F2978029D00754178 /* HomeViewController.swift */,
 				A5FF7F452978116600754178 /* Home.storyboard */,
-				A530BB6A29788F7400CEB77C /* ExploreViewController.swift */,
 				A53EE92F297A6E180038A09D /* SendLoveViewController.swift */,
 				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
 			);
@@ -609,6 +632,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53EE93D297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib in Resources */,
 				A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */,
 				A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */,
 				A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */,
@@ -772,11 +796,13 @@
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
+				A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
 				A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */,
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
 				A5A9BB24295E2E770033E65A /* Utility.swift in Sources */,
+				A53EE93B297A9B240038A09D /* SelfAffirmationTableViewCell.swift in Sources */,
 				A5A1AA36296E93EB00CC727C /* IntroScreenViewController.swift in Sources */,
 				A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */,
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
@@ -788,6 +814,7 @@
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
+				A53EE936297A82840038A09D /* ExploreModel.swift in Sources */,
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
 				A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
@@ -797,6 +824,7 @@
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,
 				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
 				A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */,
+				A53EE934297A70FF0038A09D /* ExploreManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A5B06A752971506C00DFE95D /* LastStepViewController.swift in Sources */,
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,14 +47,29 @@
                     <view key="view" contentMode="scaleToFill" id="oX2-m7-zWi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-7c-AMM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cAo-bR-S3m"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Black_1A1B1C"/>
+                        <constraints>
+                            <constraint firstItem="MYp-7c-AMM" firstAttribute="trailing" secondItem="oX2-m7-zWi" secondAttribute="trailing" id="0Gz-sp-Krf"/>
+                            <constraint firstItem="MYp-7c-AMM" firstAttribute="leading" secondItem="oX2-m7-zWi" secondAttribute="leading" id="FkS-6a-fdj"/>
+                            <constraint firstItem="MYp-7c-AMM" firstAttribute="bottom" secondItem="cAo-bR-S3m" secondAttribute="bottom" id="fVj-LE-8jy"/>
+                            <constraint firstItem="MYp-7c-AMM" firstAttribute="top" secondItem="oX2-m7-zWi" secondAttribute="top" id="tpj-dM-uTt"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="exploreUnselected" selectedImage="exploreSelected" id="MYf-ps-CxJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="MYp-7c-AMM" id="fNu-i0-dKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1f-lX-xNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="-123"/>
+            <point key="canvasLocation" x="823.66412213740455" y="-123.23943661971832"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="XPV-1G-KVK">
@@ -103,6 +119,9 @@
         <image name="receivedMessagesUnselected" width="24" height="24"/>
         <image name="sendLoveSelected" width="19" height="21"/>
         <image name="sendLoveUnselected" width="19" height="21"/>
+        <namedColor name="Black_1A1B1C">
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
