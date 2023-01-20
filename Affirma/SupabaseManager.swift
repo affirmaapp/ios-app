@@ -144,7 +144,7 @@ extension SupabaseManager {
             AffirmaStateManager.shared.login(withUser: affirmaUser)
             
             if let userId: UUID = user?.id {
-                let data: [String: UUID] = ["userId": userId]
+                let data: [String: UUID] = ["user_id": userId]
                 let query = client?.database.from("user_metadata").insert(values: try JSONEncoder().encode(data))
                 Task {
                     let _ = try? await query?.execute()
@@ -169,7 +169,7 @@ extension SupabaseManager {
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
-                    .equals(column: "userId", value: "\(userID)")
+                    .equals(column: "user_id", value: "\(userID)")
                 
                 Task {
                     let _ = try? await query?.execute()
@@ -186,15 +186,15 @@ extension SupabaseManager {
                                  minute: Int,
                                  completion: @escaping ((Bool) -> Void)) async {
         do {
-            let data: [String: Int] = ["notificationHour": hour,
-                                       "notificationMinute": minute]
+            let data: [String: Int] = ["notification_hour": hour,
+                                       "notification_minute": minute]
             AffirmaStateManager.shared.activeUser?.metaData?.notificationHour = hour
             AffirmaStateManager.shared.activeUser?.metaData?.notificationMinute = minute
             AffirmaStateManager.shared.saveActiveUser()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
-                    .equals(column: "userId", value: "\(userID)")
+                    .equals(column: "user_id", value: "\(userID)")
                 
                 Task {
                     let _ = try? await query?.execute()
@@ -216,7 +216,7 @@ extension SupabaseManager {
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
-                    .equals(column: "userId", value: "\(userID)")
+                    .equals(column: "user_id", value: "\(userID)")
                 
                 Task {
                     let _ = try? await query?.execute()
@@ -273,7 +273,7 @@ extension SupabaseManager {
                     
                     if myStruct.count > 0 {
                         let user = myStruct[0]
-                        var metaData = AffirmaUserMetaData()
+                        let metaData = AffirmaUserMetaData()
                         metaData.name = user.name
                         metaData.state = user.state
                         metaData.notificationHour = user.notificationHour

@@ -32,6 +32,10 @@ class HomeViewController: UITabBarController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
             self.addTabbarIndicatorView(index: 0, isFirstTime: true)
         }
+        
+        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [HomeViewController.self])
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.white_CAD0DE.value], for: .normal)
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.black_1A1B1C.value], for: .selected)
     }
     
     ///Add tabbar item indicator uper line
@@ -42,8 +46,11 @@ class HomeViewController: UITabBarController {
         if !isFirstTime{
             upperLineView.removeFromSuperview()
         }
-        upperLineView = UIView(frame: CGRect(x: tabView.frame.minX + spacing, y: tabView.frame.minY + 0.1, width: tabView.frame.size.width - spacing * 2, height: 4))
-        upperLineView.backgroundColor = .blue
+        upperLineView = UIView(frame: CGRect(x: tabView.frame.minX + spacing,
+                                             y: tabView.frame.minY + 0.1,
+                                             width: tabView.frame.size.width - spacing * 2,
+                                             height: 2))
+        upperLineView.backgroundColor = Colors.black_131415.value
         tabBar.addSubview(upperLineView)
     }
     

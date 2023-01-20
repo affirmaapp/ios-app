@@ -24,6 +24,8 @@
 		A50D5718295A0D1E00034A19 /* WelcomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */; };
 		A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D571A295A0D3400034A19 /* BaseViewController.swift */; };
 		A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530BB6A29788F7400CEB77C /* ExploreViewController.swift */; };
+		A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE92F297A6E180038A09D /* SendLoveViewController.swift */; };
+		A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
 		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
@@ -127,6 +129,8 @@
 		A50D5717295A0D1E00034A19 /* WelcomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeScreenViewController.xib; sourceTree = "<group>"; };
 		A50D571A295A0D3400034A19 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A530BB6A29788F7400CEB77C /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		A53EE92F297A6E180038A09D /* SendLoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveViewController.swift; sourceTree = "<group>"; };
+		A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesViewController.swift; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +488,8 @@
 				A5FF7F3F2978029D00754178 /* HomeViewController.swift */,
 				A5FF7F452978116600754178 /* Home.storyboard */,
 				A530BB6A29788F7400CEB77C /* ExploreViewController.swift */,
+				A53EE92F297A6E180038A09D /* SendLoveViewController.swift */,
+				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -764,6 +770,7 @@
 				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
+				A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
@@ -777,6 +784,7 @@
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
 				A5FF7F372974134500754178 /* StringExtensions.swift in Sources */,
+				A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
