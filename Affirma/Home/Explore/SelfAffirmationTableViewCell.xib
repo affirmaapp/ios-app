@@ -29,6 +29,30 @@
                             <constraint firstAttribute="height" constant="300" id="kfa-Ts-SGh"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIE-Vs-XCk">
+                        <rect key="frame" x="333" y="562" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7Zr-hL-vPK"/>
+                            <constraint firstAttribute="height" constant="40" id="h4k-Dl-n1H"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="download"/>
+                        <connections>
+                            <action selector="downloadButtonClicked:" destination="PoM-va-8Gb" eventType="touchUpInside" id="g8P-BI-onS"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-wF-2IO">
+                        <rect key="frame" x="333" y="512" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="W0o-Xc-vBs"/>
+                            <constraint firstAttribute="height" constant="40" id="n7c-Wu-Tar"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="liked"/>
+                        <connections>
+                            <action selector="likeButtonClicked:" destination="PoM-va-8Gb" eventType="touchUpInside" id="caE-HU-Sf3"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNo-DD-ffT">
                         <rect key="frame" x="40" y="396.66666666666669" width="313" height="33"/>
                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
@@ -42,7 +66,11 @@
                     <constraint firstItem="8nn-Ej-s4X" firstAttribute="top" secondItem="uKJ-iR-aXm" secondAttribute="top" id="9vk-Ng-P5R"/>
                     <constraint firstItem="XNo-DD-ffT" firstAttribute="top" secondItem="MYp-Fc-W5a" secondAttribute="bottom" constant="20" id="McD-Hi-58c"/>
                     <constraint firstAttribute="trailing" secondItem="8nn-Ej-s4X" secondAttribute="trailing" id="QsD-Dq-zNa"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="BIE-Vs-XCk" secondAttribute="bottom" constant="40" id="R8R-x4-Q8Y"/>
+                    <constraint firstItem="BIE-Vs-XCk" firstAttribute="top" secondItem="2qk-wF-2IO" secondAttribute="bottom" constant="10" id="T27-82-ap4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2qk-wF-2IO" secondAttribute="trailing" id="TZ5-UA-eKM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="XNo-DD-ffT" secondAttribute="trailing" constant="20" id="Th3-2a-eZw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BIE-Vs-XCk" secondAttribute="trailing" id="Vh8-F9-Xlr"/>
                     <constraint firstItem="XNo-DD-ffT" firstAttribute="leading" secondItem="uKJ-iR-aXm" secondAttribute="leadingMargin" constant="20" id="akb-pD-YY6"/>
                 </constraints>
             </tableViewCellContentView>
@@ -52,14 +80,17 @@
                 <constraint firstItem="MYp-Fc-W5a" firstAttribute="centerY" secondItem="PoM-va-8Gb" secondAttribute="centerY" constant="-100" id="Z7q-Td-tWy"/>
             </constraints>
             <connections>
-                <outlet property="gradientView" destination="8nn-Ej-s4X" id="Nvo-GV-vZn"/>
+                <outlet property="downloadButton" destination="BIE-Vs-XCk" id="eq2-cW-lyd"/>
                 <outlet property="label" destination="XNo-DD-ffT" id="P5a-P7-ky8"/>
+                <outlet property="likeButton" destination="2qk-wF-2IO" id="mhh-qA-MRG"/>
                 <outlet property="mediaView" destination="MYp-Fc-W5a" id="Ge3-5c-VZH"/>
             </connections>
             <point key="canvasLocation" x="-351.90839694656489" y="232.74647887323945"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="download" width="24" height="24"/>
+        <image name="liked" width="24" height="24"/>
         <namedColor name="White_E5E5E5">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

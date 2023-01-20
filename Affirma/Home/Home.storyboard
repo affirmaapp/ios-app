@@ -48,23 +48,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-7c-AMM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-7c-AMM">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waterMark" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-BZ-xS6">
+                                <rect key="frame" x="146.66666666666666" y="609" width="100" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="XBO-3B-lkc"/>
+                                    <constraint firstAttribute="width" constant="100" id="dAR-1p-aCY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-C5-vV0">
+                                <rect key="frame" x="333" y="79" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Jme-up-Zur"/>
+                                    <constraint firstAttribute="height" constant="40" id="xws-Os-QzU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="user"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cAo-bR-S3m"/>
                         <color key="backgroundColor" name="Black_1A1B1C"/>
                         <constraints>
                             <constraint firstItem="MYp-7c-AMM" firstAttribute="trailing" secondItem="oX2-m7-zWi" secondAttribute="trailing" id="0Gz-sp-Krf"/>
+                            <constraint firstItem="cAo-bR-S3m" firstAttribute="bottom" secondItem="wmC-BZ-xS6" secondAttribute="bottom" constant="20" id="2Ap-Od-28k"/>
                             <constraint firstItem="MYp-7c-AMM" firstAttribute="leading" secondItem="oX2-m7-zWi" secondAttribute="leading" id="FkS-6a-fdj"/>
+                            <constraint firstItem="cAo-bR-S3m" firstAttribute="trailing" secondItem="aqS-C5-vV0" secondAttribute="trailing" constant="20" id="XCj-Z9-3ff"/>
+                            <constraint firstItem="wmC-BZ-xS6" firstAttribute="centerX" secondItem="cAo-bR-S3m" secondAttribute="centerX" id="ekP-Sz-XJX"/>
                             <constraint firstItem="MYp-7c-AMM" firstAttribute="bottom" secondItem="cAo-bR-S3m" secondAttribute="bottom" id="fVj-LE-8jy"/>
+                            <constraint firstItem="aqS-C5-vV0" firstAttribute="top" secondItem="cAo-bR-S3m" secondAttribute="top" constant="20" id="p8F-9g-XGo"/>
                             <constraint firstItem="MYp-7c-AMM" firstAttribute="top" secondItem="oX2-m7-zWi" secondAttribute="top" id="tpj-dM-uTt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="exploreUnselected" selectedImage="exploreSelected" id="MYf-ps-CxJ"/>
                     <connections>
+                        <outlet property="gradientView" destination="oX2-m7-zWi" id="lMY-Ou-VkT"/>
                         <outlet property="tableView" destination="MYp-7c-AMM" id="fNu-i0-dKt"/>
+                        <outlet property="userButton" destination="aqS-C5-vV0" id="qTg-90-nS8"/>
+                        <outlet property="watermarkImage" destination="wmC-BZ-xS6" id="l8J-KP-jg2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1f-lX-xNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,6 +142,8 @@
         <image name="receivedMessagesUnselected" width="24" height="24"/>
         <image name="sendLoveSelected" width="19" height="21"/>
         <image name="sendLoveUnselected" width="19" height="21"/>
+        <image name="user" width="36" height="36"/>
+        <image name="waterMark" width="126" height="167"/>
         <namedColor name="Black_1A1B1C">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

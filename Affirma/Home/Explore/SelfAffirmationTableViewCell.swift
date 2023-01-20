@@ -11,9 +11,11 @@ import UIKit
 class SelfAffirmationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mediaView: GenericMediaView!
-    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var downloadButton: UIButton!
     
+    var takeScreenshot: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,11 +23,8 @@ class SelfAffirmationTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        gradientView.applyGradient(withColours: [Colors.black_2E302F.value,
-                                                 Colors.black_131415.value],
-                                   gradientOrientation: .topLeftBottomRight)
-        
     }
+    
     
     func render(withText text: AffirmationText?,
                 withImage image: AffirmationImage?) {
@@ -39,5 +38,25 @@ class SelfAffirmationTableViewCell: UITableViewCell {
                              withVideo: nil,
                              withGif: nil)
         }
+    }
+    
+    func prepareForScreenshot() {
+        self.downloadButton.isHidden = true
+        self.likeButton.isHidden = true
+    }
+    
+    func handleAfterScreenshotUI() {
+        self.downloadButton.isHidden = false
+        self.likeButton.isHidden = false
+        
+        self.layoutIfNeeded()
+    }
+    
+    @IBAction func downloadButtonClicked(_ sender: Any) {
+        self.takeScreenshot?()
+    }
+    
+    @IBAction func likeButtonClicked(_ sender: Any) {
+        
     }
 }

@@ -29,6 +29,7 @@ class ExploreViewModel: BaseViewModel {
             self.affirmationImagesList = imagesList
             
             print("LIST: \(imagesList.count)")
+            self.reloadData?()
         })
     }
     
