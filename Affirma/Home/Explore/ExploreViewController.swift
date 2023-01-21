@@ -5,6 +5,7 @@
 //  Created by Airblack on 19/01/23.
 //
 
+import CoreMotion
 import Foundation
 import UIKit
 
@@ -16,6 +17,7 @@ class ExploreViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userButton: UIButton!
     @IBOutlet weak var watermarkImage: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +28,14 @@ class ExploreViewController: BaseViewController {
         Task {
             _ = try? await handleViewModelCallbacks()
         }
-        
+
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         registerCells()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,32 +104,11 @@ class ExploreViewController: BaseViewController {
             UIGraphicsEndImageContext()
             
             if let screenshot = screenshot {
-                let image = cropImage(screenshot: screenshot)
-                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                UIImageWriteToSavedPhotosAlbum(screenshot, nil, nil, nil)
                 completion(true)
                 
             }
         }
-    }
-    
-    func cropImage(screenshot: UIImage) -> UIImage {
-        let scale = screenshot.scale
-        let imgSize = screenshot.size
-        let screenHeight = UIScreen.main.bounds.height
-        let bound = self.view.bounds.height
-        let navHeight = self.navigationController!.navigationBar.frame.height
-        let bottomBarHeight = screenHeight - navHeight - bound
-        let crop = CGRectMake(0, 200, //"start" at the upper-left corner
-            (imgSize.width - 1) * scale, //include half the width of the whole screen
-            (imgSize.height - bottomBarHeight - 300) * scale) //include the height of the navigationBar and the height of view
-
-        if let cgImage = screenshot.cgImage,
-           let imageInRect = cgImage.cropping(to: crop) {
-            let image: UIImage = UIImage(cgImage: cgImage)
-            return image
-        }
-        
-        return UIImage()
     }
     
     func prepareForScreenshot() {
