@@ -13,7 +13,7 @@ target 'Affirma' do
  pod 'IQKeyboardManagerSwift'
  pod 'OTPFieldView'
  pod 'ObjectMapper'
-
+ pod 'WatchLayout'
 
   target 'AffirmaTests' do
     inherit! :search_paths

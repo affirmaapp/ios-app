@@ -11,4 +11,9 @@ import UIKit
 class ImageCollectionView: UICollectionViewCell {
     
     @IBOutlet weak var mediaView: GenericMediaView!
+    
+    
+    func render(withImage image: String?) {
+        mediaView.render(withImage: image, withVideo: nil, withGif: nil)
+    }
 }

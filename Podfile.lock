@@ -5,6 +5,7 @@ PODS:
   - ObjectMapper (4.2.0)
   - OTPFieldView (1.0.1)
   - Player (0.14.0)
+  - WatchLayout (1.1.0)
 
 DEPENDENCIES:
   - Gifu
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - ObjectMapper
   - OTPFieldView
   - Player
+  - WatchLayout
 
 SPEC REPOS:
   trunk:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - ObjectMapper
     - OTPFieldView
     - Player
+    - WatchLayout
 
 SPEC CHECKSUMS:
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
+  WatchLayout: f25fbd1c49726249f6f8e513616be8b2d636f06c
 
-PODFILE CHECKSUM: 1e25e393ef0896dbd1d4124433761f5c95c5fe7b
+PODFILE CHECKSUM: afd1e0548a2a3f366857f4b3a6bf8ddedb6d0aca
 
 COCOAPODS: 1.11.3
