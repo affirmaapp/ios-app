@@ -31,6 +31,11 @@
 		A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE937297A97600038A09D /* ExploreViewModel.swift */; };
 		A53EE93B297A9B240038A09D /* SelfAffirmationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE93A297A9B240038A09D /* SelfAffirmationTableViewCell.swift */; };
 		A53EE93D297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE93C297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib */; };
+		A53EE940297BEA800038A09D /* ImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE93F297BEA800038A09D /* ImageCollectionView.xib */; };
+		A53EE942297BEA890038A09D /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE941297BEA890038A09D /* ImageCollectionView.swift */; };
+		A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE943297BEB490038A09D /* SendLoveModel.swift */; };
+		A53EE946297BEBC50038A09D /* SendLoveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE945297BEBC50038A09D /* SendLoveManager.swift */; };
+		A53EE948297BEC170038A09D /* SendLoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE947297BEC170038A09D /* SendLoveViewModel.swift */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
 		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
@@ -141,6 +146,11 @@
 		A53EE937297A97600038A09D /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		A53EE93A297A9B240038A09D /* SelfAffirmationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAffirmationTableViewCell.swift; sourceTree = "<group>"; };
 		A53EE93C297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfAffirmationTableViewCell.xib; sourceTree = "<group>"; };
+		A53EE93F297BEA800038A09D /* ImageCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionView.xib; sourceTree = "<group>"; };
+		A53EE941297BEA890038A09D /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
+		A53EE943297BEB490038A09D /* SendLoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveModel.swift; sourceTree = "<group>"; };
+		A53EE945297BEBC50038A09D /* SendLoveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveManager.swift; sourceTree = "<group>"; };
+		A53EE947297BEC170038A09D /* SendLoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveViewModel.swift; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +386,19 @@
 			path = Explore;
 			sourceTree = "<group>";
 		};
+		A53EE93E297BE8C30038A09D /* SendLove */ = {
+			isa = PBXGroup;
+			children = (
+				A53EE92F297A6E180038A09D /* SendLoveViewController.swift */,
+				A53EE93F297BEA800038A09D /* ImageCollectionView.xib */,
+				A53EE941297BEA890038A09D /* ImageCollectionView.swift */,
+				A53EE943297BEB490038A09D /* SendLoveModel.swift */,
+				A53EE945297BEBC50038A09D /* SendLoveManager.swift */,
+				A53EE947297BEC170038A09D /* SendLoveViewModel.swift */,
+			);
+			path = SendLove;
+			sourceTree = "<group>";
+		};
 		A5A1AA2D296E319300CC727C /* SecondQuestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,10 +531,10 @@
 		A5FF7F3E2978025A00754178 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A53EE93E297BE8C30038A09D /* SendLove */,
 				A53EE939297A9AFF0038A09D /* Explore */,
 				A5FF7F3F2978029D00754178 /* HomeViewController.swift */,
 				A5FF7F452978116600754178 /* Home.storyboard */,
-				A53EE92F297A6E180038A09D /* SendLoveViewController.swift */,
 				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
 			);
 			path = Home;
@@ -642,6 +665,7 @@
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A5FF7F462978116600754178 /* Home.storyboard in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
+				A53EE940297BEA800038A09D /* ImageCollectionView.xib in Resources */,
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
@@ -798,6 +822,8 @@
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
+				A53EE942297BEA890038A09D /* ImageCollectionView.swift in Sources */,
+				A53EE946297BEBC50038A09D /* SendLoveManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
 				A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */,
 				A50D56E1295A044B00034A19 /* ViewController.swift in Sources */,
@@ -818,11 +844,13 @@
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
 				A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
+				A53EE948297BEC170038A09D /* SendLoveViewModel.swift in Sources */,
 				A5FF7F442978065000754178 /* TabBarWithCorners.swift in Sources */,
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,
 				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
+				A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */,
 				A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */,
 				A53EE934297A70FF0038A09D /* ExploreManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,

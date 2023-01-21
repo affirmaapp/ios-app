@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,27 +19,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAv-Q6-hMV">
-                                <rect key="frame" x="150" y="396.66666666666669" width="93" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="LOGOUT"/>
-                                <connections>
-                                    <action selector="logoutClicked:" destination="yg4-Uy-X3L" eventType="touchUpInside" id="OWZ-Yy-Brc"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s get positive, select a theme for your affirmation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-eA-V1N">
+                                <rect key="frame" x="20" y="69" width="353" height="65.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <color key="textColor" name="White_E5E5E5"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rdH-Eg-gl5">
+                                <rect key="frame" x="0.0" y="134.66666666666669" width="393" height="634.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="337-0X-FHJ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="45U-hZ-59i">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wUn-WJ-EJy">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="alW-AU-Pnm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KAv-Q6-hMV" firstAttribute="centerX" secondItem="alW-AU-Pnm" secondAttribute="centerX" id="Cmk-vc-R0w"/>
-                            <constraint firstItem="KAv-Q6-hMV" firstAttribute="centerY" secondItem="alW-AU-Pnm" secondAttribute="centerY" id="cE6-pa-fiy"/>
+                            <constraint firstItem="alW-AU-Pnm" firstAttribute="trailing" secondItem="rdH-Eg-gl5" secondAttribute="trailing" id="9Fj-i2-a4g"/>
+                            <constraint firstItem="rdH-Eg-gl5" firstAttribute="leading" secondItem="alW-AU-Pnm" secondAttribute="leading" id="9Qo-JJ-tZ7"/>
+                            <constraint firstItem="rdH-Eg-gl5" firstAttribute="top" secondItem="XLP-eA-V1N" secondAttribute="bottom" id="JFM-3l-Qds"/>
+                            <constraint firstItem="XLP-eA-V1N" firstAttribute="top" secondItem="alW-AU-Pnm" secondAttribute="top" constant="10" id="Qnh-bB-sHs"/>
+                            <constraint firstItem="alW-AU-Pnm" firstAttribute="bottom" secondItem="rdH-Eg-gl5" secondAttribute="bottom" id="RdR-PN-kJm"/>
+                            <constraint firstItem="alW-AU-Pnm" firstAttribute="trailing" secondItem="XLP-eA-V1N" secondAttribute="trailing" constant="20" id="Vy5-jv-ABS"/>
+                            <constraint firstItem="XLP-eA-V1N" firstAttribute="leading" secondItem="alW-AU-Pnm" secondAttribute="leading" constant="20" id="upF-mf-bW2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Send Love" image="sendLoveUnselected" selectedImage="sendLoveSelected" id="cXS-zD-JPu"/>
+                    <connections>
+                        <outlet property="collectionView" destination="rdH-Eg-gl5" id="yfz-DR-2pg"/>
+                        <outlet property="gradientView" destination="VXd-2s-PxC" id="gAK-pt-U5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VO7-YG-mhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1283" y="-209"/>
+            <point key="canvasLocation" x="-1283.206106870229" y="-209.1549295774648"/>
         </scene>
         <!--Explore-->
         <scene sceneID="4cs-07-q7I">
@@ -146,6 +174,9 @@
         <image name="waterMark" width="126" height="167"/>
         <namedColor name="Black_1A1B1C">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White_E5E5E5">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
