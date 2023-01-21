@@ -29,13 +29,19 @@ class HomeViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+
+        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [HomeViewController.self])
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.white_CAD0DE.value], for: .normal)
+        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.black_1A1B1C.value], for: .selected)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
             self.addTabbarIndicatorView(index: 0, isFirstTime: true)
         }
         
-        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [HomeViewController.self])
-        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.white_CAD0DE.value], for: .normal)
-        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.black_1A1B1C.value], for: .selected)
     }
     
     ///Add tabbar item indicator uper line
