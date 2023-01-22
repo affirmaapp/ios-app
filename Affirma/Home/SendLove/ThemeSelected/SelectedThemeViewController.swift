@@ -5,6 +5,7 @@
 //  Created by Airblack on 21/01/23.
 //
 
+import AnimatedCollectionViewLayout
 import Foundation
 import UIKit
 
@@ -36,6 +37,12 @@ class SelectedThemeViewController: BaseViewController {
         }
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = AnimatedCollectionViewLayout()
+        layout.scrollDirection = .horizontal
+        layout.animator = LinearCardAttributesAnimator(minAlpha: 0.5, itemSpacing: 0.1, scaleRate: 0.95)
+       
+        collectionView.collectionViewLayout = layout
         registerCells()
         setUI()
     }
@@ -62,6 +69,13 @@ class SelectedThemeViewController: BaseViewController {
         viewModel?.reloadData = {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+            }
+        }
+        
+        viewModel?.scrollToItem = { count in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.collectionView.scrollToItem(at: IndexPath(item: count, section: 0),
+                                                 at: .centeredHorizontally, animated: true)
             }
         }
     }
@@ -106,9 +120,9 @@ extension SelectedThemeViewController: UICollectionViewDelegate,
                       height: UIScreen.main.bounds.height * 0.65)
     }
     
-//    func collectionView(_ collectionView: UICollectionView,
-//                        layout collectionViewLayout: UICollectionViewLayout,
-//                        insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-//    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+    }
 }

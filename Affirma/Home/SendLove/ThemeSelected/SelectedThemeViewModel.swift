@@ -21,6 +21,8 @@ class SelectedThemeViewModel: BaseViewModel {
     
     var showChancesOverPopup: (() -> Void)?
     
+    var scrollToItem: ((Int) -> Void)?
+    
     // MARK: Init
     override init() {
         super.init()
@@ -66,5 +68,7 @@ class SelectedThemeViewModel: BaseViewModel {
         
         generatedCards.append(card)
         self.reloadData?()
+        
+        self.scrollToItem?(generatedCards.count - 1)
     }
 }
