@@ -83,6 +83,10 @@
 		A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A762971507500DFE95D /* LastStepViewController.xib */; };
 		A5B06A79297150F400DFE95D /* lastStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A78297150F300DFE95D /* lastStep.gif */; };
 		A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A7A2971565800DFE95D /* sixthStep.gif */; };
+		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
+		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
+		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
+		A5C23A84297D78630022601C /* SendAffirmationPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A83297D78630022601C /* SendAffirmationPopup.xib */; };
 		A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */; };
 		A5FF7F222973273000754178 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5FF7F212973273000754178 /* Supabase */; };
 		A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FF7F242973EE5400754178 /* CountryListViewController.swift */; };
@@ -207,6 +211,10 @@
 		A5B06A762971507500DFE95D /* LastStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastStepViewController.xib; sourceTree = "<group>"; };
 		A5B06A78297150F300DFE95D /* lastStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lastStep.gif; sourceTree = "<group>"; };
 		A5B06A7A2971565800DFE95D /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
+		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
+		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
+		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
+		A5C23A83297D78630022601C /* SendAffirmationPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendAffirmationPopup.xib; sourceTree = "<group>"; };
 		A5FEE65F29730AF300EA4D9D /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		A5FF7F242973EE5400754178 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		A5FF7F262973EE6600754178 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
@@ -440,6 +448,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		A53EE95F297D63FB0038A09D /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */,
+				A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */,
+				A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */,
+				A5C23A83297D78630022601C /* SendAffirmationPopup.xib */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
 		A5A1AA2D296E319300CC727C /* SecondQuestion */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +492,7 @@
 		A5A9BAE7295C8F940033E65A /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				A53EE95F297D63FB0038A09D /* Popups */,
 				A5A9BB1A295E21740033E65A /* Button */,
 				A5A9BB19295E21650033E65A /* Media */,
 				A5A9BB302960D3E50033E65A /* GradientView.swift */,
@@ -707,10 +727,12 @@
 				A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A5FF7F462978116600754178 /* Home.storyboard in Resources */,
+				A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A53EE940297BEA800038A09D /* ImageCollectionView.xib in Resources */,
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
+				A5C23A84297D78630022601C /* SendAffirmationPopup.xib in Resources */,
 				A53EE95A297D07AB0038A09D /* AffirmationCardView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
@@ -894,9 +916,11 @@
 				A53EE936297A82840038A09D /* ExploreModel.swift in Sources */,
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,
 				A530BB6B29788F7400CEB77C /* ExploreViewController.swift in Sources */,
+				A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */,
 				A50D56DD295A044B00034A19 /* AppDelegate.swift in Sources */,
 				A53EE948297BEC170038A09D /* SendLoveViewModel.swift in Sources */,
 				A5FF7F442978065000754178 /* TabBarWithCorners.swift in Sources */,
+				A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */,
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,

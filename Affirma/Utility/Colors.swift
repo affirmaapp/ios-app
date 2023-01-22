@@ -15,6 +15,7 @@ enum Colors {
     case white_CAD0DE
     case black_1A1B1C
     case black_18181C
+    case gray_444444
     case custom(hexString: String, alpha: Double)
     
     func withAlpha(_ alpha: Double) -> UIColor {
@@ -29,6 +30,7 @@ enum ColorStrings: String {
     case black_1A1B1C = "Black_1A1B1C"
     case white_CAD0DE = "White_CAD0DE"
     case black_18181C = "Black_18181C"
+    case gray_444444 = "Gray_444444"
 }
 
 extension Colors {
@@ -49,6 +51,8 @@ extension Colors {
             color = UIColor(named: ColorStrings.black_1A1B1C.rawValue) ?? .white
         case .black_18181C:
             color = UIColor(named: ColorStrings.black_18181C.rawValue) ?? .white
+        case .gray_444444:
+            color = UIColor(named: ColorStrings.gray_444444.rawValue) ?? .white
         case let .custom(hexValue, opacity):
             color = hexStringToUIColor(hex: hexValue).withAlphaComponent(CGFloat(opacity))
         }

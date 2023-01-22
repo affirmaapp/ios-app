@@ -5,7 +5,9 @@
 //  Created by Airblack on 21/01/23.
 //
 
+import Anchorage
 import AnimatedCollectionViewLayout
+import ContactsUI
 import Foundation
 import UIKit
 
@@ -26,6 +28,18 @@ class SelectedThemeViewController: BaseViewController {
     
     var viewModel: SelectedThemeViewModel?
     var themeData: ThemeData?
+    let contactPicker = CNContactPickerViewController()
+    
+    private var choicePopup: ChoicesOverPopup = Bundle.main
+        .loadNibNamed("ChoicesOverPopup",
+                      owner: self,
+                      options: nil)?.first as! ChoicesOverPopup
+    
+    private var sendAffirmationPopup: SendAffirmationPopup = Bundle.main
+        .loadNibNamed("SendAffirmationPopup",
+                      owner: self,
+                      options: nil)?.first as! SendAffirmationPopup
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +59,22 @@ class SelectedThemeViewController: BaseViewController {
         collectionView.collectionViewLayout = layout
         registerCells()
         setUI()
+        
+        sendAffirmationPopup.pickFromContactsPressed = {
+            self.contactPicker.delegate = self
+            self.contactPicker.displayedPropertyKeys =
+            [CNContactGivenNameKey
+             , CNContactPhoneNumbersKey]
+            self.present(self.contactPicker, animated: true, completion: nil)
+        }
+        
+        sendAffirmationPopup.sendPressed = { number in
+            if let number = number {
+                if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=Hi,+I+need+help+with+my+delivery") {
+                    UIApplication.shared.open(supportUrl)
+                }
+            }
+        }
     }
     
     func registerCells() {
@@ -78,6 +108,10 @@ class SelectedThemeViewController: BaseViewController {
                                                  at: .centeredHorizontally, animated: true)
             }
         }
+        
+        viewModel?.showChancesOverPopup = {
+            self.addChoicePopup() 
+        }
     }
     
     @IBAction func pickAnotherPressed(_ sender: Any) {
@@ -90,6 +124,26 @@ class SelectedThemeViewController: BaseViewController {
                               withGif: nil)
         
         themeText.text = themeData?.theme_text?.uppercased()
+    }
+    
+    func addChoicePopup() {
+        self.choicePopup.alpha = 0
+        self.view.addSubview(choicePopup)
+        choicePopup.verticalAnchors == self.view.verticalAnchors
+        choicePopup.horizontalAnchors == self.view.horizontalAnchors
+        UIView.animate(withDuration: 0.5) {
+            self.choicePopup.alpha = 1
+        }
+    }
+    
+    func addSendAffirmationPopup() {
+        self.sendAffirmationPopup.alpha = 0
+        self.view.addSubview(sendAffirmationPopup)
+        sendAffirmationPopup.verticalAnchors == self.view.verticalAnchors
+        sendAffirmationPopup.horizontalAnchors == self.view.horizontalAnchors
+        UIView.animate(withDuration: 0.5) {
+            self.sendAffirmationPopup.alpha = 1
+        }
     }
 }
 
@@ -108,6 +162,9 @@ extension SelectedThemeViewController: UICollectionViewDelegate,
         if let cards = viewModel?.generatedCards, cards.count > indexPath.item {
             let card = cards[indexPath.item]
             
+            cell.sharePressed = { model in
+                self.addSendAffirmationPopup()
+            }
             cell.render(withModel: card)
         }
         return cell
@@ -124,5 +181,26 @@ extension SelectedThemeViewController: UICollectionViewDelegate,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+    }
+}
+
+extension SelectedThemeViewController: CNContactPickerDelegate {
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        // You can fetch selected name and number in the following way
+
+        // user name
+        let userName:String = contact.givenName
+
+        // user phone number
+        let userPhoneNumbers:[CNLabeledValue<CNPhoneNumber>] = contact.phoneNumbers
+        let firstPhoneNumber:CNPhoneNumber = userPhoneNumbers[0].value
+
+
+        // user phone number string
+        let primaryPhoneNumberStr:String = firstPhoneNumber.stringValue
+
+        print(primaryPhoneNumberStr.filter("+0123456789.".contains))
+        sendAffirmationPopup.render(withNumber: primaryPhoneNumberStr.filter("+0123456789.".contains))
+
     }
 }

@@ -15,6 +15,7 @@ target 'Affirma' do
  pod 'ObjectMapper'
  pod 'WatchLayout'
  pod 'AnimatedCollectionViewLayout'
+ pod 'Anchorage'
 
   target 'AffirmaTests' do
     inherit! :search_paths
