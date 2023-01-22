@@ -67,6 +67,7 @@ class SendLoveViewController: BaseViewController {
                     self.collectionView.setContentOffset(self.layout
                         .centeredOffsetForItem(indexPath: IndexPath(item: 0, section: 0)),
                                                          animated: true)
+                    
                 }
             }
         }
@@ -102,5 +103,11 @@ extension SendLoveViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCollectionView", for: indexPath) as! ImageCollectionView
         cell.render(withImage: viewModel?.themes[indexPath.row].theme_text_image)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel?.themes[indexPath.row]
+        let selectedThemeVC = SelectedThemeViewControllerFactory.produce(withThemeData: item)
+        self.navigationController?.pushViewController(selectedThemeVC, animated: true)
     }
 }

@@ -36,6 +36,15 @@
 		A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE943297BEB490038A09D /* SendLoveModel.swift */; };
 		A53EE946297BEBC50038A09D /* SendLoveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE945297BEBC50038A09D /* SendLoveManager.swift */; };
 		A53EE948297BEC170038A09D /* SendLoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE947297BEC170038A09D /* SendLoveViewModel.swift */; };
+		A53EE94D297C069F0038A09D /* SelectedThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE94C297C069F0038A09D /* SelectedThemeViewController.swift */; };
+		A53EE94F297C06AF0038A09D /* SelectedThemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE94E297C06AF0038A09D /* SelectedThemeViewController.xib */; };
+		A53EE951297C1E0F0038A09D /* SelectedThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE950297C1E0F0038A09D /* SelectedThemeManager.swift */; };
+		A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE952297C31B30038A09D /* SelectedThemeModel.swift */; };
+		A53EE955297C45380038A09D /* SelectedThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE954297C45380038A09D /* SelectedThemeViewModel.swift */; };
+		A53EE958297D079F0038A09D /* AffirmationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE957297D079F0038A09D /* AffirmationCardView.swift */; };
+		A53EE95A297D07AB0038A09D /* AffirmationCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE959297D07AB0038A09D /* AffirmationCardView.xib */; };
+		A53EE95C297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53EE95B297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift */; };
+		A53EE95E297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A53EE95D297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib */; };
 		A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1A8D22967DADE00F23482 /* thirdStep.gif */; };
 		A5A1AA2F296E31F500CC727C /* SecondQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */; };
 		A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */; };
@@ -151,6 +160,15 @@
 		A53EE943297BEB490038A09D /* SendLoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveModel.swift; sourceTree = "<group>"; };
 		A53EE945297BEBC50038A09D /* SendLoveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveManager.swift; sourceTree = "<group>"; };
 		A53EE947297BEC170038A09D /* SendLoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLoveViewModel.swift; sourceTree = "<group>"; };
+		A53EE94C297C069F0038A09D /* SelectedThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedThemeViewController.swift; sourceTree = "<group>"; };
+		A53EE94E297C06AF0038A09D /* SelectedThemeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedThemeViewController.xib; sourceTree = "<group>"; };
+		A53EE950297C1E0F0038A09D /* SelectedThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedThemeManager.swift; sourceTree = "<group>"; };
+		A53EE952297C31B30038A09D /* SelectedThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedThemeModel.swift; sourceTree = "<group>"; };
+		A53EE954297C45380038A09D /* SelectedThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedThemeViewModel.swift; sourceTree = "<group>"; };
+		A53EE957297D079F0038A09D /* AffirmationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationCardView.swift; sourceTree = "<group>"; };
+		A53EE959297D07AB0038A09D /* AffirmationCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffirmationCardView.xib; sourceTree = "<group>"; };
+		A53EE95B297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A53EE95D297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffirmationCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5A1A8D22967DADE00F23482 /* thirdStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thirdStep.gif; sourceTree = "<group>"; };
 		A5A1AA2E296E31F500CC727C /* SecondQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A1AA30296E31FD00CC727C /* SecondQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondQuestionViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +407,7 @@
 		A53EE93E297BE8C30038A09D /* SendLove */ = {
 			isa = PBXGroup;
 			children = (
+				A53EE949297C06400038A09D /* ThemeSelected */,
 				A53EE92F297A6E180038A09D /* SendLoveViewController.swift */,
 				A53EE93F297BEA800038A09D /* ImageCollectionView.xib */,
 				A53EE941297BEA890038A09D /* ImageCollectionView.swift */,
@@ -397,6 +416,28 @@
 				A53EE947297BEC170038A09D /* SendLoveViewModel.swift */,
 			);
 			path = SendLove;
+			sourceTree = "<group>";
+		};
+		A53EE949297C06400038A09D /* ThemeSelected */ = {
+			isa = PBXGroup;
+			children = (
+				A53EE956297D06320038A09D /* Views */,
+				A53EE94C297C069F0038A09D /* SelectedThemeViewController.swift */,
+				A53EE94E297C06AF0038A09D /* SelectedThemeViewController.xib */,
+				A53EE950297C1E0F0038A09D /* SelectedThemeManager.swift */,
+				A53EE952297C31B30038A09D /* SelectedThemeModel.swift */,
+				A53EE954297C45380038A09D /* SelectedThemeViewModel.swift */,
+			);
+			path = ThemeSelected;
+			sourceTree = "<group>";
+		};
+		A53EE956297D06320038A09D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A53EE95B297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift */,
+				A53EE95D297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A5A1AA2D296E319300CC727C /* SecondQuestion */ = {
@@ -436,6 +477,8 @@
 				A5A9BB19295E21650033E65A /* Media */,
 				A5A9BB302960D3E50033E65A /* GradientView.swift */,
 				A5FF7F432978065000754178 /* TabBarWithCorners.swift */,
+				A53EE957297D079F0038A09D /* AffirmationCardView.swift */,
+				A53EE959297D07AB0038A09D /* AffirmationCardView.xib */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -668,6 +711,7 @@
 				A53EE940297BEA800038A09D /* ImageCollectionView.xib in Resources */,
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
+				A53EE95A297D07AB0038A09D /* AffirmationCardView.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
 				A5FF7F31297404BD00754178 /* countries.json in Resources */,
@@ -675,8 +719,10 @@
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
 				A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */,
 				A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */,
+				A53EE95E297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
 				A5B06A79297150F400DFE95D /* lastStep.gif in Resources */,
+				A53EE94F297C06AF0038A09D /* SelectedThemeViewController.xib in Resources */,
 				A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */,
 				A5A9BB09295CE54E0033E65A /* LoginViewController.xib in Resources */,
 				A5FF7F30297404BD00754178 /* CountryListTableViewCell.xib in Resources */,
@@ -815,14 +861,18 @@
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
+				A53EE95C297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift in Sources */,
 				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
+				A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
 				A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
+				A53EE955297C45380038A09D /* SelectedThemeViewModel.swift in Sources */,
 				A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A53EE942297BEA890038A09D /* ImageCollectionView.swift in Sources */,
+				A53EE958297D079F0038A09D /* AffirmationCardView.swift in Sources */,
 				A53EE946297BEBC50038A09D /* SendLoveManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
 				A5FF7F33297411D600754178 /* TableViewExtensions.swift in Sources */,
@@ -833,6 +883,7 @@
 				A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */,
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
 				A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */,
+				A53EE951297C1E0F0038A09D /* SelectedThemeManager.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
 				A5FF7F372974134500754178 /* StringExtensions.swift in Sources */,
@@ -849,6 +900,7 @@
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,
+				A53EE94D297C069F0038A09D /* SelectedThemeViewController.swift in Sources */,
 				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
 				A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */,
 				A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */,

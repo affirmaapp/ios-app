@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AffirmationCardView" customModule="Affirma" customModuleProvider="target">
+            <connections>
+                <outlet property="affirmationCardView" destination="iN0-l3-epB" id="pG8-JH-gfn"/>
+                <outlet property="imageView" destination="Vgr-4R-tPl" id="Vm2-Tf-Ppv"/>
+                <outlet property="label" destination="U1s-c5-H08" id="U6i-MW-C76"/>
+                <outlet property="shareButton" destination="Oy4-a6-hde" id="Ogb-DM-JLR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-4R-tPl" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
+                    <rect key="frame" x="61.666666666666657" y="186" width="270" height="270"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="270" id="1nL-W7-hBv"/>
+                        <constraint firstAttribute="width" constant="270" id="d9z-dG-c4b"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1s-c5-H08">
+                    <rect key="frame" x="20" y="476" width="353" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                    <color key="textColor" name="White_E5E5E5"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy4-a6-hde">
+                    <rect key="frame" x="176.66666666666666" y="703" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="OtV-tr-pLt"/>
+                        <constraint firstAttribute="width" constant="40" id="vUy-ae-jrf"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="share"/>
+                    <connections>
+                        <action selector="shareButtonPressed:" destination="-1" eventType="touchUpInside" id="9S1-Tq-Mot"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="Black_18181C"/>
+            <constraints>
+                <constraint firstItem="Oy4-a6-hde" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="0Bt-Kk-HHh"/>
+                <constraint firstItem="U1s-c5-H08" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1K7-J3-DHf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oy4-a6-hde" secondAttribute="bottom" constant="40" id="CLs-dv-5DF"/>
+                <constraint firstItem="Vgr-4R-tPl" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-100" id="G1Q-aI-8JL"/>
+                <constraint firstItem="U1s-c5-H08" firstAttribute="top" secondItem="Vgr-4R-tPl" secondAttribute="bottom" constant="20" id="cH9-eQ-OrH"/>
+                <constraint firstItem="Vgr-4R-tPl" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gxt-Tu-nfC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U1s-c5-H08" secondAttribute="trailing" constant="20" id="iqr-wn-IlO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="46.564885496183201" y="-4.5774647887323949"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="share" width="21" height="21"/>
+        <namedColor name="Black_18181C">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White_E5E5E5">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
