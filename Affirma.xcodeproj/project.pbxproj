@@ -51,6 +51,7 @@
 		A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA32296E36CB00CC727C /* fifthStep.gif */; };
 		A5A1AA36296E93EB00CC727C /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A1AA35296E93EB00CC727C /* IntroScreenViewController.swift */; };
 		A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A1AA37296E93F400CC727C /* IntroScreenViewController.xib */; };
+		A5A4639B297E392400BAB044 /* TextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A4639A297E392400BAB044 /* TextFieldExtensions.swift */; };
 		A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */; };
 		A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */; };
 		A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5A86ED72969BE4B00B710A9 /* fourthStep.gif */; };
@@ -179,6 +180,7 @@
 		A5A1AA32296E36CB00CC727C /* fifthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fifthStep.gif; sourceTree = "<group>"; };
 		A5A1AA35296E93EB00CC727C /* IntroScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
 		A5A1AA37296E93F400CC727C /* IntroScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroScreenViewController.xib; sourceTree = "<group>"; };
+		A5A4639A297E392400BAB044 /* TextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtensions.swift; sourceTree = "<group>"; };
 		A5A86ED32969B8B700B710A9 /* FirstQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstQuestionViewController.swift; sourceTree = "<group>"; };
 		A5A86ED52969B8D100B710A9 /* FirstQuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstQuestionViewController.xib; sourceTree = "<group>"; };
 		A5A86ED72969BE4B00B710A9 /* fourthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fourthStep.gif; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		A5B06A762971507500DFE95D /* LastStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastStepViewController.xib; sourceTree = "<group>"; };
 		A5B06A78297150F300DFE95D /* lastStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lastStep.gif; sourceTree = "<group>"; };
 		A5B06A7A2971565800DFE95D /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
+		A5B0F598297F127500A69AF0 /* Affirma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Affirma.entitlements; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -313,6 +316,7 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5B0F598297F127500A69AF0 /* Affirma.entitlements */,
 				A5FF7F3E2978025A00754178 /* Home */,
 				A5FF7F382974490C00754178 /* User */,
 				A5A9BAF4295C93000033E65A /* Managers */,
@@ -369,6 +373,7 @@
 				A5A9BB25295EC96D0033E65A /* LabelExtensions.swift */,
 				A5FF7F32297411D600754178 /* TableViewExtensions.swift */,
 				A5FF7F362974134500754178 /* StringExtensions.swift */,
+				A5A4639A297E392400BAB044 /* TextFieldExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -885,6 +890,7 @@
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
 				A53EE95C297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift in Sources */,
 				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
+				A5A4639B297E392400BAB044 /* TextFieldExtensions.swift in Sources */,
 				A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
@@ -1112,14 +1118,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Affirma/Affirma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				DEVELOPMENT_TEAM = 6Z5ABRGYU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Affirma/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Affirma would like access to your photo album to save the image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gyroscope;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1128,7 +1137,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.Affirma;
+				PRODUCT_BUNDLE_IDENTIFIER = com.affirma.affirmations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1142,14 +1151,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Affirma/Affirma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9GSJWLTXP5;
+				DEVELOPMENT_TEAM = 6Z5ABRGYU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Affirma/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Affirma would like access to your photo album to save the image";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gyroscope;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1158,7 +1170,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.selfcare.Affirma;
+				PRODUCT_BUNDLE_IDENTIFIER = com.affirma.affirmations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

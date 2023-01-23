@@ -2,16 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.affirmaapp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>affirmaapp</string>
+			</array>
+		</dict>
+	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>whatsapp</string>
 	</array>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>gyroscope</string>
-	</array>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Affirma would like access to your photo album to save the image</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

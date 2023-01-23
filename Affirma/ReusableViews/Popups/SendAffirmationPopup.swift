@@ -13,7 +13,7 @@ class SendAffirmationPopup: UIView {
     @IBOutlet weak var pickFromContactButton: UIButton!
     @IBOutlet weak var bottomStackView: UIStackView!
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField!    
     
     var phoneNumber: String?
     
@@ -30,6 +30,8 @@ class SendAffirmationPopup: UIView {
                                             size: .custom(12.0)).instance,
                                  color: Colors.black_18181C.withAlpha(0.5),
                                  text: "Enter their number")
+        
+        textField.setLeftPaddingPoints(10)
         
     }
     
