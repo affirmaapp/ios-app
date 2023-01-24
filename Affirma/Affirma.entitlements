@@ -5,6 +5,10 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>applinks:com.affirmaapp</string>
+		<string>applinks:bb7sw.app.link</string>
+		<string>applinks:bb7sw-alternate.app.link</string>
+		<string>applinks:bb7sw-alternate.test-app.link</string>
+		<string>applinks:bb7sw.test-app.link</string>
 	</array>
 </dict>
 </plist>

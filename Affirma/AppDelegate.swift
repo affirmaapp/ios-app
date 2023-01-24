@@ -5,6 +5,7 @@
 //  Created by Airblack on 26/12/22.
 //
 
+import Branch
 import IQKeyboardManagerSwift
 import UIKit
 
@@ -18,6 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
+        
+        // TODO: REMOVE FOR PROD
+//        Branch.setUseTestBranchKey(true)
+          
+        
+        let branch: Branch = Branch.getInstance()
+        branch.enableLogging()
+        branch.initSession(launchOptions: launchOptions, andRegisterDeepLinkHandler: {params, error in
+         if error == nil {
+             print(params as? [String: AnyObject] ?? {})
+             if let userInfo = params as? [String: Any] {
+                 
+             }
+         print("params: %@", params as? [String: AnyObject] ?? {})
+         }
+       })
         
         return true
     }
@@ -36,6 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return Branch.getInstance().application(app, open: url, options: options)
+    }
 
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        return Branch.getInstance().continue(userActivity)
+    }
 }
 

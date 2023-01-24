@@ -5,6 +5,7 @@
 //  Created by Airblack on 26/12/22.
 //
 
+import Branch
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,6 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        // workaround for SceneDelegate continueUserActivity not getting called on cold start
+        if let userActivity = connectionOptions.userActivities.first {
+            BranchScene.shared().scene(scene, continue: userActivity)
+        } else if !connectionOptions.urlContexts.isEmpty {
+            BranchScene.shared().scene(scene, openURLContexts: connectionOptions.urlContexts)
+        }
+        
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = WelcomeScreenViewControllerFactory.produce()  // Your RootViewController in here
@@ -25,6 +33,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
     }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+           print("URL: \(url)")
+        }
+        
+        BranchScene.shared().scene(scene, openURLContexts: URLContexts)
+    }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        BranchScene.shared().scene(scene, continue: userActivity)
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

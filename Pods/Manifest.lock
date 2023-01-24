@@ -1,6 +1,7 @@
 PODS:
   - Anchorage (4.5.0)
   - AnimatedCollectionViewLayout (1.1.0)
+  - Branch (1.44.0)
   - Gifu (3.3.1)
   - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (7.4.1)
@@ -12,6 +13,7 @@ PODS:
 DEPENDENCIES:
   - Anchorage
   - AnimatedCollectionViewLayout
+  - Branch
   - Gifu
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -24,6 +26,7 @@ SPEC REPOS:
   trunk:
     - Anchorage
     - AnimatedCollectionViewLayout
+    - Branch
     - Gifu
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -35,6 +38,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Anchorage: 1961bc81c84aeed54ad7ffc697c50cd9de748ba6
   AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
+  Branch: 7ef075130253915439cec12fa99027f587a72d00
   Gifu: 416d4e38c4c2fed012f019e0a1d3ffcb58e5b842
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
@@ -43,6 +47,6 @@ SPEC CHECKSUMS:
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
   WatchLayout: f25fbd1c49726249f6f8e513616be8b2d636f06c
 
-PODFILE CHECKSUM: 693c35568d20e6aa5d79e49b844373d21c8b8e43
+PODFILE CHECKSUM: 476f6cfd045c8dbb02f8d69b775f94a101f48c73
 
 COCOAPODS: 1.11.3
