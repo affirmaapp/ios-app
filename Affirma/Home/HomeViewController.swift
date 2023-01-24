@@ -29,18 +29,20 @@ class HomeViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-
-        let appearance = UITabBarItem.appearance(whenContainedInInstancesOf: [HomeViewController.self])
-        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.white_CAD0DE.value], for: .normal)
-        appearance.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.black_1A1B1C.value], for: .selected)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
-            self.addTabbarIndicatorView(index: 0, isFirstTime: true)
+//            self.addTabbarIndicatorView(index: self.selectedIndex, isFirstTime: true)
         }
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
     }
     
@@ -64,6 +66,6 @@ class HomeViewController: UITabBarController {
 
 extension HomeViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        addTabbarIndicatorView(index: self.selectedIndex)
+//        addTabbarIndicatorView(index: self.selectedIndex)
     }
 }

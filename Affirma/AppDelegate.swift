@@ -17,11 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.white_CAD0DE.value], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.black_1A1B1C.value], for: .selected)
+        UITabBar.appearance().tintColor = Colors.black_1A1B1C.value
+        
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         
         // TODO: REMOVE FOR PROD
-//        Branch.setUseTestBranchKey(true)
+        Branch.setUseTestBranchKey(true)
           
         
         let branch: Branch = Branch.getInstance()
