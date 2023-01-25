@@ -78,4 +78,11 @@ class Utility {
         // set attributed text on a UILabel
         return attibutedString
     }
+    
+    class func getQueryStringParameter(url: String, param: String) -> String? {
+        guard let url = URLComponents(string: url) else {
+            return nil
+        }
+        return url.queryItems?.first { $0.name == param }?.value
+    }
 }

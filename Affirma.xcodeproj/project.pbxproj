@@ -84,6 +84,9 @@
 		A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A762971507500DFE95D /* LastStepViewController.xib */; };
 		A5B06A79297150F400DFE95D /* lastStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A78297150F300DFE95D /* lastStep.gif */; };
 		A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */ = {isa = PBXBuildFile; fileRef = A5B06A7A2971565800DFE95D /* sixthStep.gif */; };
+		A5B0F59B297FB59D00A69AF0 /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59A297FB59D00A69AF0 /* DeeplinkManager.swift */; };
+		A5B0F59D297FB96A00A69AF0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */; };
+		A5B0F59F2980EE7700A69AF0 /* AffirmaNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -214,6 +217,9 @@
 		A5B06A78297150F300DFE95D /* lastStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lastStep.gif; sourceTree = "<group>"; };
 		A5B06A7A2971565800DFE95D /* sixthStep.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sixthStep.gif; sourceTree = "<group>"; };
 		A5B0F598297F127500A69AF0 /* Affirma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Affirma.entitlements; sourceTree = "<group>"; };
+		A5B0F59A297FB59D00A69AF0 /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
+		A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaNotification.swift; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -514,6 +520,9 @@
 				A5A9BAF5295C93110033E65A /* ImageDownloadManager.swift */,
 				A5A9BAF7295C970E0033E65A /* VideoManager.swift */,
 				A5A9BAF9295C973E0033E65A /* AudioManager.swift */,
+				A5B0F59A297FB59D00A69AF0 /* DeeplinkManager.swift */,
+				A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */,
+				A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -573,6 +582,14 @@
 			path = LastStep;
 			sourceTree = "<group>";
 		};
+		A5B0F599297FB4E100A69AF0 /* MessagesReceived */ = {
+			isa = PBXGroup;
+			children = (
+				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
+			);
+			path = MessagesReceived;
+			sourceTree = "<group>";
+		};
 		A5FF7F232973EE4100754178 /* CountryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,11 +616,11 @@
 		A5FF7F3E2978025A00754178 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A5B0F599297FB4E100A69AF0 /* MessagesReceived */,
 				A53EE93E297BE8C30038A09D /* SendLove */,
 				A53EE939297A9AFF0038A09D /* Explore */,
 				A5FF7F3F2978029D00754178 /* HomeViewController.swift */,
 				A5FF7F452978116600754178 /* Home.storyboard */,
-				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -911,6 +928,7 @@
 				A5FF7F252973EE5400754178 /* CountryListViewController.swift in Sources */,
 				A5A9BB1C295E218C0033E65A /* GenericButtonView.swift in Sources */,
 				A5A86ED42969B8B700B710A9 /* FirstQuestionViewController.swift in Sources */,
+				A5B0F59D297FB96A00A69AF0 /* UserDefaultsManager.swift in Sources */,
 				A53EE951297C1E0F0038A09D /* SelectedThemeManager.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
@@ -930,6 +948,7 @@
 				A5A1AA31296E31FD00CC727C /* SecondQuestionViewController.swift in Sources */,
 				A5A9BAF8295C970E0033E65A /* VideoManager.swift in Sources */,
 				A5FF7F352974123300754178 /* BaseViewModel.swift in Sources */,
+				A5B0F59B297FB59D00A69AF0 /* DeeplinkManager.swift in Sources */,
 				A53EE94D297C069F0038A09D /* SelectedThemeViewController.swift in Sources */,
 				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
 				A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */,
@@ -937,6 +956,7 @@
 				A53EE934297A70FF0038A09D /* ExploreManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A5B06A752971506C00DFE95D /* LastStepViewController.swift in Sources */,
+				A5B0F59F2980EE7700A69AF0 /* AffirmaNotification.swift in Sources */,
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,
 				A5A9BB26295EC96D0033E65A /* LabelExtensions.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,

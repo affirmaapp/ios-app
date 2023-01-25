@@ -35,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          if error == nil {
              print(params as? [String: AnyObject] ?? {})
              if let userInfo = params as? [String: Any] {
-                 
+                 let deeplink = userInfo["$deeplink_path"] as? String
+                 DeeplinkManager.shared.handle(deeplink: deeplink, shouldPresent: false)
              }
          print("params: %@", params as? [String: AnyObject] ?? {})
          }

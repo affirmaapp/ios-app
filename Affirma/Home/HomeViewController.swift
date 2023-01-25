@@ -29,14 +29,12 @@ class HomeViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2){
-//            self.addTabbarIndicatorView(index: self.selectedIndex, isFirstTime: true)
-        }
         
         
     }
@@ -46,7 +44,20 @@ class HomeViewController: UITabBarController {
         
     }
     
-    ///Add tabbar item indicator uper line
+    func addObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.selectMessagesRecieved(notification:)),
+                                               name: AffirmaNotification.switchToMessagesRecieved,
+                                               object: nil)
+    }
+    
+    @objc
+    func selectMessagesRecieved(notification: Notification) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.selectedIndex = 2
+        }
+    }
+    
     func addTabbarIndicatorView(index: Int, isFirstTime: Bool = false){
         guard let tabView = tabBar.items?[index].value(forKey: "view") as? UIView else {
             return
