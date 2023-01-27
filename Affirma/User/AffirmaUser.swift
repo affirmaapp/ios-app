@@ -46,13 +46,13 @@ class AffirmaUser: NSObject, Mappable, NSCoding {
     required convenience init?(map: Map) { self.init() }
     
     func mapping(map: Map) {
-        userId <- map["_id"]
+        userId <- map["user_id"]
         metaData <- map["data"]
         phoneNumber <- map["phone"]
     }
     
     func encode(with coder: NSCoder) {
-        coder.encode(self.userId, forKey: "userId")
+        coder.encode(self.userId, forKey: "user_id")
         coder.encode(self.phoneNumber, forKey: "phone")
         coder.encode(self.metaData, forKey: "data")
     }

@@ -87,6 +87,11 @@
 		A5B0F59B297FB59D00A69AF0 /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59A297FB59D00A69AF0 /* DeeplinkManager.swift */; };
 		A5B0F59D297FB96A00A69AF0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */; };
 		A5B0F59F2980EE7700A69AF0 /* AffirmaNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */; };
+		A5B0F5A229828F4A00A69AF0 /* EmptyMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A129828F4A00A69AF0 /* EmptyMessageView.swift */; };
+		A5B0F5A42983882200A69AF0 /* EmptyMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0F5A32983882200A69AF0 /* EmptyMessageView.xib */; };
+		A5B0F5A629839EE400A69AF0 /* ReceivedMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */; };
+		A5B0F5A829839EF600A69AF0 /* ReceivedMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */; };
+		A5B0F5AA29839F0900A69AF0 /* ReceivedMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -220,6 +225,11 @@
 		A5B0F59A297FB59D00A69AF0 /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkManager.swift; sourceTree = "<group>"; };
 		A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmaNotification.swift; sourceTree = "<group>"; };
+		A5B0F5A129828F4A00A69AF0 /* EmptyMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyMessageView.swift; sourceTree = "<group>"; };
+		A5B0F5A32983882200A69AF0 /* EmptyMessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyMessageView.xib; sourceTree = "<group>"; };
+		A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesViewModel.swift; sourceTree = "<group>"; };
+		A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesModel.swift; sourceTree = "<group>"; };
+		A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesManager.swift; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -322,6 +332,7 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5B0F5A029810E6100A69AF0 /* EmptyScreen */,
 				A5B0F598297F127500A69AF0 /* Affirma.entitlements */,
 				A5FF7F3E2978025A00754178 /* Home */,
 				A5FF7F382974490C00754178 /* User */,
@@ -586,8 +597,20 @@
 			isa = PBXGroup;
 			children = (
 				A53EE931297A6E400038A09D /* ReceivedMessagesViewController.swift */,
+				A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */,
+				A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */,
+				A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */,
 			);
 			path = MessagesReceived;
+			sourceTree = "<group>";
+		};
+		A5B0F5A029810E6100A69AF0 /* EmptyScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A5B0F5A129828F4A00A69AF0 /* EmptyMessageView.swift */,
+				A5B0F5A32983882200A69AF0 /* EmptyMessageView.xib */,
+			);
+			path = EmptyScreen;
 			sourceTree = "<group>";
 		};
 		A5FF7F232973EE4100754178 /* CountryList */ = {
@@ -748,6 +771,7 @@
 				A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */,
 				A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
+				A5B0F5A42983882200A69AF0 /* EmptyMessageView.xib in Resources */,
 				A5FF7F462978116600754178 /* Home.storyboard in Resources */,
 				A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
@@ -902,15 +926,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B0F5A229828F4A00A69AF0 /* EmptyMessageView.swift in Sources */,
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
 				A53EE95C297D0CAE0038A09D /* AffirmationCardCollectionViewCell.swift in Sources */,
 				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
+				A5B0F5A829839EF600A69AF0 /* ReceivedMessagesModel.swift in Sources */,
 				A5A4639B297E392400BAB044 /* TextFieldExtensions.swift in Sources */,
 				A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
+				A5B0F5A629839EE400A69AF0 /* ReceivedMessagesViewModel.swift in Sources */,
 				A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A53EE955297C45380038A09D /* SelectedThemeViewModel.swift in Sources */,
@@ -933,6 +960,7 @@
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
 				A5FF7F372974134500754178 /* StringExtensions.swift in Sources */,
+				A5B0F5AA29839F0900A69AF0 /* ReceivedMessagesManager.swift in Sources */,
 				A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
