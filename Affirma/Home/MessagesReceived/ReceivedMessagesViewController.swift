@@ -25,6 +25,7 @@ class ReceivedMessagesViewController: BaseViewController {
             _ = try? await handleViewModelCallbacks()
         }
 
+        addObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +35,24 @@ class ReceivedMessagesViewController: BaseViewController {
                                                  Colors.black_131415.value],
                                    gradientOrientation: .topLeftBottomRight)
         
+    }
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.addMessage(notification:)),
+                                               name: AffirmaNotification.addMessage,
+                                               object: nil)
+    }
+    
+    @objc
+    func addMessage(notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any?] {
+            if let affirmationToAdd = userInfo["affirmationToAdd"] as? ReceivedMessagesBaseModel {
+                Task {
+                    _ = try? await self.viewModel?.addMessage(withModel: affirmationToAdd)
+                }
+            }
+        }
     }
     
     private func registerCells() {
@@ -49,6 +68,7 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.headerLabel.text = "Wow, it seems like your positive vibes are attracting a lot of affirmations!"
                 self.tableView.isHidden = false
                 self.emptyMessageView.isHidden = true
                 self.registerCells()

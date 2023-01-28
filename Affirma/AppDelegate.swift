@@ -36,7 +36,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              print(params as? [String: AnyObject] ?? {})
              if let userInfo = params as? [String: Any] {
                  let deeplink = userInfo["$deeplink_path"] as? String
-                 DeeplinkManager.shared.handle(deeplink: deeplink, shouldPresent: false)
+                 if let props = userInfo["$custom_meta_tags"] as? String {
+                     print("PROPS JSON: \(props.toJSON())")
+                     let data = props.data(using: .utf8)!
+                     do {
+                         if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String: Any]
+                         {
+                            print(jsonArray) // use the json here
+                             if let metaTags = jsonArray as? [String: Any] {
+                                 
+                                 let senderId = metaTags["sender_id"] as? String
+                                 let cardId = metaTags["card_id"] as? String
+                                 let affirmation = metaTags["affirmation"] as? String
+                                 let affirmationImage = metaTags["affirmation_image"] as? String
+                                 let senderName = metaTags["sender_name"] as? String
+                                 let dataModel = ReceivedMessagesDataModel(withSenderId: senderId,
+                                                                           withCardId: cardId,
+                                                                           withAffirmation: affirmation,
+                                                                           withAffirmationImage: affirmationImage,
+                                                                           withSenderName: senderName)
+                                 
+                                 let baseModel = ReceivedMessagesBaseModel(withData: [dataModel])
+                                 DeeplinkManager.shared.handle(deeplink: deeplink,
+                                                               shouldPresent: false,
+                                                               affirmationToAdd: baseModel)
+                             }
+                         } else {
+                             print("bad json")
+                         }
+                     } catch let error as NSError {
+                         print(error)
+                     }
+                 }
              }
          print("params: %@", params as? [String: AnyObject] ?? {})
          }

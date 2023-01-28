@@ -9,7 +9,7 @@ import Foundation
 
 struct AffirmaNotification {
     
-    // This notification updates the list of sessions whenever a new message is recived in any of the sessions
     static let switchToMessagesRecieved = Notification.Name("switchToMessagesRecieved")
+    static let addMessage = Notification.Name("addMessage")
     
 }

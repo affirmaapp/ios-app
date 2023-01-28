@@ -23,7 +23,8 @@ class DeeplinkManager: NSObject {
     func handle(deeplink: String?,
                 shouldPresent: Bool?,
                 withDeeplinkType deeplinkType: DeeplinkType? = nil,
-                deeplinkSource: String? = nil) {
+                deeplinkSource: String? = nil,
+                affirmationToAdd: ReceivedMessagesBaseModel? = nil) {
         var type: DeeplinkType?
         var viewController: UIViewController?
         
@@ -38,9 +39,15 @@ class DeeplinkManager: NSObject {
             case .messagesReceived(shouldAddToList: let shouldAddToList):
                 var userInfo: [String: Any] = [:]
                 userInfo["shouldAddToList"] = shouldAddToList
+                userInfo["affirmationToAdd"] = affirmationToAdd
                 NotificationCenter.default.post(name: AffirmaNotification.switchToMessagesRecieved,
                                                 object: nil,
                                                 userInfo: userInfo)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    NotificationCenter.default.post(name: AffirmaNotification.addMessage,
+                                                    object: nil,
+                                                    userInfo: userInfo)
+                }
             }
         }
     }

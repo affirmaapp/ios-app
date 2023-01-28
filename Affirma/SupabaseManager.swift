@@ -148,7 +148,6 @@ extension SupabaseManager {
                 let query = client?.database.from("user_metadata").insert(values: try JSONEncoder().encode(data))
                 Task {
                     let _ = try? await query?.execute()
-                    
                 }
             }
             completion(true)
@@ -157,6 +156,7 @@ extension SupabaseManager {
         }
     }
     
+
     func setUserName(name: String,
                      completion: @escaping ((Bool) -> Void)) async {
         do {
