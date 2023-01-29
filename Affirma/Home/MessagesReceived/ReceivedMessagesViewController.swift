@@ -26,6 +26,11 @@ class ReceivedMessagesViewController: BaseViewController {
         }
 
         addObservers()
+        self.registerCells()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        self.tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 100, right: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,9 +61,9 @@ class ReceivedMessagesViewController: BaseViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: "SelfAffirmationTableViewCell",
+        tableView.register(UINib(nibName: "AffirmationMessageTableViewCell",
                                  bundle: nil),
-                           forCellReuseIdentifier: "SelfAffirmationTableViewCell")
+                           forCellReuseIdentifier: "AffirmationMessageTableViewCell")
     }
     
     func handleViewModelCallbacks() async {
@@ -71,7 +76,6 @@ class ReceivedMessagesViewController: BaseViewController {
                 self.headerLabel.text = "Wow, it seems like your positive vibes are attracting a lot of affirmations!"
                 self.tableView.isHidden = false
                 self.emptyMessageView.isHidden = true
-                self.registerCells()
                 self.tableView.reloadData()
             }
         }
@@ -85,4 +89,26 @@ class ReceivedMessagesViewController: BaseViewController {
         }
         
     }
+}
+
+extension ReceivedMessagesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel?.data?.messages?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: AffirmationMessageTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
+        if let list = viewModel?.data?.messages, list.count > indexPath.row {
+            cell.render(withModel: list[indexPath.row])
+        }
+        cell.selectionStyle = .none
+        return cell
+        
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.height * 0.65
+    }
+    
 }

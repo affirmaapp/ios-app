@@ -92,6 +92,8 @@
 		A5B0F5A629839EE400A69AF0 /* ReceivedMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */; };
 		A5B0F5A829839EF600A69AF0 /* ReceivedMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */; };
 		A5B0F5AA29839F0900A69AF0 /* ReceivedMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */; };
+		A5B0F5AC29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5AB29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift */; };
+		A5B0F5AE29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -230,6 +232,8 @@
 		A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesViewModel.swift; sourceTree = "<group>"; };
 		A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesModel.swift; sourceTree = "<group>"; };
 		A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessagesManager.swift; sourceTree = "<group>"; };
+		A5B0F5AB29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationMessageTableViewCell.swift; sourceTree = "<group>"; };
+		A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffirmationMessageTableViewCell.xib; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -600,6 +604,8 @@
 				A5B0F5A529839EE400A69AF0 /* ReceivedMessagesViewModel.swift */,
 				A5B0F5A729839EF600A69AF0 /* ReceivedMessagesModel.swift */,
 				A5B0F5A929839F0900A69AF0 /* ReceivedMessagesManager.swift */,
+				A5B0F5AB29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift */,
+				A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */,
 			);
 			path = MessagesReceived;
 			sourceTree = "<group>";
@@ -773,6 +779,7 @@
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
 				A5B0F5A42983882200A69AF0 /* EmptyMessageView.xib in Resources */,
 				A5FF7F462978116600754178 /* Home.storyboard in Resources */,
+				A5B0F5AE29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib in Resources */,
 				A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */,
 				A50D570D295A04EE00034A19 /* affirmaIcon.png in Resources */,
 				A53EE940297BEA800038A09D /* ImageCollectionView.xib in Resources */,
@@ -986,6 +993,7 @@
 				A5B06A752971506C00DFE95D /* LastStepViewController.swift in Sources */,
 				A5B0F59F2980EE7700A69AF0 /* AffirmaNotification.swift in Sources */,
 				A5A9BB22295E24510033E65A /* Font.swift in Sources */,
+				A5B0F5AC29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift in Sources */,
 				A5A9BB26295EC96D0033E65A /* LabelExtensions.swift in Sources */,
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
 				A5FF7F3A2974491B00754178 /* AffirmaUser.swift in Sources */,

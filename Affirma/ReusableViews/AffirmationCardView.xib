@@ -14,6 +14,7 @@
                 <outlet property="affirmationCardView" destination="iN0-l3-epB" id="pG8-JH-gfn"/>
                 <outlet property="imageView" destination="Vgr-4R-tPl" id="Vm2-Tf-Ppv"/>
                 <outlet property="label" destination="U1s-c5-H08" id="U6i-MW-C76"/>
+                <outlet property="sentStackView" destination="lCL-Rx-biS" id="kgg-37-PzZ"/>
                 <outlet property="shareButton" destination="Oy4-a6-hde" id="Ogb-DM-JLR"/>
             </connections>
         </placeholder>
@@ -48,6 +49,24 @@
                         <action selector="shareButtonPressed:" destination="-1" eventType="touchUpInside" id="9S1-Tq-Mot"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lCL-Rx-biS">
+                    <rect key="frame" x="20" y="732.33333333333337" width="353" height="30.666666666666629"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exploreSelected" translatesAutoresizingMaskIntoConstraints="NO" id="joy-DC-zeQ">
+                            <rect key="frame" x="170.66666666666666" y="0.0" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="bWF-sQ-pQV"/>
+                                <constraint firstAttribute="height" constant="12" id="ywq-f9-Lhv"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This was sent with love to you!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsg-dh-jG8">
+                            <rect key="frame" x="95.666666666666686" y="14.000000000000002" width="162" height="16.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                            <color key="textColor" name="White_E5E5E5"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="Black_18181C"/>
@@ -56,6 +75,9 @@
                 <constraint firstItem="U1s-c5-H08" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1K7-J3-DHf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oy4-a6-hde" secondAttribute="bottom" constant="40" id="CLs-dv-5DF"/>
                 <constraint firstItem="Vgr-4R-tPl" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-100" id="G1Q-aI-8JL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCL-Rx-biS" secondAttribute="trailing" constant="20" id="Q9J-Uw-9de"/>
+                <constraint firstAttribute="bottom" secondItem="lCL-Rx-biS" secondAttribute="bottom" constant="20" id="QEI-LH-Uc7"/>
+                <constraint firstItem="lCL-Rx-biS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aY4-c4-AK4"/>
                 <constraint firstItem="U1s-c5-H08" firstAttribute="top" secondItem="Vgr-4R-tPl" secondAttribute="bottom" constant="20" id="cH9-eQ-OrH"/>
                 <constraint firstItem="Vgr-4R-tPl" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gxt-Tu-nfC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U1s-c5-H08" secondAttribute="trailing" constant="20" id="iqr-wn-IlO"/>
@@ -70,6 +92,7 @@
         </view>
     </objects>
     <resources>
+        <image name="exploreSelected" width="17" height="13"/>
         <image name="share" width="21" height="21"/>
         <namedColor name="Black_18181C">
             <color red="0.093999996781349182" green="0.093999996781349182" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

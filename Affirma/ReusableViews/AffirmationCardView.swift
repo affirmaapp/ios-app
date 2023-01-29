@@ -14,9 +14,11 @@ class AffirmationCardView: UIView {
     @IBOutlet weak var imageView: GenericMediaView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var sentStackView: UIStackView!
     
     var sharePressed: ((SelectedThemeModel?) -> Void)?
     var model: SelectedThemeModel?
+    var messageModel: ReceivedMessagesDataModel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,6 +44,22 @@ class AffirmationCardView: UIView {
         self.model = model
         imageView.render(withImage: model.affirmation_image,
                          withVideo: nil, withGif: nil)
+        shareButton.isHidden = false
+        sentStackView.isHidden = true
+        
+        label.text = model.affirmation
+    }
+    
+    func render(withModel model: ReceivedMessagesDataModel?) {
+        guard let model = model else {
+            return
+        }
+        
+        self.messageModel = model
+        imageView.render(withImage: model.affirmation_image,
+                         withVideo: nil, withGif: nil)
+        shareButton.isHidden = true
+        sentStackView.isHidden = false
         
         label.text = model.affirmation
     }
