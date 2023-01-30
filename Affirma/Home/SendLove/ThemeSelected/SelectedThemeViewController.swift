@@ -25,6 +25,8 @@ class SelectedThemeViewController: BaseViewController {
     @IBOutlet weak var themeImageView: GenericMediaView!
     @IBOutlet weak var themeText: UILabel!
     @IBOutlet var gradientView: UIView!
+    @IBOutlet weak var anotherOptionButton: UIButton!
+    
     
     var viewModel: SelectedThemeViewModel?
     var themeData: ThemeData?
@@ -119,6 +121,10 @@ class SelectedThemeViewController: BaseViewController {
     
     @IBAction func pickAnotherPressed(_ sender: Any) {
         viewModel?.addToGeneratedCards()
+        
+        anotherOptionButton
+        .setTitle("Give me another option (\(viewModel?.generatedCards.count ?? 1)/3)",
+                      for: .normal)
     }
     
     private func setUI() {

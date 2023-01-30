@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectedThemeViewController" customModule="Affirma" customModuleProvider="target">
             <connections>
+                <outlet property="anotherOptionButton" destination="p6b-WY-pGu" id="SYE-As-eVW"/>
                 <outlet property="collectionView" destination="ojK-1S-EfI" id="C53-JI-uay"/>
                 <outlet property="gradientView" destination="iN0-l3-epB" id="btm-7C-DTL"/>
                 <outlet property="themeImageView" destination="qwV-g4-4qg" id="c89-tS-h2v"/>
