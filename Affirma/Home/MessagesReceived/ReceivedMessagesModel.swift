@@ -31,6 +31,7 @@ class ReceivedMessagesDataModel: NSObject, Mappable, Codable {
     var affirmation: String?
     var affirmation_image: String?
     var sender_name: String?
+    var message_id: String?
     
     override init() {}
     required convenience init?(map: Map) { self.init() }
@@ -41,18 +42,21 @@ class ReceivedMessagesDataModel: NSObject, Mappable, Codable {
         affirmation <- map["affirmation"]
         affirmation_image <- map["affirmation_image"]
         sender_name <- map["sender_name"]
+        message_id <- map["message_id"]
     }
     
     init(withSenderId senderId: String?,
          withCardId cardId: String?,
          withAffirmation affirmation: String?,
          withAffirmationImage affirmationImage: String?,
-         withSenderName senderName: String?) {
+         withSenderName senderName: String?,
+         withMessageId messageId: String?) {
         self.sender_id = senderId
         self.card_id = cardId
         self.affirmation = affirmation
         self.affirmation_image = affirmationImage
         self.sender_name = senderName
+        self.message_id = messageId
     }
 }
 

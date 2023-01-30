@@ -87,8 +87,23 @@ class ReceivedMessagesManager: NSObject {
                             
                         } else {
                             var existingMessages = myStruct[0]
-                            if let count =  existingMessages.messages?.count, count > 0 {
-                                existingMessages.messages?.append(contentsOf: model?.messages ?? [])
+                            if let count = existingMessages.messages?.count, count > 0 {
+                                if let messages = model?.messages,
+                                   var existingMessagesList = existingMessages.messages {
+                                    for message in messages {
+                                        for existingMessage in existingMessagesList {
+                                            if existingMessage.message_id == message.message_id {
+                                                addcompletion(true)
+                                                return
+                                            }
+                                        }
+                                        
+                                        existingMessages.messages?.append(message)
+
+                                    }
+                                    
+                                }
+                                    
                             } else {
                                 existingMessages.messages = model?.messages ?? []
                             }

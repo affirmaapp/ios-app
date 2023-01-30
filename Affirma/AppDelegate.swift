@@ -50,11 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                  let affirmation = metaTags["affirmation"] as? String
                                  let affirmationImage = metaTags["affirmation_image"] as? String
                                  let senderName = metaTags["sender_name"] as? String
+                                 let message_id = metaTags["message_id"] as? String
                                  let dataModel = ReceivedMessagesDataModel(withSenderId: senderId,
                                                                            withCardId: cardId,
                                                                            withAffirmation: affirmation,
                                                                            withAffirmationImage: affirmationImage,
-                                                                           withSenderName: senderName)
+                                                                           withSenderName: senderName,
+                                                                           withMessageId: message_id)
                                  
                                  let baseModel = ReceivedMessagesBaseModel(withData: [dataModel])
                                  DeeplinkManager.shared.handle(deeplink: deeplink,

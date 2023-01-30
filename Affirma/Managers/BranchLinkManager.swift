@@ -28,10 +28,11 @@ class BranchLinkManager: NSObject {
         
         var metaTags: [String: String] = [:]
         var modelToShare = ReceivedMessagesDataModel(withSenderId: AffirmaStateManager.shared.activeUser?.userId?.uuidString,
-                                              withCardId: String(model.id ?? 1),
-                                              withAffirmation: model.affirmation,
-                                              withAffirmationImage: model.affirmation_image,
-                                              withSenderName: AffirmaStateManager.shared.activeUser?.metaData?.name)
+                                                     withCardId: String(model.id ?? 1),
+                                                     withAffirmation: model.affirmation,
+                                                     withAffirmationImage: model.affirmation_image,
+                                                     withSenderName: AffirmaStateManager.shared.activeUser?.metaData?.name,
+                                                     withMessageId: String(NSDate().timeIntervalSince1970))
         
         let linkProperties = BranchLinkProperties()
         linkProperties.addControlParam("$custom_meta_tags", withValue: modelToShare.toJSONString())

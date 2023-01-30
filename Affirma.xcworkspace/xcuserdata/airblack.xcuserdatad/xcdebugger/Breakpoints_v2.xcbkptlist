@@ -132,7 +132,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb65a"
+                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb618"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -142,12 +142,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "304">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "68">
                </Location>
                <Location
-                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb65a"
+                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb618"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -157,9 +157,9 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "340">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -382,6 +382,69 @@
                   startingLineNumber = "80"
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "352">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3725876F-8307-4A38-B07C-647F447EA43A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Home/MessagesReceived/ReceivedMessagesManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "addMessage(withModel:addcompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3725876F-8307-4A38-B07C-647F447EA43A - 55607153e419da76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Affirma.ReceivedMessagesManager.addMessage(withModel: Swift.Optional&lt;Affirma.ReceivedMessagesBaseModel&gt;, addcompletion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "1400">
+               </Location>
+               <Location
+                  uuid = "3725876F-8307-4A38-B07C-647F447EA43A - 129de9ca1a40de78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Affirma.ReceivedMessagesManager.addMessage(withModel: Swift.Optional&lt;Affirma.ReceivedMessagesBaseModel&gt;, addcompletion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "1308">
+               </Location>
+               <Location
+                  uuid = "3725876F-8307-4A38-B07C-647F447EA43A - 4ad112319d7edf33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(10) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in Affirma.ReceivedMessagesManager.addMessage(withModel: Swift.Optional&lt;Affirma.ReceivedMessagesBaseModel&gt;, addcompletion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "1204">
                </Location>
             </Locations>
          </BreakpointContent>
