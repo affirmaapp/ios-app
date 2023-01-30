@@ -29,6 +29,7 @@ class SelectedThemeViewController: BaseViewController {
     var viewModel: SelectedThemeViewModel?
     var themeData: ThemeData?
     let contactPicker = CNContactPickerViewController()
+    var modelToShare: SelectedThemeModel?
     
     private var choicePopup: ChoicesOverPopup = Bundle.main
         .loadNibNamed("ChoicesOverPopup",
@@ -70,8 +71,10 @@ class SelectedThemeViewController: BaseViewController {
         
         sendAffirmationPopup.sendPressed = { number in
             if let number = number {
-                if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=Hi,+I+need+help+with+my+delivery") {
-                    UIApplication.shared.open(supportUrl)
+                BranchLinkManager.shared.createLink(forModel: self.modelToShare) { link in
+                    if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {
+                        UIApplication.shared.open(supportUrl)
+                    }
                 }
             }
         }
@@ -163,6 +166,7 @@ extension SelectedThemeViewController: UICollectionViewDelegate,
             let card = cards[indexPath.item]
             
             cell.sharePressed = { model in
+                self.modelToShare = model
                 self.addSendAffirmationPopup()
             }
             cell.render(withModel: card)
