@@ -11,6 +11,9 @@ import Foundation
 class AffirmaStateManager: NSObject {
     @objc static let shared = AffirmaStateManager()
     
+    var deeplinkToExecute: String?
+    var messageToAdd: ReceivedMessagesBaseModel?
+    
     var activeUser: AffirmaUser? {
         didSet {
             saveActiveUser()

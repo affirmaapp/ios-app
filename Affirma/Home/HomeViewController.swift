@@ -36,6 +36,7 @@ class HomeViewController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        handleDeeplink()
         
     }
     
@@ -49,6 +50,18 @@ class HomeViewController: UITabBarController {
                                                selector: #selector(self.selectMessagesRecieved(notification:)),
                                                name: AffirmaNotification.switchToMessagesRecieved,
                                                object: nil)
+    }
+    
+    private func handleDeeplink() {
+        if AffirmaStateManager.shared.deeplinkToExecute != nil {
+            DeeplinkManager.shared.handle(deeplink: AffirmaStateManager.shared.deeplinkToExecute,
+                                          shouldPresent: false,
+                                          affirmationToAdd: AffirmaStateManager.shared.messageToAdd)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                AffirmaStateManager.shared.deeplinkToExecute = nil
+                AffirmaStateManager.shared.messageToAdd = nil
+            }
+        }
     }
     
     @objc

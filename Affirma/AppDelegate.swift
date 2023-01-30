@@ -59,9 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                            withMessageId: message_id)
                                  
                                  let baseModel = ReceivedMessagesBaseModel(withData: [dataModel])
-                                 DeeplinkManager.shared.handle(deeplink: deeplink,
-                                                               shouldPresent: false,
-                                                               affirmationToAdd: baseModel)
+                                 AffirmaStateManager.shared.deeplinkToExecute = deeplink
+                                 AffirmaStateManager.shared.messageToAdd = baseModel
                              }
                          } else {
                              print("bad json")
