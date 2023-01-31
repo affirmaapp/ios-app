@@ -96,6 +96,10 @@
 		A5B0F5AE29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */; };
 		A5B0F5B0298688E300A69AF0 /* BranchLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */; };
 		A5B0F5B22987B31300A69AF0 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */; };
+		A5B9AA5A2988F84900FBC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */; };
+		A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */; };
+		A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */; };
+		A5B9AA612988FDA800FBC1A5 /* ProfileItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -238,6 +242,10 @@
 		A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffirmationMessageTableViewCell.xib; sourceTree = "<group>"; };
 		A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchLinkManager.swift; sourceTree = "<group>"; };
 		A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemTableViewCell.xib; sourceTree = "<group>"; };
+		A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemTableViewCell.swift; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -340,6 +348,7 @@
 		A50D56DB295A044B00034A19 /* Affirma */ = {
 			isa = PBXGroup;
 			children = (
+				A5B9AA582988F72700FBC1A5 /* Profile */,
 				A5B0F5A029810E6100A69AF0 /* EmptyScreen */,
 				A5B0F598297F127500A69AF0 /* Affirma.entitlements */,
 				A5FF7F3E2978025A00754178 /* Home */,
@@ -625,6 +634,25 @@
 			path = EmptyScreen;
 			sourceTree = "<group>";
 		};
+		A5B9AA582988F72700FBC1A5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AA5D2988FD5D00FBC1A5 /* TableViewCells */,
+				A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */,
+				A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A5B9AA5D2988FD5D00FBC1A5 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */,
+				A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		A5FF7F232973EE4100754178 /* CountryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,6 +821,7 @@
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5C23A84297D78630022601C /* SendAffirmationPopup.xib in Resources */,
 				A53EE95A297D07AB0038A09D /* AffirmationCardView.xib in Resources */,
+				A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
 				A5A86ED82969BE4B00B710A9 /* fourthStep.gif in Resources */,
 				A5FF7F31297404BD00754178 /* countries.json in Resources */,
@@ -800,6 +829,7 @@
 				A5A9BAF3295C90DB0033E65A /* GenericGifView.xib in Resources */,
 				A5A86ED62969B8D100B710A9 /* FirstQuestionViewController.xib in Resources */,
 				A5A1A8D32967DADE00F23482 /* thirdStep.gif in Resources */,
+				A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */,
 				A53EE95E297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
 				A5B06A79297150F400DFE95D /* lastStep.gif in Resources */,
@@ -954,6 +984,7 @@
 				A53EE930297A6E180038A09D /* SendLoveViewController.swift in Sources */,
 				A5A9BB0B295CE5560033E65A /* LoginViewController.swift in Sources */,
 				A53EE955297C45380038A09D /* SelectedThemeViewModel.swift in Sources */,
+				A5B9AA5A2988F84900FBC1A5 /* ProfileViewController.swift in Sources */,
 				A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A53EE942297BEA890038A09D /* ImageCollectionView.swift in Sources */,
@@ -996,6 +1027,7 @@
 				A5FF7F2D297404BD00754178 /* CountryModel.swift in Sources */,
 				A53EE944297BEB490038A09D /* SendLoveModel.swift in Sources */,
 				A5FF7F2F297404BD00754178 /* CountryListTableViewCell.swift in Sources */,
+				A5B9AA612988FDA800FBC1A5 /* ProfileItemTableViewCell.swift in Sources */,
 				A53EE934297A70FF0038A09D /* ExploreManager.swift in Sources */,
 				A50D5716295A0CF400034A19 /* WelcomeScreenViewController.swift in Sources */,
 				A5B06A752971506C00DFE95D /* LastStepViewController.swift in Sources */,

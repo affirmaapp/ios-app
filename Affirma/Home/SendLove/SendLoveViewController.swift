@@ -16,17 +16,7 @@ class SendLoveViewController: BaseViewController {
     var viewModel: SendLoveViewModel?
     
 //    @IBAction func logoutClicked(_ sender: Any) {
-//        Task {
-//            _ = try? await SupabaseManager.shared.logout()
-//            
-//            DispatchQueue.main.async {
-//                let loginVC = LoginViewControllerFactory.produce()
-//                let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-//                let nav = UINavigationController(rootViewController: loginVC)
-//                nav.isNavigationBarHidden = true
-//                appDelegate.window?.rootViewController = nav
-//            }
-//        }
+
 //    }
     
     let layout = WatchLayout()

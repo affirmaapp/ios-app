@@ -140,6 +140,10 @@ class ExploreViewController: BaseViewController {
         watermarkImage.alpha = 0
     }
     
+    @IBAction func profileTapped(_ sender: Any) {
+        let profileVC = ProfileViewControllerFactory.produce()
+        self.navigationController?.pushViewController(profileVC, animated: true)
+    }
 }
 
 
