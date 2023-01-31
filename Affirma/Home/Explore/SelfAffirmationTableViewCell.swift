@@ -40,6 +40,20 @@ class SelfAffirmationTableViewCell: UITableViewCell {
         }
     }
     
+    func render(withText text: String?,
+                withImage image: String?) {
+        
+        if let text = text {
+            self.label.text = text
+        }
+        
+        if let image = image {
+            mediaView.render(withImage: image,
+                             withVideo: nil,
+                             withGif: nil)
+        }
+    }
+    
     func prepareForScreenshot() {
         self.downloadButton.isHidden = true
         self.likeButton.isHidden = true

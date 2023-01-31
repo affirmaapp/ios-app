@@ -31,6 +31,8 @@ class HomeViewController: UITabBarController {
         self.delegate = self
         
         addObservers()
+        
+        NotificationManager.shared.fetchNotificationData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +40,8 @@ class HomeViewController: UITabBarController {
         
         handleDeeplink()
         
+        NotificationManager.shared.requestNotificationAuthorization()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -28,6 +28,8 @@ class ExploreViewController: BaseViewController {
         Task {
             _ = try? await handleViewModelCallbacks()
         }
+        
+        addObservers()
 
     }
     
@@ -53,6 +55,20 @@ class ExploreViewController: BaseViewController {
         
         
         self.tableView.reloadData()
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.reloadExplore(notification:)),
+                                               name: AffirmaNotification.reloadExplore,
+                                               object: nil)
+    }
+    
+    @objc
+    func reloadExplore(notification: Notification) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     private func registerCells() {
@@ -134,8 +150,15 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SelfAffirmationTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
-        cell.render(withText: viewModel?.chooseAffirmationText(),
-                    withImage: viewModel?.chooseAffirmationImage())
+        if NotificationManager.shared.affirmationText != nil {
+            cell.render(withText: NotificationManager.shared.affirmationText,
+                        withImage: NotificationManager.shared.affirmationImage)
+            
+            NotificationManager.shared.resetNotificationData()
+        } else {
+            cell.render(withText: viewModel?.chooseAffirmationText(),
+                        withImage: viewModel?.chooseAffirmationImage())
+        }
         cell.selectionStyle = .none
         cell.takeScreenshot = {
             self.prepareForScreenshot()

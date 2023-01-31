@@ -95,6 +95,7 @@
 		A5B0F5AC29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5AB29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift */; };
 		A5B0F5AE29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */; };
 		A5B0F5B0298688E300A69AF0 /* BranchLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */; };
+		A5B0F5B22987B31300A69AF0 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -236,6 +237,7 @@
 		A5B0F5AB29850DBA00A69AF0 /* AffirmationMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationMessageTableViewCell.swift; sourceTree = "<group>"; };
 		A5B0F5AD29850DC400A69AF0 /* AffirmationMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AffirmationMessageTableViewCell.xib; sourceTree = "<group>"; };
 		A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchLinkManager.swift; sourceTree = "<group>"; };
+		A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 				A5B0F59C297FB96A00A69AF0 /* UserDefaultsManager.swift */,
 				A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */,
 				A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */,
+				A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -954,6 +957,7 @@
 				A53EE938297A97600038A09D /* ExploreViewModel.swift in Sources */,
 				A5FF7F3C29744DD500754178 /* AffirmaStateManager.swift in Sources */,
 				A53EE942297BEA890038A09D /* ImageCollectionView.swift in Sources */,
+				A5B0F5B22987B31300A69AF0 /* NotificationManager.swift in Sources */,
 				A53EE958297D079F0038A09D /* AffirmationCardView.swift in Sources */,
 				A53EE946297BEBC50038A09D /* SendLoveManager.swift in Sources */,
 				A5A9BAF6295C93110033E65A /* ImageDownloadManager.swift in Sources */,
