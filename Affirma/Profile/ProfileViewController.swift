@@ -132,6 +132,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             switch row {
             case .meaning:
                 print("")
+                let meaningVC = MeaningViewControllerFactory.produce()
+                self.navigationController?.pushViewController(meaningVC, animated: true)
             case .settings:
                 print("")
             case .shareApp:

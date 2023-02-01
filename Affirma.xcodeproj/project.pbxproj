@@ -100,6 +100,13 @@
 		A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */; };
 		A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */; };
 		A5B9AA612988FDA800FBC1A5 /* ProfileItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */; };
+		A5B9AA6E2989487E00FBC1A5 /* MeaningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA6D2989487E00FBC1A5 /* MeaningViewController.xib */; };
+		A5B9AA702989488800FBC1A5 /* MeaningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA6F2989488800FBC1A5 /* MeaningViewController.swift */; };
+		A5B9AA722989489C00FBC1A5 /* MeaningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA712989489C00FBC1A5 /* MeaningViewModel.swift */; };
+		A5B9AA74298948AD00FBC1A5 /* MeaningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA73298948AD00FBC1A5 /* MeaningManager.swift */; };
+		A5B9AA76298948BB00FBC1A5 /* MeaningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA75298948BB00FBC1A5 /* MeaningModel.swift */; };
+		A5B9AA7929894B7100FBC1A5 /* MeaningCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */; };
+		A5B9AA7B29894B9400FBC1A5 /* MeaningCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -246,6 +253,13 @@
 		A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemTableViewCell.xib; sourceTree = "<group>"; };
 		A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemTableViewCell.swift; sourceTree = "<group>"; };
+		A5B9AA6D2989487E00FBC1A5 /* MeaningViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeaningViewController.xib; sourceTree = "<group>"; };
+		A5B9AA6F2989488800FBC1A5 /* MeaningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewController.swift; sourceTree = "<group>"; };
+		A5B9AA712989489C00FBC1A5 /* MeaningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningViewModel.swift; sourceTree = "<group>"; };
+		A5B9AA73298948AD00FBC1A5 /* MeaningManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningManager.swift; sourceTree = "<group>"; };
+		A5B9AA75298948BB00FBC1A5 /* MeaningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningModel.swift; sourceTree = "<group>"; };
+		A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeaningCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -637,6 +651,7 @@
 		A5B9AA582988F72700FBC1A5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A5B9AA6C2989480B00FBC1A5 /* Meaning */,
 				A5B9AA5D2988FD5D00FBC1A5 /* TableViewCells */,
 				A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */,
 				A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */,
@@ -651,6 +666,28 @@
 				A5B9AA602988FDA800FBC1A5 /* ProfileItemTableViewCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		A5B9AA6C2989480B00FBC1A5 /* Meaning */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AA7729894B4A00FBC1A5 /* CollectionViewCells */,
+				A5B9AA6D2989487E00FBC1A5 /* MeaningViewController.xib */,
+				A5B9AA6F2989488800FBC1A5 /* MeaningViewController.swift */,
+				A5B9AA712989489C00FBC1A5 /* MeaningViewModel.swift */,
+				A5B9AA73298948AD00FBC1A5 /* MeaningManager.swift */,
+				A5B9AA75298948BB00FBC1A5 /* MeaningModel.swift */,
+			);
+			path = Meaning;
+			sourceTree = "<group>";
+		};
+		A5B9AA7729894B4A00FBC1A5 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */,
+				A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		A5FF7F232973EE4100754178 /* CountryList */ = {
@@ -803,11 +840,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B9AA6E2989487E00FBC1A5 /* MeaningViewController.xib in Resources */,
 				A53EE93D297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib in Resources */,
 				A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */,
 				A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */,
 				A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */,
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,
+				A5B9AA7B29894B9400FBC1A5 /* MeaningCollectionViewCell.xib in Resources */,
 				A5A1AA33296E36CB00CC727C /* fifthStep.gif in Resources */,
 				A5FF7F272973EE6600754178 /* CountryListViewController.xib in Resources */,
 				A50D56E9295A044D00034A19 /* LaunchScreen.storyboard in Resources */,
@@ -970,6 +1009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B0F5A229828F4A00A69AF0 /* EmptyMessageView.swift in Sources */,
+				A5B9AA76298948BB00FBC1A5 /* MeaningModel.swift in Sources */,
 				A5A9BAF1295C90CC0033E65A /* GenericGifView.swift in Sources */,
 				A5A9BAEF295C8FEF0033E65A /* GenericVideoView.swift in Sources */,
 				A5A9BB312960D3E50033E65A /* GradientView.swift in Sources */,
@@ -977,6 +1017,7 @@
 				A5FF7F402978029F00754178 /* HomeViewController.swift in Sources */,
 				A5B0F5A829839EF600A69AF0 /* ReceivedMessagesModel.swift in Sources */,
 				A5A4639B297E392400BAB044 /* TextFieldExtensions.swift in Sources */,
+				A5B9AA702989488800FBC1A5 /* MeaningViewController.swift in Sources */,
 				A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,
@@ -1004,6 +1045,7 @@
 				A53EE951297C1E0F0038A09D /* SelectedThemeManager.swift in Sources */,
 				A50D5713295A078E00034A19 /* Colors.swift in Sources */,
 				A5FEE66029730AF300EA4D9D /* SupabaseManager.swift in Sources */,
+				A5B9AA722989489C00FBC1A5 /* MeaningViewModel.swift in Sources */,
 				A5FF7F372974134500754178 /* StringExtensions.swift in Sources */,
 				A5B0F5AA29839F0900A69AF0 /* ReceivedMessagesManager.swift in Sources */,
 				A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */,
@@ -1038,7 +1080,9 @@
 				A50D56DF295A044B00034A19 /* SceneDelegate.swift in Sources */,
 				A5FF7F3A2974491B00754178 /* AffirmaUser.swift in Sources */,
 				A5A9BB20295E23EB0033E65A /* ButtonConfig.swift in Sources */,
+				A5B9AA7929894B7100FBC1A5 /* MeaningCollectionViewCell.swift in Sources */,
 				A50D571B295A0D3400034A19 /* BaseViewController.swift in Sources */,
+				A5B9AA74298948AD00FBC1A5 /* MeaningManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
