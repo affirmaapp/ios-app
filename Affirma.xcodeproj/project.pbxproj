@@ -107,6 +107,8 @@
 		A5B9AA76298948BB00FBC1A5 /* MeaningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA75298948BB00FBC1A5 /* MeaningModel.swift */; };
 		A5B9AA7929894B7100FBC1A5 /* MeaningCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */; };
 		A5B9AA7B29894B9400FBC1A5 /* MeaningCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */; };
+		A5B9AA7E298A2C9400FBC1A5 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA7D298A2C9400FBC1A5 /* SettingsViewController.xib */; };
+		A5B9AA80298A2C9C00FBC1A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA7F298A2C9C00FBC1A5 /* SettingsViewController.swift */; };
 		A5C23A7E297D65070022601C /* ChoicesOverPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */; };
 		A5C23A80297D65110022601C /* ChoicesOverPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */; };
 		A5C23A82297D784A0022601C /* SendAffirmationPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */; };
@@ -260,6 +262,8 @@
 		A5B9AA75298948BB00FBC1A5 /* MeaningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningModel.swift; sourceTree = "<group>"; };
 		A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningCollectionViewCell.swift; sourceTree = "<group>"; };
 		A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeaningCollectionViewCell.xib; sourceTree = "<group>"; };
+		A5B9AA7D298A2C9400FBC1A5 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		A5B9AA7F298A2C9C00FBC1A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A5C23A7D297D65070022601C /* ChoicesOverPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoicesOverPopup.xib; sourceTree = "<group>"; };
 		A5C23A7F297D65110022601C /* ChoicesOverPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoicesOverPopup.swift; sourceTree = "<group>"; };
 		A5C23A81297D784A0022601C /* SendAffirmationPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAffirmationPopup.swift; sourceTree = "<group>"; };
@@ -651,6 +655,7 @@
 		A5B9AA582988F72700FBC1A5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A5B9AA7C298A2C5600FBC1A5 /* Settings */,
 				A5B9AA6C2989480B00FBC1A5 /* Meaning */,
 				A5B9AA5D2988FD5D00FBC1A5 /* TableViewCells */,
 				A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */,
@@ -688,6 +693,15 @@
 				A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		A5B9AA7C298A2C5600FBC1A5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9AA7D298A2C9400FBC1A5 /* SettingsViewController.xib */,
+				A5B9AA7F298A2C9C00FBC1A5 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A5FF7F232973EE4100754178 /* CountryList */ = {
@@ -859,6 +873,7 @@
 				A5B06A7B2971565800DFE95D /* sixthStep.gif in Resources */,
 				A5A9BB1E295E21990033E65A /* GenericButtonView.xib in Resources */,
 				A5C23A84297D78630022601C /* SendAffirmationPopup.xib in Resources */,
+				A5B9AA7E298A2C9400FBC1A5 /* SettingsViewController.xib in Resources */,
 				A53EE95A297D07AB0038A09D /* AffirmationCardView.xib in Resources */,
 				A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */,
 				A5A9BB00295CDD810033E65A /* GenericMediaView.xib in Resources */,
@@ -1051,6 +1066,7 @@
 				A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
+				A5B9AA80298A2C9C00FBC1A5 /* SettingsViewController.swift in Sources */,
 				A5A9BAFC295C9B2B0033E65A /* ViewExtensions.swift in Sources */,
 				A53EE936297A82840038A09D /* ExploreModel.swift in Sources */,
 				A5A9BB2D2960D38B0033E65A /* OTPViewController.swift in Sources */,

@@ -136,6 +136,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 self.navigationController?.pushViewController(meaningVC, animated: true)
             case .settings:
                 print("")
+                let settingsVC = SettingsViewControllerFactory.produce()
+                self.navigationController?.pushViewController(settingsVC, animated: true)
             case .shareApp:
                 print("")
                 // TODO: replace app id and add a message
