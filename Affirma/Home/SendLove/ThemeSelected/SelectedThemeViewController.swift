@@ -76,6 +76,8 @@ class SelectedThemeViewController: BaseViewController {
                 BranchLinkManager.shared.createLink(forModel: self.modelToShare) { link in
                     if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {
                         UIApplication.shared.open(supportUrl)
+                        
+                        self.sendAffirmationPopup.dismiss()
                     }
                 }
             }
@@ -117,6 +119,10 @@ class SelectedThemeViewController: BaseViewController {
         viewModel?.showChancesOverPopup = {
             self.addChoicePopup() 
         }
+    }
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pickAnotherPressed(_ sender: Any) {

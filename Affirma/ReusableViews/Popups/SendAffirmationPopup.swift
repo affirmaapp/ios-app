@@ -40,6 +40,15 @@ class SendAffirmationPopup: UIView {
         self.phoneNumber = number
     }
     
+    func dismiss() {
+        UIView.animate(withDuration: 0.5) {
+            self.alpha = 0
+        } completion: { _ in
+            self.removeFromSuperview()
+            self.popupDismissed?()
+        }
+    }
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
         self.sendPressed?(self.phoneNumber)
     }
@@ -49,12 +58,7 @@ class SendAffirmationPopup: UIView {
     }
     
     @IBAction func closePressed(_ sender: Any) {
-        UIView.animate(withDuration: 0.5) {
-            self.alpha = 0
-        } completion: { _ in
-            self.removeFromSuperview()
-            self.popupDismissed?()
-        }
+        self.dismiss()
     }
 }
 

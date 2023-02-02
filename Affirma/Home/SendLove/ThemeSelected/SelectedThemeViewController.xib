@@ -35,6 +35,19 @@
                                 <constraint firstAttribute="width" constant="150" id="kql-TX-sN3"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvn-qG-Yja">
+                            <rect key="frame" x="20" y="50" width="40" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="QeR-TF-qcm"/>
+                                <constraint firstAttribute="height" constant="40" id="wd8-RP-RqJ"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backButton"/>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="Sld-8m-K4B"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7j-9W-OfN">
                             <rect key="frame" x="110" y="109" width="273" height="41"/>
                             <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="30"/>
@@ -49,7 +62,9 @@
                         <constraint firstItem="R7j-9W-OfN" firstAttribute="leading" secondItem="qwV-g4-4qg" secondAttribute="trailing" constant="-30" id="VSS-Ls-AE9"/>
                         <constraint firstItem="qwV-g4-4qg" firstAttribute="leading" secondItem="LkF-Uu-0Ca" secondAttribute="leading" constant="-10" id="dXh-0b-G9V"/>
                         <constraint firstAttribute="bottom" secondItem="R7j-9W-OfN" secondAttribute="bottom" id="dZI-Xg-fg9"/>
+                        <constraint firstItem="yvn-qG-Yja" firstAttribute="top" secondItem="LkF-Uu-0Ca" secondAttribute="top" constant="50" id="dyx-Qf-CKw"/>
                         <constraint firstAttribute="height" constant="150" id="l2J-Yd-Ywk"/>
+                        <constraint firstItem="yvn-qG-Yja" firstAttribute="leading" secondItem="LkF-Uu-0Ca" secondAttribute="leading" constant="20" id="mCT-42-Pe4"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-1S-EfI">
@@ -90,6 +105,7 @@
         </view>
     </objects>
     <resources>
+        <image name="backButton" width="9" height="14"/>
         <namedColor name="Black_1A1B1C">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
