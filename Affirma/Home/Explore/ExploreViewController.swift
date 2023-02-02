@@ -7,6 +7,7 @@
 
 import CoreMotion
 import Foundation
+import SwiftToast
 import UIKit
 
 class ExploreViewController: BaseViewController {
@@ -134,6 +135,23 @@ class ExploreViewController: BaseViewController {
         watermarkImage.alpha = 1
     }
     
+    func showToast() {
+        let toast =  SwiftToast(
+                            text: "Saved!",
+                            textAlignment: .center,
+                            backgroundColor: Colors.purple_7D5FFF.withAlpha(0.6),
+                            textColor: .white,
+                            font: Font(.installed(.avenirLight),
+                                       size: .custom(20.0)).instance,
+                            duration: 2.0,
+                            minimumHeight: CGFloat(80.0),
+                            statusBarStyle: .darkContent,
+                            aboveStatusBar: false,
+                            target: nil,
+                            style: .navigationBar)
+        present(toast, animated: true)
+    }
+    
     
     func handleAfterScreenshotUI() {
         userButton.isHidden = false
@@ -169,6 +187,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             self.prepareForScreenshot()
             cell.prepareForScreenshot()
             self.takeScreenshot { _ in
+                self.showToast()
                 cell.handleAfterScreenshotUI()
                 self.handleAfterScreenshotUI()
                 cell.layoutIfNeeded()

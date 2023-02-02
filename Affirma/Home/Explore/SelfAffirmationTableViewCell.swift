@@ -18,6 +18,8 @@ class SelfAffirmationTableViewCell: UITableViewCell {
     var takeScreenshot: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        likeButton.isHidden = true
     }
     
     override func layoutSubviews() {
@@ -56,18 +58,21 @@ class SelfAffirmationTableViewCell: UITableViewCell {
     
     func prepareForScreenshot() {
         self.downloadButton.isHidden = true
-        self.likeButton.isHidden = true
+//        self.likeButton.isHidden = true
     }
     
     func handleAfterScreenshotUI() {
         self.downloadButton.isHidden = false
-        self.likeButton.isHidden = false
+//        self.likeButton.isHidden = false
         
-        self.layoutIfNeeded()
+//        self.layoutIfNeeded()
     }
     
     @IBAction func downloadButtonClicked(_ sender: Any) {
         self.takeScreenshot?()
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
     
     @IBAction func likeButtonClicked(_ sender: Any) {

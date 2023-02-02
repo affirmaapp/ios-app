@@ -186,6 +186,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Player/Player.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftToast/SwiftToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WatchLayout/WatchLayout.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -199,6 +200,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Player/Player.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftToast/SwiftToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WatchLayout/WatchLayout.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

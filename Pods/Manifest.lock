@@ -11,6 +11,7 @@ PODS:
   - ObjectMapper (4.2.0)
   - OTPFieldView (1.0.1)
   - Player (0.14.0)
+  - SwiftToast (1.1.3)
   - WatchLayout (1.1.0)
 
 DEPENDENCIES:
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - ObjectMapper
   - OTPFieldView
   - Player
+  - SwiftToast
   - WatchLayout
 
 SPEC REPOS:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - ObjectMapper
     - OTPFieldView
     - Player
+    - SwiftToast
     - WatchLayout
 
 SPEC CHECKSUMS:
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
+  SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   WatchLayout: f25fbd1c49726249f6f8e513616be8b2d636f06c
 
-PODFILE CHECKSUM: 804a8985efc2cc9a1435a8a0652b7bdb369d1383
+PODFILE CHECKSUM: dc8402d9b3e8aff5884de93db9b14f3e2c84e571
 
 COCOAPODS: 1.11.3

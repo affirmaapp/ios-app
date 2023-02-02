@@ -18,6 +18,7 @@ target 'Affirma' do
  pod 'Anchorage'
  pod 'Branch'
  pod 'NVActivityIndicatorView'
+ pod "SwiftToast"
 
   target 'AffirmaTests' do
     inherit! :search_paths

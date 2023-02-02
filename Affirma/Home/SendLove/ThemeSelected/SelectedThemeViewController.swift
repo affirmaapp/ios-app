@@ -120,6 +120,10 @@ class SelectedThemeViewController: BaseViewController {
     }
     
     @IBAction func pickAnotherPressed(_ sender: Any) {
+        
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+        
         viewModel?.addToGeneratedCards()
         
         anotherOptionButton
