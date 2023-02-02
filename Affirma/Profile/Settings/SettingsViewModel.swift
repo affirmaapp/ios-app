@@ -11,11 +11,11 @@ class SettingsViewModel: BaseViewModel {
     
     // MARK: Properties
 
-    var reloadName: (() -> Void)?
-    var reloadTime: (() -> Void)?
+    var detailsSaved: (() -> Void)?
     
     var wasNameChanged: Bool = false
     var wasTimeChanged: Bool = false
+    let myGroup = DispatchGroup()
     
     // MARK: Init
     override init() {
@@ -27,32 +27,47 @@ class SettingsViewModel: BaseViewModel {
                   withHour hour: Int,
                   withMinute minute: Int) {
         Task {
-            let _ = try? await updateName(withName: name)
+            myGroup.enter()
+            myGroup.enter()
+            
+            let _ = try? await updateName(withName: name, completion: { isSaved in
+                self.myGroup.leave()
+            })
+                                          
             let _ = try? await updateNotificationTime(withHour: hour,
-                                                      withMinute: minute)
+                                                      withMinute: minute, completion: { isSaved in
+                self.myGroup.leave()
+            })
+            
+            myGroup.notify(queue: DispatchQueue.main) {
+                self.detailsSaved?()
+            }
         }
     }
     
-    private func updateName(withName name: String?) async {
+    private func updateName(withName name: String?,
+                            completion: @escaping ((Bool) -> Void)) async {
         if let name = name {
             await SupabaseManager.shared.setUserName(name: name) { isSaved in
                 if isSaved {
-                    self.reloadName?()
+                    completion(true)
                 } else {
-                    print("error in logging in")
+                    completion(false)
                 }
             }
         }
     }
     
     private func updateNotificationTime(withHour hour: Int,
-                                        withMinute minute: Int) async {
+                                        withMinute minute: Int,
+                                        completion: @escaping ((Bool) -> Void)) async {
         await SupabaseManager.shared.setUserNotificationTime(hour: hour,
                                                              minute: minute) { isSaved in
             if isSaved {
-                self.reloadTime?()
+                completion(true)
             } else {
                 print("error in logging in")
+                completion(false)
             }
         }
     }

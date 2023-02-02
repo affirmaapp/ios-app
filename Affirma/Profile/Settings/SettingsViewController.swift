@@ -70,6 +70,29 @@ class SettingsViewController: BaseViewController {
                                 withHour: self.notificationHour,
                                 withMinute: self.notificationMinute)
         }
+        
+        viewModel?.detailsSaved = {
+            self.notifyUser()
+        }
+    }
+    
+    func notifyUser() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Details saved!",
+                                          message: "",
+                                          preferredStyle: .alert)
+            
+            // add the actions (buttons)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { _ in
+                print("dismiss")
+                
+                self.navigationController?.popViewController(animated: true)
+            })
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func checkForCta() {
