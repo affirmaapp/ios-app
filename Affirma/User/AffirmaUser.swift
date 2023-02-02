@@ -13,8 +13,8 @@ class UserData: NSObject, Mappable, Codable {
     var userId: UUID?
     var id: Int?
     var state: String?
-    var notificationHour: Int?
-    var notificationMinute: Int?
+    var notification_hour: Int?
+    var notification_minute: Int?
     
     override init() {}
     required convenience init?(map: Map) { self.init() }
@@ -24,8 +24,8 @@ class UserData: NSObject, Mappable, Codable {
         userId <- map["user_id"]
         id <- map["id"]
         state <- map["state"]
-        notificationHour <- map["notification_hour"]
-        notificationMinute <- map["notification_minute"]
+        notification_hour <- map["notification_hour"]
+        notification_minute <- map["notification_minute"]
     }
     
     init(withName name: String,
@@ -68,8 +68,8 @@ class AffirmaUser: NSObject, Mappable, NSCoding {
 
 class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     var name: String?
-    var notificationHour: Int?
-    var notificationMinute: Int?
+    var notification_hour: Int?
+    var notification_minute: Int?
     var state: String?
     
     override init() {}
@@ -77,23 +77,23 @@ class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     
     func mapping(map: Map) {
         name <- map["name"]
-        notificationHour <- map["notification_hour"]
-        notificationMinute <- map["notification_minute"]
+        notification_hour <- map["notification_hour"]
+        notification_minute <- map["notification_minute"]
         state <- map["state"]
     }
     
     func encode(with coder: NSCoder) {
         coder.encode(self.name, forKey: "name")
-        coder.encode(self.notificationHour, forKey: "notification_hour")
-        coder.encode(self.notificationMinute, forKey: "notification_minute")
+        coder.encode(self.notification_hour, forKey: "notification_hour")
+        coder.encode(self.notification_minute, forKey: "notification_minute")
         coder.encode(self.state, forKey: "state")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
         self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
-        self.notificationHour = aDecoder.decodeObject(forKey: "notification_hour") as? Int ?? 0
-        self.notificationMinute = aDecoder.decodeObject(forKey: "notification_minute") as? Int ?? 0
+        self.notification_hour = aDecoder.decodeObject(forKey: "notification_hour") as? Int ?? 0
+        self.notification_minute = aDecoder.decodeObject(forKey: "notification_minute") as? Int ?? 0
         self.state = aDecoder.decodeObject(forKey: "state") as? String ?? ""
     }
 }

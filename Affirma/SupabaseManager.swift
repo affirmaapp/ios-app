@@ -188,8 +188,8 @@ extension SupabaseManager {
         do {
             let data: [String: Int] = ["notification_hour": hour,
                                        "notification_minute": minute]
-            AffirmaStateManager.shared.activeUser?.metaData?.notificationHour = hour
-            AffirmaStateManager.shared.activeUser?.metaData?.notificationMinute = minute
+            AffirmaStateManager.shared.activeUser?.metaData?.notification_hour = hour
+            AffirmaStateManager.shared.activeUser?.metaData?.notification_minute = minute
             AffirmaStateManager.shared.saveActiveUser()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
@@ -276,8 +276,8 @@ extension SupabaseManager {
                         let metaData = AffirmaUserMetaData()
                         metaData.name = user.name
                         metaData.state = user.state
-                        metaData.notificationHour = user.notificationHour
-                        metaData.notificationMinute = user.notificationMinute
+                        metaData.notification_hour = user.notification_hour
+                        metaData.notification_minute = user.notification_minute
                         
                         AffirmaStateManager.shared.activeUser?.metaData = metaData
                         AffirmaStateManager.shared.saveActiveUser()
