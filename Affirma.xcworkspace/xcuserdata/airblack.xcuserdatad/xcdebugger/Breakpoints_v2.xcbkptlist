@@ -404,65 +404,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "813E260A-BFB6-4DC3-A68C-3D6477CDB3C9"
+            uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Affirma/Managers/NotificationManager.swift"
+            filePath = "Affirma/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "userNotificationCenter(_:didReceive:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad317c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Affirma.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad317c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Affirma.AppDelegate.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "596">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AC74B0E-ED19-433F-99C3-6CC3C70C715D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Home/Explore/ExploreViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "reloadExplore(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E18DDEFC-AE59-4719-BD1F-A82FA87D4294"
+            uuid = "A036AB7C-00E2-4C92-89E5-FCE8AC0CEE2C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Affirma/Managers/NotificationManager.swift"
+            filePath = "Affirma/Home/Explore/ExploreViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "userNotificationCenter(_:didReceive:)"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E18DDEFC-AE59-4719-BD1F-A82FA87D4294 - fd8d63a5221a5c09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Affirma.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Managers/NotificationManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "E18DDEFC-AE59-4719-BD1F-A82FA87D4294 - fd8d63a5221a5c09"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Affirma.NotificationManager.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse) async -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Managers/NotificationManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "596">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

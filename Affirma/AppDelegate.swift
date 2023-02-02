@@ -12,7 +12,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let userNotificationCenter = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = Colors.black_1A1B1C.value
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            NotificationManager.shared.sendNotification()
+            self.sendNotification()
         }
+        self.userNotificationCenter.delegate = self
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -109,3 +110,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate {
+    
+    func sendNotification() {
+        
+        let notificationContent = UNMutableNotificationContent()
+        
+        // Add the content to the notification content
+        let body = NotificationManager.shared.affirmationTextList.randomElement()?.text ?? ""
+        let image = NotificationManager.shared.affirmationImagesList.randomElement()?.image_url ?? ""
+        
+        notificationContent.title = "Affirma"
+        notificationContent.body = body
+        //            notificationContent.badge = NSNumber(value: 3)
+        notificationContent.userInfo = ["affirmation": body,
+                                        "affirmation_image": image]
+        
+        // Add an attachment to the notification content
+        //            if let url = Bundle.main.url(forResource: "dune",
+        //                                            withExtension: "png") {
+        //                if let attachment = try? UNNotificationAttachment(identifier: "dune",
+        //                                                                    url: url,
+        //                                                                    options: nil) {
+        //                    notificationContent.attachments = [attachment]
+        //                }
+        //            }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10,
+                                                        repeats: false)
+        let request = UNNotificationRequest(identifier: "testNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+        
+        userNotificationCenter.add(request) { (error) in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        if let notification = response.notification.request.content.userInfo as? [String: Any] {
+            if let affirmation = notification["affirmation"] as? String,
+               let affirmation_image = notification["affirmation_image"] as? String {
+                NotificationManager.shared.affirmationText = affirmation
+                NotificationManager.shared.affirmationImage = affirmation_image
+                
+                NotificationCenter.default.post(name: AffirmaNotification.reloadExplore,
+                                                object: nil,
+                                                userInfo: nil)
+            }
+        }
+    }
+}

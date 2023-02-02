@@ -23,22 +23,42 @@ class ExploreViewModel: BaseViewModel {
         
     }
     
+    func fetchData() {
+        let myGroup = DispatchGroup()
+        
+        myGroup.enter()
+        myGroup.enter()
+        
+        Task {
+            let _ = try? await fetchImageList(completion: { dataFetched in
+                myGroup.leave()
+            })
+            
+            let _ = try? await fetchTextList(completion: { dataFetched in
+                myGroup.leave()
+            })
+        }
+        
+        myGroup.notify(queue: DispatchQueue.main) {
+            self.reloadData?()
+        }
+    }
     
-    func fetchImageList() async {
+    func fetchImageList(completion: @escaping ((Bool) -> Void)) async {
         await manager?.fetchAffirmationImages(completion: { imagesList in
             self.affirmationImagesList = imagesList
             
             print("LIST: \(imagesList.count)")
-            self.reloadData?()
+            completion(true)
         })
     }
     
-    func fetchTextList() async {
+    func fetchTextList(completion: @escaping ((Bool) -> Void)) async {
         await manager?.fetchAffirmationText(completion: { textList in
             self.affirmationTextList = textList
             
             print("TEXT LIST: \(textList.count)")
-            self.reloadData?() 
+            completion(true)
             
         })
     }

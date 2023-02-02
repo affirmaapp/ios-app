@@ -67,7 +67,7 @@ class ExploreViewController: BaseViewController {
     
     @objc
     func reloadExplore(notification: Notification) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.tableView.reloadData()
         }
     }
@@ -91,20 +91,18 @@ class ExploreViewController: BaseViewController {
     }
     
     func handleViewModelCallbacks() async {
-        Task {
-            _ = try? await viewModel?.fetchImageList()
-            _ = try? await viewModel?.fetchTextList()
-        }
+        viewModel?.fetchData()
+        
         
         viewModel?.reloadData = {
-//            DispatchQueue.main.async {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.hideFullScreenLoader()
-                    self.registerCells()
-                    self.tableView.reloadData()
-                }
-                
-//            }
+            //            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.hideFullScreenLoader()
+                self.registerCells()
+                self.tableView.reloadData()
+            }
+            
+            //            }
         }
     }
     
@@ -171,13 +169,17 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel?.affirmationTextList.count ?? 0
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        NotificationManager.shared.resetNotificationData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SelfAffirmationTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
-        if NotificationManager.shared.affirmationText != nil {
+        if NotificationManager.shared.affirmationText != nil
+            && !(NotificationManager.shared.affirmationText?.isEmpty ?? true) {
             cell.render(withText: NotificationManager.shared.affirmationText,
                         withImage: NotificationManager.shared.affirmationImage)
-            
-            NotificationManager.shared.resetNotificationData()
         } else {
             cell.render(withText: viewModel?.chooseAffirmationText(),
                         withImage: viewModel?.chooseAffirmationImage())

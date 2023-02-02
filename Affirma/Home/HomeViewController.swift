@@ -40,7 +40,6 @@ class HomeViewController: UITabBarController {
         
         handleDeeplink()
         
-        NotificationManager.shared.requestNotificationAuthorization()
 
     }
     
