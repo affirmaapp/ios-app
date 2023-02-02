@@ -17,6 +17,7 @@ target 'Affirma' do
  pod 'AnimatedCollectionViewLayout'
  pod 'Anchorage'
  pod 'Branch'
+ pod 'NVActivityIndicatorView'
 
   target 'AffirmaTests' do
     inherit! :search_paths
