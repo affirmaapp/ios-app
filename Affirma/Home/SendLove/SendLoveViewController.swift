@@ -29,7 +29,8 @@ class SendLoveViewController: BaseViewController {
                                 forCellWithReuseIdentifier: "ImageCollectionView")
         
         collectionView.delegate = self
-        collectionView.dataSource = self 
+        collectionView.dataSource = self
+        showFullScreenLoader()
         Task {
             _ = try? await handleViewModelCallbacks()
         }
@@ -52,7 +53,7 @@ class SendLoveViewController: BaseViewController {
         viewModel?.reloadData = {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 self.collectionView.reloadData()
-                
+                self.hideFullScreenLoader()
                 DispatchQueue.main.async {
                     self.collectionView.setContentOffset(self.layout
                         .centeredOffsetForItem(indexPath: IndexPath(item: 0, section: 0)),

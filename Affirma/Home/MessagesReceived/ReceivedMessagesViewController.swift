@@ -21,10 +21,14 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel = ReceivedMessagesViewModel()
         
+        showFullScreenLoader()
         Task {
             _ = try? await handleViewModelCallbacks()
         }
-
+        
+        self.tableView.isHidden = true
+        self.emptyMessageView.isHidden = true
+        
         addObservers()
         self.registerCells()
         tableView.delegate = self
@@ -73,6 +77,7 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.hideFullScreenLoader()
                 self.headerLabel.text = "Wow, it seems like your positive vibes are attracting a lot of affirmations!"
                 self.tableView.isHidden = false
                 self.emptyMessageView.isHidden = true
@@ -82,6 +87,7 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.showEmptyScreen = {
             DispatchQueue.main.async {
+                self.hideFullScreenLoader()
                 self.headerLabel.text = "Take the lead!\nThe more you give, the more you’ll receive"
                 self.tableView.isHidden = true
                 self.emptyMessageView.isHidden = false

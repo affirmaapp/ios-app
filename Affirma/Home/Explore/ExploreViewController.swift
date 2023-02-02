@@ -22,9 +22,9 @@ class ExploreViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showFullScreenLoader()
         viewModel = ExploreViewModel()
         
-//        registerCells()
         Task {
             _ = try? await handleViewModelCallbacks()
         }
@@ -98,6 +98,7 @@ class ExploreViewController: BaseViewController {
         viewModel?.reloadData = {
 //            DispatchQueue.main.async {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.hideFullScreenLoader()
                     self.registerCells()
                     self.tableView.reloadData()
                 }
