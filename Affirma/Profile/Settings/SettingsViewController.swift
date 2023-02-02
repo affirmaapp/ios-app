@@ -66,6 +66,7 @@ class SettingsViewController: BaseViewController {
     
     func handleCallback() {
         saveButton.primaryCtaClicked = {
+            self.showFullScreenLoader()
             self.viewModel?.saveData(withName: self.name,
                                 withHour: self.notificationHour,
                                 withMinute: self.notificationMinute)
@@ -73,6 +74,7 @@ class SettingsViewController: BaseViewController {
         
         viewModel?.detailsSaved = {
             self.notifyUser()
+            self.hideFullScreenLoader()
         }
     }
     

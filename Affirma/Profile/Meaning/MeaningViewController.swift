@@ -34,6 +34,7 @@ class MeaningViewController: BaseViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        showFullScreenLoader()
         Task {
             _ = try? await handleViewModelCallbacks()
         }
@@ -46,6 +47,7 @@ class MeaningViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.hideFullScreenLoader()
                 self.collectionView.reloadData()
             }
         }
