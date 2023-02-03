@@ -14,14 +14,19 @@ class ReceivedMessagesViewController: BaseViewController {
     @IBOutlet weak var emptyMessageView: EmptyMessageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerLabel: UILabel!
-    var viewModel: ReceivedMessagesViewModel?
+    @IBOutlet weak var topHeaderHeight: NSLayoutConstraint!
+    @IBOutlet weak var topHeader: UIView!
     
+    var viewModel: ReceivedMessagesViewModel?
+    var dataFetched: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = ReceivedMessagesViewModel()
         
-        showFullScreenLoader()
+        self.showFullScreenLoader()
+        
         Task {
             _ = try? await handleViewModelCallbacks()
         }
@@ -77,6 +82,7 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.dataFetched = true 
                 self.hideFullScreenLoader()
                 self.headerLabel.text = "Wow, it seems like your positive vibes are attracting a lot of affirmations!"
                 self.tableView.isHidden = false
@@ -87,13 +93,31 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.showEmptyScreen = {
             DispatchQueue.main.async {
+                self.dataFetched = true
                 self.hideFullScreenLoader()
                 self.headerLabel.text = "Take the lead!\nThe more you give, the more you’ll receive"
                 self.tableView.isHidden = true
                 self.emptyMessageView.isHidden = false
             }
         }
-        
+    }
+    
+    func hideTopHeader() {
+        topHeaderHeight.constant = 0
+        UIView.animate(withDuration: 0.8, delay: 0) {
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.topHeader.alpha = 0
+        }
+    }
+    
+    func showTopHeader() {
+        topHeaderHeight.constant = 180
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.view.layoutIfNeeded()
+        } completion: { _ in
+            self.topHeader.alpha = 1
+        }
     }
 }
 
@@ -115,6 +139,16 @@ extension ReceivedMessagesViewController: UITableViewDelegate, UITableViewDataSo
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height * 0.65
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if dataFetched {
+            if scrollView.contentOffset.y > 100 {
+                hideTopHeader()
+            } else {
+                showTopHeader()
+            }
+        }
     }
     
 }

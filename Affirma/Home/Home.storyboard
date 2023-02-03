@@ -216,6 +216,8 @@
                         <outlet property="gradientView" destination="nah-DV-aGt" id="C6L-wX-4GR"/>
                         <outlet property="headerLabel" destination="OWS-rm-201" id="jda-g0-8CC"/>
                         <outlet property="tableView" destination="wxr-Wf-ruh" id="hHj-O1-K4d"/>
+                        <outlet property="topHeader" destination="s80-0o-kVS" id="LvJ-pi-yL4"/>
+                        <outlet property="topHeaderHeight" destination="4do-Aw-szd" id="F4f-bc-7ov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8T-fx-cUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

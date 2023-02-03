@@ -41,6 +41,9 @@ class HomeViewController: UITabBarController {
         handleDeeplink()
         
 
+        self.view.applyGradient(withColours: [Colors.black_2E302F.value,
+                                                 Colors.black_131415.value],
+                                   gradientOrientation: .topLeftBottomRight)
     }
     
     override func viewDidAppear(_ animated: Bool) {

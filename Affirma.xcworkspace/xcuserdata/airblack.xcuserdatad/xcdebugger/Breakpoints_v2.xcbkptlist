@@ -468,16 +468,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A036AB7C-00E2-4C92-89E5-FCE8AC0CEE2C"
+            uuid = "19E6D694-D029-40AB-8F45-51CC6C05D1F1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Affirma/Home/Explore/ExploreViewController.swift"
+            filePath = "Affirma/Home/MessagesReceived/ReceivedMessagesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "showTopHeader()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
