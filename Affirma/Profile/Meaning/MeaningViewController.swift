@@ -21,8 +21,11 @@ class MeaningViewController: BaseViewController {
     
     @IBOutlet var gradientView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var headerHeight: NSLayoutConstraint!
+    @IBOutlet weak var topHeader: UIView!
     
     var viewModel: MeaningViewModel?
+    var dataFetched: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +50,11 @@ class MeaningViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.dataFetched = true
                 self.hideFullScreenLoader()
-                self.collectionView.reloadData()
+                UIView.performWithoutAnimation {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
@@ -70,6 +76,30 @@ class MeaningViewController: BaseViewController {
     
     @IBAction func backPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func hideTopHeader() {
+        if headerHeight.constant == 200 {
+            headerHeight.constant = 0
+            self.topHeader.isHidden = true
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.view.layoutIfNeeded()
+            } completion: { _ in
+//                self.topHeader.isHidden = true
+            }
+        }
+    }
+    
+    func showTopHeader() {
+        if headerHeight.constant == 0 {
+            self.topHeader.isHidden = false
+            headerHeight.constant = 200
+            UIView.animate(withDuration: 0.5, delay: 0) {
+                self.view.layoutIfNeeded()
+            } completion: { _ in
+                
+            }
+        }
     }
     
 }
@@ -104,5 +134,15 @@ extension MeaningViewController: UICollectionViewDelegate,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 100, left: 20, bottom: 0, right: 20)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if dataFetched {
+            if scrollView.contentOffset.y > 100 {
+                hideTopHeader()
+            } else {
+                showTopHeader()
+            }
+        }
     }
 }

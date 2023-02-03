@@ -25,9 +25,17 @@ class NotificationManager: NSObject {
 
     }
     
-//    init() {
-//        self.exploreManager = ExploreManager()
-//    }
+    func doWeHavePermission(completion: @escaping ((Bool) -> Void)) {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            print("Notification settings: \(settings)")
+            if settings.authorizationStatus == .authorized {
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+    
     func askForUsersPermission() {
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.alert, .sound, .badge]) {[weak self] granted, _ in

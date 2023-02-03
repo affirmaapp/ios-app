@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="collectionView" destination="fca-AO-xnd" id="BtK-ue-n3c"/>
                 <outlet property="gradientView" destination="iN0-l3-epB" id="ioC-qQ-q9k"/>
+                <outlet property="headerHeight" destination="QSx-lF-w73" id="zWw-77-08l"/>
+                <outlet property="topHeader" destination="Gje-eY-L5Q" id="Jaf-fk-C7U"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gwe-DW-yMY"/>
             </connections>
         </placeholder>

@@ -14,6 +14,8 @@
                 <outlet property="datePicker" destination="fBp-Hb-4lV" id="Nwz-Pg-5sC"/>
                 <outlet property="gradientView" destination="iN0-l3-epB" id="s2l-D8-bUD"/>
                 <outlet property="nameTextfield" destination="4wS-kJ-15W" id="RhS-MO-EI4"/>
+                <outlet property="notificationAlertLabel" destination="rdA-gy-ZEk" id="8G0-DK-YoK"/>
+                <outlet property="notificationPermissionButton" destination="fVS-q8-Q0c" id="Cuk-2h-Zcw"/>
                 <outlet property="saveButton" destination="3uA-Ke-T6W" id="hgL-T1-oHL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="UEt-ca-ABN"/>
             </connections>
@@ -129,6 +131,30 @@
                         <action selector="editTapped:" destination="-1" eventType="touchUpInside" id="Wck-e6-TZR"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affirmations eagerly waiting to motivate you, just as soon as you grant us the nod." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-gy-ZEk">
+                    <rect key="frame" x="20" y="535.66666666666663" width="353" height="38.333333333333371"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                    <color key="textColor" red="0.92156862745098034" green="0.23137254901960785" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVS-q8-Q0c">
+                    <rect key="frame" x="131" y="594" width="131" height="32"/>
+                    <color key="backgroundColor" name="White_CAD0DE"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                    <inset key="contentEdgeInsets" minX="8" minY="5" maxX="8" maxY="5"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Give permission">
+                        <color key="titleColor" name="Black_1A1B1C"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="askForNotificationPermission:" destination="-1" eventType="touchUpInside" id="aQY-9S-oaP"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,17 +170,22 @@
                 <constraint firstItem="fBp-Hb-4lV" firstAttribute="top" secondItem="9lf-tB-8pS" secondAttribute="bottom" constant="20" id="QXy-ex-fqT"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4wS-kJ-15W" secondAttribute="trailing" constant="20" id="Z2o-7z-fOf"/>
                 <constraint firstItem="2tZ-Dh-iM3" firstAttribute="leading" secondItem="4wS-kJ-15W" secondAttribute="leading" id="cin-yK-9vf"/>
+                <constraint firstItem="rdA-gy-ZEk" firstAttribute="top" secondItem="fBp-Hb-4lV" secondAttribute="bottom" constant="20" id="cyl-fv-lpE"/>
                 <constraint firstItem="4wS-kJ-15W" firstAttribute="top" secondItem="EA3-18-hfE" secondAttribute="bottom" id="d05-g4-AAO"/>
                 <constraint firstItem="0vq-Sh-ioc" firstAttribute="trailing" secondItem="4wS-kJ-15W" secondAttribute="trailing" id="dxa-q6-fGC"/>
+                <constraint firstItem="fVS-q8-Q0c" firstAttribute="top" secondItem="rdA-gy-ZEk" secondAttribute="bottom" constant="20" id="hwb-DR-Unw"/>
                 <constraint firstItem="fBp-Hb-4lV" firstAttribute="leading" secondItem="9lf-tB-8pS" secondAttribute="leading" id="ivl-DE-KYP"/>
                 <constraint firstItem="hCm-dg-aM9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="l3h-Wf-TH3"/>
                 <constraint firstItem="9lf-tB-8pS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="lG5-eW-aeM"/>
+                <constraint firstAttribute="trailing" secondItem="rdA-gy-ZEk" secondAttribute="trailing" constant="20" id="pxh-9n-9gl"/>
                 <constraint firstItem="4wS-kJ-15W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="qVb-Ty-7Kz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hCm-dg-aM9" secondAttribute="trailing" id="rwk-hm-IYm"/>
+                <constraint firstItem="rdA-gy-ZEk" firstAttribute="leading" secondItem="fBp-Hb-4lV" secondAttribute="leading" id="scg-Oq-kjH"/>
                 <constraint firstItem="3uA-Ke-T6W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="szO-Nh-epp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EA3-18-hfE" secondAttribute="trailing" constant="20" id="t2G-z9-N0W"/>
                 <constraint firstItem="hCm-dg-aM9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tq6-O9-zbn"/>
                 <constraint firstItem="9lf-tB-8pS" firstAttribute="top" secondItem="2tZ-Dh-iM3" secondAttribute="bottom" constant="40" id="vkh-cw-f5N"/>
+                <constraint firstItem="fVS-q8-Q0c" firstAttribute="centerX" secondItem="rdA-gy-ZEk" secondAttribute="centerX" id="zJD-cl-j9o"/>
             </constraints>
             <point key="canvasLocation" x="-14.503816793893129" y="19.718309859154932"/>
         </view>
@@ -165,6 +196,12 @@
         <image name="setting" width="20" height="20"/>
         <namedColor name="Black_18181C">
             <color red="0.093999996781349182" green="0.093999996781349182" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black_1A1B1C">
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White_CAD0DE">
+            <color red="0.79199999570846558" green="0.81599998474121094" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White_E5E5E5">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

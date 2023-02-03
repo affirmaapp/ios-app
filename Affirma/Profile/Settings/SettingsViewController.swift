@@ -21,6 +21,9 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var saveButton: GenericButtonView!
     @IBOutlet var gradientView: UIView!
+    @IBOutlet weak var notificationAlertLabel: UILabel!
+    @IBOutlet weak var notificationPermissionButton: UIButton!
+    
     
     var viewModel: SettingsViewModel?
     fileprivate var name: String?
@@ -32,9 +35,46 @@ class SettingsViewController: BaseViewController {
         
         viewModel = SettingsViewModel()
         
-        nameTextfield.delegate = self 
+        setName()
+        setDate()
+        saveButton.render(withType: .inactive, withText: "Save")
+        handleCallback()
+        
+        nameTextfield.addDoneButtonOnKeyboard()
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter
+            .addObserver(self,
+                         selector: #selector(appMovedToForeground),
+                         name: UIApplication.willEnterForegroundNotification,
+                         object: nil)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        gradientView.applyGradient(withColours: [Colors.black_2E302F.value,
+                                                 Colors.black_131415.value],
+                                   gradientOrientation: .topLeftBottomRight)
+        
+        setUI()
+        
+    }
+    
+    @objc
+    func appMovedToForeground() {
+        setUI()
+    }
+    
+    
+    func setName() {
+        nameTextfield.delegate = self
         nameTextfield.text = AffirmaStateManager.shared.activeUser?.metaData?.name
         self.name = AffirmaStateManager.shared.activeUser?.metaData?.name
+    }
+    
+    func setDate() {
         
         let calendar = Calendar.current
         var components = DateComponents()
@@ -48,20 +88,23 @@ class SettingsViewController: BaseViewController {
         if let date = calendar.date(from: components) {
             datePicker.setDate(date, animated: true)
         }
-        
-        saveButton.render(withType: .inactive, withText: "Save")
-        handleCallback()
-        
-        nameTextfield.addDoneButtonOnKeyboard()
+
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        gradientView.applyGradient(withColours: [Colors.black_2E302F.value,
-                                                 Colors.black_131415.value],
-                                   gradientOrientation: .topLeftBottomRight)
-        
+    func setUI() {
+        NotificationManager.shared.doWeHavePermission { isGranted in
+            if isGranted {
+                DispatchQueue.main.async {
+                    self.notificationAlertLabel.isHidden = true
+                    self.notificationPermissionButton.isHidden = true
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.notificationAlertLabel.isHidden = false
+                    self.notificationPermissionButton.isHidden = false
+                }
+            }
+        }
     }
     
     func handleCallback() {
@@ -94,6 +137,14 @@ class SettingsViewController: BaseViewController {
             
             // show the alert
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func askForNotificationPermission(_ sender: Any) {
+        if let url = URL(string: UIApplication.openSettingsURLString) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
         }
     }
     
