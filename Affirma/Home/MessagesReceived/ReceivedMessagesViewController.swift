@@ -80,6 +80,10 @@ class ReceivedMessagesViewController: BaseViewController {
             _ = try? await viewModel?.fetchMessages()
         }
         
+        emptyMessageView.sendLoveClicked = {
+            self.tabBarController?.selectedIndex = 1
+        }
+        
         viewModel?.reloadData = {
             DispatchQueue.main.async {
                 self.dataFetched = true 

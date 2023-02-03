@@ -99,8 +99,8 @@ class SecondQuestionViewController: BaseViewController {
     }
     
     private func handleTap() {
-        NotificationManager.shared.askForUsersPermission()
         forwardButton.customCtaCtaClicked = { tag in
+            NotificationManager.shared.askForUsersPermission()
             Task {
                 try await self.updateNotificationTime(withHour: self.notificationHour,
                                                       withMinute: self.notificationMinute)
