@@ -14,6 +14,7 @@ class ReceivedMessagesViewModel: BaseViewModel {
     
     var data: ReceivedMessagesBaseModel?
     var reloadData: (() -> Void)?
+    var refreshData: (() -> Void)?
     var showEmptyScreen: (() -> Void)?
     
     // MARK: Init
@@ -39,7 +40,7 @@ class ReceivedMessagesViewModel: BaseViewModel {
     func addMessage(withModel model: ReceivedMessagesBaseModel?) async {
         await manager?.addMessage(withModel: model, addcompletion: { isAddedSuccessfully in
             if isAddedSuccessfully {
-                self.reloadData?()
+                self.refreshData?()
             }
         })
     }

@@ -40,9 +40,19 @@ class DeeplinkManager: NSObject {
                 var userInfo: [String: Any] = [:]
                 userInfo["shouldAddToList"] = shouldAddToList
                 userInfo["affirmationToAdd"] = affirmationToAdd
+                
+                if let messages = affirmationToAdd?.messages {
+                    for message in messages {
+                        if message.sender_id == AffirmaStateManager.shared.activeUser?.userId?.uuidString {
+                            userInfo["shouldAddToList"] = false
+                        }
+                    }
+                }
+                
                 NotificationCenter.default.post(name: AffirmaNotification.switchToMessagesRecieved,
                                                 object: nil,
                                                 userInfo: userInfo)
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     NotificationCenter.default.post(name: AffirmaNotification.addMessage,
                                                     object: nil,

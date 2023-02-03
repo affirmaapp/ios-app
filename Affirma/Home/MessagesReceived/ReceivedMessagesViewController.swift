@@ -62,8 +62,11 @@ class ReceivedMessagesViewController: BaseViewController {
     func addMessage(notification: Notification) {
         if let userInfo = notification.userInfo as? [String: Any?] {
             if let affirmationToAdd = userInfo["affirmationToAdd"] as? ReceivedMessagesBaseModel {
-                Task {
-                    _ = try? await self.viewModel?.addMessage(withModel: affirmationToAdd)
+                if let shouldAdd = userInfo["shouldAddToList"] as? Bool,
+                    shouldAdd == true {
+                    Task {
+                        _ = try? await self.viewModel?.addMessage(withModel: affirmationToAdd)
+                    }
                 }
             }
         }
@@ -82,6 +85,12 @@ class ReceivedMessagesViewController: BaseViewController {
         
         emptyMessageView.sendLoveClicked = {
             self.tabBarController?.selectedIndex = 1
+        }
+        
+        viewModel?.refreshData = {
+            Task {
+                _ = try? await self.viewModel?.fetchMessages()
+            }
         }
         
         viewModel?.reloadData = {

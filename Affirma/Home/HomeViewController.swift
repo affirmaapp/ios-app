@@ -44,11 +44,23 @@ class HomeViewController: UITabBarController {
         self.view.applyGradient(withColours: [Colors.black_2E302F.value,
                                                  Colors.black_131415.value],
                                    gradientOrientation: .topLeftBottomRight)
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter
+            .addObserver(self,
+                         selector: #selector(appMovedToForeground),
+                         name: UIApplication.willEnterForegroundNotification,
+                         object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    @objc
+    func appMovedToForeground() {
+        handleDeeplink()
     }
     
     func addObservers() {
