@@ -67,4 +67,49 @@ class NotificationManager: NSObject {
         NotificationManager.shared.affirmationImage = nil 
     }
     
+    func removePendingNotification() {
+        UNUserNotificationCenter.current()
+            .removePendingNotificationRequests(withIdentifiers: ["selfAffirmationNotification"])
+    }
+    
+    func scheduleNotification() {
+        removePendingNotification()
+        let notificationContent = UNMutableNotificationContent()
+        
+        // Add the content to the notification content
+        let body = NotificationManager.shared.affirmationTextList.randomElement()?.text ?? ""
+        let image = NotificationManager.shared.affirmationImagesList.randomElement()?.image_url ?? ""
+        
+        notificationContent.title = "Affirma"
+        notificationContent.body = body
+        //            notificationContent.badge = NSNumber(value: 3)
+        notificationContent.userInfo = ["affirmation": body,
+                                        "affirmation_image": image]
+        
+        //         Add an attachment to the notification content
+        if let url = Bundle.main.url(forResource: "energy",
+                                     withExtension: "png") {
+            if let attachment = try? UNNotificationAttachment(identifier: "energy",
+                                                              url: url,
+                                                              options: nil) {
+                notificationContent.attachments = [attachment]
+            }
+        }
+        
+        var datComp = DateComponents()
+        datComp.hour = AffirmaStateManager.shared.activeUser?.metaData?.notification_hour
+        datComp.minute = AffirmaStateManager.shared.activeUser?.metaData?.notification_minute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: datComp, repeats: true)
+
+        let request = UNNotificationRequest(identifier: "selfAffirmationNotification",
+                                            content: notificationContent,
+                                            trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
+            if let error = error {
+                print("Notification Error: ", error)
+            }
+        }
+    }
+    
 }

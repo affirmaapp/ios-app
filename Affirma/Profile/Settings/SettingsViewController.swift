@@ -121,9 +121,11 @@ class SettingsViewController: BaseViewController {
         checkForCta()
         
         print("Selected Date: \(datePicker.date)")
-        let components = Calendar.current.dateComponents([.hour, .minute], from: datePicker.date)
+        var components = Calendar.current.dateComponents([.hour, .minute], from: datePicker.date)
         let hour = components.hour
         let minute = components.minute
+        components.year = 2023
+        print("Components: \(components)")
         
         print("Hour: \(String(describing: hour)), \(String(describing: minute))")
         self.notificationHour = hour ?? 16

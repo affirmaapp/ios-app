@@ -62,8 +62,8 @@
             filePath = "Affirma/SupabaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "setState(to:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -411,13 +411,13 @@
             filePath = "Affirma/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "userNotificationCenter(_:didReceive:)"
-            landmarkType = "7">
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "AppDelegate"
+            landmarkType = "21">
             <Locations>
                <Location
-                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad317c"
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3fd0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -427,12 +427,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
                   offsetFromSymbolStart = "212">
                </Location>
                <Location
-                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad317c"
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3fd0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -442,8 +442,8 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
                   offsetFromSymbolStart = "596">
                </Location>
             </Locations>
@@ -478,6 +478,22 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "showTopHeader()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96EA2B66-BE82-4D2C-BF17-7F92BE271690"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/Managers/NotificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "scheduleNotification()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

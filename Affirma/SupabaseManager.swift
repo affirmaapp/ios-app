@@ -191,6 +191,8 @@ extension SupabaseManager {
             AffirmaStateManager.shared.activeUser?.metaData?.notification_hour = hour
             AffirmaStateManager.shared.activeUser?.metaData?.notification_minute = minute
             AffirmaStateManager.shared.saveActiveUser()
+            
+            NotificationManager.shared.scheduleNotification()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))
