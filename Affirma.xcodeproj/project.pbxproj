@@ -100,6 +100,7 @@
 		A5B29CE9298B75CB00AEEC05 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B29CE8298B75CB00AEEC05 /* SettingsManager.swift */; };
 		A5B29CEC298B9C3F00AEEC05 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B29CEB298B9C3F00AEEC05 /* GenericLoader.swift */; };
 		A5B29CEE298B9C4800AEEC05 /* GenericLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B29CED298B9C4800AEEC05 /* GenericLoader.xib */; };
+		A5B29CF0298CD8C000AEEC05 /* energy.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B29CEF298CD8C000AEEC05 /* energy.png */; };
 		A5B9AA5A2988F84900FBC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */; };
 		A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */; };
 		A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */; };
@@ -259,6 +260,7 @@
 		A5B29CE8298B75CB00AEEC05 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		A5B29CEB298B9C3F00AEEC05 /* GenericLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLoader.swift; sourceTree = "<group>"; };
 		A5B29CED298B9C4800AEEC05 /* GenericLoader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericLoader.xib; sourceTree = "<group>"; };
+		A5B29CEF298CD8C000AEEC05 /* energy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = energy.png; sourceTree = "<group>"; };
 		A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				A50D56E0295A044B00034A19 /* ViewController.swift */,
 				A50D56E2295A044B00034A19 /* Main.storyboard */,
 				A50D56E5295A044D00034A19 /* Assets.xcassets */,
+				A5B29CEF298CD8C000AEEC05 /* energy.png */,
 				A50D570C295A04ED00034A19 /* affirmaIcon.png */,
 				A50D56E7295A044D00034A19 /* LaunchScreen.storyboard */,
 				A50D56EA295A044D00034A19 /* Info.plist */,
@@ -878,6 +881,7 @@
 				A53EE93D297A9B6E0038A09D /* SelfAffirmationTableViewCell.xib in Resources */,
 				A5B29CEE298B9C4800AEEC05 /* GenericLoader.xib in Resources */,
 				A5A9BB06295CE40C0033E65A /* logoGif.gif in Resources */,
+				A5B29CF0298CD8C000AEEC05 /* energy.png in Resources */,
 				A5B06A772971507500DFE95D /* LastStepViewController.xib in Resources */,
 				A5A1AA38296E93F400CC727C /* IntroScreenViewController.xib in Resources */,
 				A50D5711295A074400034A19 /* Colors.xcassets in Resources */,

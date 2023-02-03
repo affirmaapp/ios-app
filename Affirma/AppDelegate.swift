@@ -126,15 +126,15 @@ extension AppDelegate {
         notificationContent.userInfo = ["affirmation": body,
                                         "affirmation_image": image]
         
-        // Add an attachment to the notification content
-        //            if let url = Bundle.main.url(forResource: "dune",
-        //                                            withExtension: "png") {
-        //                if let attachment = try? UNNotificationAttachment(identifier: "dune",
-        //                                                                    url: url,
-        //                                                                    options: nil) {
-        //                    notificationContent.attachments = [attachment]
-        //                }
-        //            }
+//         Add an attachment to the notification content
+                    if let url = Bundle.main.url(forResource: "energy",
+                                                    withExtension: "png") {
+                        if let attachment = try? UNNotificationAttachment(identifier: "energy",
+                                                                            url: url,
+                                                                            options: nil) {
+                            notificationContent.attachments = [attachment]
+                        }
+                    }
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10,
                                                         repeats: false)
