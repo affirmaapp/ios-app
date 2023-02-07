@@ -71,4 +71,11 @@ class SelectedThemeViewModel: BaseViewModel {
         
         self.scrollToItem?(generatedCards.count - 1)
     }
+    
+    func addMessage(forUser userId: String?,
+                    withModel model: ReceivedMessagesBaseModel?) async {
+        await manager?.addMessage(forUser: userId,
+                                  withModel: model, addcompletion: { isAddedSuccessfully in
+        })
+    }
 }

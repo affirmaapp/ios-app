@@ -45,10 +45,10 @@ class ReceivedMessagesManager: NSObject {
         }
     }
     
-    func setUserMessages(withId userId: UUID) async {
+    func setUserMessages(withId userId: String) async {
         do {
             
-            let data: [String: UUID] = ["user_id": userId]
+            let data: [String: String] = ["user_id": userId]
             let query = client?.database.from("user_messages_received").insert(values: try JSONEncoder().encode(data))
             Task {
                 let _ = try? await query?.execute()
@@ -75,7 +75,7 @@ class ReceivedMessagesManager: NSObject {
                     if let data = queryResponse?.underlyingResponse.data {
                         let myStruct = try! decoder.decode([ReceivedMessagesBaseModel].self, from: data)
                         if myStruct.isEmpty {
-                            let _ = try? await setUserMessages(withId: userID)
+                            let _ = try? await setUserMessages(withId: userID.uuidString)
                             
                             let user_messages = ["messages": model?.messages]
                             let query = client?.database.from("user_messages_received")

@@ -62,8 +62,8 @@
             filePath = "Affirma/SupabaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "setState(to:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Affirma/SupabaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "setUserName(name:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,58 +110,10 @@
             filePath = "Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "handleViewModelCallbacks()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb618"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Affirma.SelectedThemeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "DBA304A5-BD42-4036-B13B-11FFB1641ED7 - 8b360ad09efdb618"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Affirma.SelectedThemeViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -228,7 +180,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 2a3fcfe7ce0260e8"
+                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 2a3fcfe7ce0260c9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -238,12 +190,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 7d830b216bef6350"
+                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 7d830b216bef6371"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -253,12 +205,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "48">
                </Location>
                <Location
-                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 28e812db245b3cee"
+                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 28e812db245b3ccf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -268,12 +220,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 66dd78086084c064"
+                  uuid = "14859401-D431-405C-AC6A-9D47F2C5443C - 66dd78086084c78b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -283,8 +235,8 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/Home/MessagesReceived/ReceivedMessagesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
                   offsetFromSymbolStart = "44">
                </Location>
             </Locations>
@@ -318,7 +270,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
                   endingLineNumber = "80"
-                  offsetFromSymbolStart = "208">
+                  offsetFromSymbolStart = "228">
                </Location>
                <Location
                   uuid = "4F0D275B-0818-460A-91B7-16AB41F5E475 - eacb06a248ebc353"
@@ -333,7 +285,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "80"
                   endingLineNumber = "80"
-                  offsetFromSymbolStart = "352">
+                  offsetFromSymbolStart = "372">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -366,7 +318,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
                   endingLineNumber = "89"
-                  offsetFromSymbolStart = "1468">
+                  offsetFromSymbolStart = "1568">
                </Location>
                <Location
                   uuid = "3725876F-8307-4A38-B07C-647F447EA43A - 129de9ca1a40de78"
@@ -381,7 +333,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
                   endingLineNumber = "89"
-                  offsetFromSymbolStart = "1376">
+                  offsetFromSymbolStart = "1476">
                </Location>
                <Location
                   uuid = "3725876F-8307-4A38-B07C-647F447EA43A - 4ad112319d7edf33"
@@ -396,7 +348,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
                   endingLineNumber = "89"
-                  offsetFromSymbolStart = "1272">
+                  offsetFromSymbolStart = "1372">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -500,54 +452,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "230B353C-33F4-44F7-9E72-6A1901B7DEEC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirma/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "230B353C-33F4-44F7-9E72-6A1901B7DEEC - 44cbaa0b0bf873ba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Affirma.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "448">
-               </Location>
-               <Location
-                  uuid = "230B353C-33F4-44F7-9E72-6A1901B7DEEC - 905a364c87f138a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in implicit closure #1 () throws -&gt; Any in closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Affirma.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
-                  moduleName = "Affirma"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5C369008-035A-4E2C-9F97-520F327B9D69"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -596,22 +500,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B6ABFCE-E922-4CE6-8FA5-4415679E025D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Affirma/Home/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1FE7CEBF-F423-4DA3-872F-575F54071AAC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -623,6 +511,180 @@
             endingLineNumber = "63"
             landmarkName = "appMovedToForeground()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "420DAC06-B24D-4D0A-8946-E32B9533F271"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/SupabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "setUser(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "420DAC06-B24D-4D0A-8946-E32B9533F271 - aa4f37ef778fda12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Affirma.SupabaseManager.setUser(completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "420DAC06-B24D-4D0A-8946-E32B9533F271 - d55b0c7cef14e426"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Affirma.SupabaseManager.setUser(completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "420DAC06-B24D-4D0A-8946-E32B9533F271 - a3f2e5358dc51614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Affirma.SupabaseManager.setUser(completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "420DAC06-B24D-4D0A-8946-E32B9533F271 - 5824c3e92f39f015"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Affirma.SupabaseManager.setUser(completion: (Swift.Bool) -&gt; ()) async -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "321C623C-8DF1-40BB-90EB-110368A51A3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/SupabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "isUserActive(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "321C623C-8DF1-40BB-90EB-110368A51A3A - 50457a9219eaa0a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Affirma.SupabaseManager.isUserActive(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "321C623C-8DF1-40BB-90EB-110368A51A3A - 50457a9219eaa0a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Affirma.SupabaseManager.isUserActive(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Affirma"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/SupabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "404">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CBBE16A-928B-4D50-8F19-74070D9BBF41"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/User/AffirmaStateManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "logout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE3FD34E-15CF-449B-9177-8EC8E01AEF9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/User/AffirmaStateManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "login(withUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "824FAC91-3613-4E40-8AEC-9853E20129BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Affirma/User/AffirmaUser.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "state"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

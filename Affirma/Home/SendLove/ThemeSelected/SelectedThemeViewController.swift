@@ -62,27 +62,9 @@ class SelectedThemeViewController: BaseViewController {
         collectionView.collectionViewLayout = layout
         registerCells()
         setUI()
-        
-        sendAffirmationPopup.pickFromContactsPressed = {
-            self.contactPicker.delegate = self
-            self.contactPicker.displayedPropertyKeys =
-            [CNContactGivenNameKey
-             , CNContactPhoneNumbersKey]
-            self.present(self.contactPicker, animated: true, completion: nil)
-        }
-        
-        sendAffirmationPopup.sendPressed = { number in
-            if let number = number {
-                BranchLinkManager.shared.createLink(forModel: self.modelToShare) { link in
-                    if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {
-                        UIApplication.shared.open(supportUrl)
-                        
-                        self.sendAffirmationPopup.dismiss()
-                    }
-                }
-            }
-        }
+        handlePopupCallbacks()
     }
+    
     
     func registerCells() {
         collectionView.register(UINib(nibName: "AffirmationCardCollectionViewCell", bundle: nil),
@@ -96,6 +78,60 @@ class SelectedThemeViewController: BaseViewController {
                                                  Colors.black_131415.value],
                                    gradientOrientation: .topLeftBottomRight)
         
+    }
+    
+    
+    func handlePopupCallbacks() {
+        
+        sendAffirmationPopup.pickFromContactsPressed = {
+            self.contactPicker.delegate = self
+            self.contactPicker.displayedPropertyKeys =
+            [CNContactGivenNameKey
+             , CNContactPhoneNumbersKey]
+            self.present(self.contactPicker, animated: true, completion: nil)
+        }
+        
+        sendAffirmationPopup.sendPressed = { number in
+            if let number = number?.replacingOccurrences(of: "+", with: "") {
+                SupabaseManager.shared.doesUserExist(forNumber: number) { doesExist, userId in
+                    BranchLinkManager.shared.createLink(forModel: self.modelToShare,
+                                                        shouldAdd: !(doesExist)) { link in
+                        if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {
+                            UIApplication.shared.open(supportUrl)
+                            
+                            self.sendAffirmationPopup.dismiss()
+                        }
+                    }
+                    
+                    if doesExist == true {
+                        self.addAffirmation(forUserId: userId)
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    func addAffirmation(forUserId userId: String?) {
+        let senderId = AffirmaStateManager.shared.activeUser?.userId
+        let cardId = self.modelToShare?.id
+        let affirmation = self.modelToShare?.affirmation
+        let affirmationImage = self.modelToShare?.affirmation_image
+        let senderName = AffirmaStateManager.shared.activeUser?.metaData?.name
+        let message_id = String(NSDate().timeIntervalSince1970)
+        let dataModel = ReceivedMessagesDataModel(withSenderId: senderId?.uuidString,
+                                                  withCardId: String(cardId ?? 0),
+                                                  withAffirmation: affirmation,
+                                                  withAffirmationImage: affirmationImage,
+                                                  withSenderName: senderName,
+                                                  withMessageId: message_id)
+        
+        let baseModel = ReceivedMessagesBaseModel(withData: [dataModel])
+        
+        Task {
+            let _ = try? await self.viewModel?.addMessage(forUser: userId,
+                                                          withModel: baseModel)
+        }
     }
     
     func handleViewModelCallbacks() async {

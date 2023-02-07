@@ -13,6 +13,7 @@ class BranchLinkManager: NSObject {
     @objc static let shared = BranchLinkManager()
     
     func createLink(forModel model: SelectedThemeModel?,
+                    shouldAdd: Bool,
                     completion: @escaping ((String?) -> Void)) {
         guard let model = model else {
             return
@@ -36,7 +37,9 @@ class BranchLinkManager: NSObject {
         
         let linkProperties = BranchLinkProperties()
         linkProperties.addControlParam("$custom_meta_tags", withValue: modelToShare.toJSONString())
-        linkProperties.addControlParam("$deeplink_path", withValue: "affirmaapp.com/messagesReceived?shouldAdd=true")
+        
+        let link = "affirmaapp.com/messagesReceived?shouldAdd=\(shouldAdd)"
+        linkProperties.addControlParam("$deeplink_path", withValue: link)
         
         
         buo.getShortUrl(with: linkProperties) { (link, error) in

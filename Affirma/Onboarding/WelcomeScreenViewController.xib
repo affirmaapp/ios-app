@@ -66,7 +66,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="Black_131415"/>
             <constraints>
                 <constraint firstItem="y6T-74-4Pa" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8Cc-nS-vuz"/>
                 <constraint firstItem="6M7-7K-DBg" firstAttribute="centerY" secondItem="y6T-74-4Pa" secondAttribute="centerY" id="9jV-Xq-IBw"/>
@@ -93,8 +93,11 @@
         </view>
     </objects>
     <resources>
-        <image name="arrowDown" width="30" height="17"/>
+        <image name="arrowDown" width="12.333333015441895" height="7.3333334922790527"/>
         <image name="icon" width="175" height="201"/>
+        <namedColor name="Black_131415">
+            <color red="0.075000002980232239" green="0.078000001609325409" blue="0.082000002264976501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="White_E5E5E5">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

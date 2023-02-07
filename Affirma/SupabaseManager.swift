@@ -95,7 +95,7 @@ extension SupabaseManager {
                 completion(true)
             }
         } catch {
-            print("error in sign in")
+            print("error in sign in: \(error)")
             completion(false)
         }
     }
@@ -143,8 +143,10 @@ extension SupabaseManager {
             affirmaUser.phoneNumber = user?.phone
             AffirmaStateManager.shared.login(withUser: affirmaUser)
             
-            if let userId: UUID = user?.id {
-                let data: [String: UUID] = ["user_id": userId]
+            if let userId: String = user?.id.uuidString,
+               let phone = user?.phone {
+                let data: [String: String] = ["user_id": userId,
+                                              "phone": phone]
                 let query = client?.database.from("user_metadata").insert(values: try JSONEncoder().encode(data))
                 Task {
                     let _ = try? await query?.execute()
@@ -257,13 +259,44 @@ extension SupabaseManager {
         }
     }
     
+    func doesUserExist(forNumber number: String,
+                       completion: @escaping ((Bool, String?) -> Void)) {
+        do {
+            let query = client?.database.from("user_metadata")
+                .select().filter(column: "phone", operator: .eq, value: number)
+            
+            Task {
+                let queryResponse = try? await query?.execute()
+                let decoder = JSONDecoder()
+                if let data = queryResponse?.underlyingResponse.data {
+                    let myStruct = try! decoder.decode([UserData].self, from: data)
+
+                    if myStruct.count > 0 {
+                        let user = myStruct[0].user_id
+                        completion(true, user?.uuidString)
+                    } else {
+                        completion(false, nil)
+                    }
+                } else {
+                    completion(false, nil)
+                }
+            }
+        } catch {
+            completion(false, nil)
+        }
+        
+        
+    }
+    
     func fetchUserMetaData(forId userId: String?,
                            completion: @escaping ((Bool) -> Void)) async {
         guard let userId = userId else {
             return
         }
         do {
-            let query = client?.database.from("user_metadata").select()
+            let query = client?.database.from("user_metadata")
+                .select()
+                .equals(column: "user_id", value: "\(userId)")
             
             Task {
                 let queryResponse = try? await query?.execute()

@@ -10,9 +10,10 @@ import ObjectMapper
 
 class UserData: NSObject, Mappable, Codable {
     var name: String?
-    var userId: UUID?
+    var user_id: UUID?
     var id: Int?
     var state: String?
+    var phone: String?
     var notification_hour: Int?
     var notification_minute: Int?
     
@@ -21,21 +22,15 @@ class UserData: NSObject, Mappable, Codable {
     
     func mapping(map: Map) {
         name <- map["name"]
-        userId <- map["user_id"]
+        user_id <- map["user_id"]
         id <- map["id"]
         state <- map["state"]
+        phone <- map["phone"]
         notification_hour <- map["notification_hour"]
         notification_minute <- map["notification_minute"]
     }
-    
-    init(withName name: String,
-         withUserId userId: UUID,
-         withId id: Int) {
-        self.name = name
-        self.userId = userId
-        self.id = id
-    }
 }
+
 
 class AffirmaUser: NSObject, Mappable, NSCoding {
     var userId: UUID?
@@ -70,7 +65,9 @@ class AffirmaUserMetaData: NSObject, Mappable, NSCoding {
     var name: String?
     var notification_hour: Int?
     var notification_minute: Int?
-    var state: String?
+    var state: String? { didSet {
+        print("SET SET TO \(state)")
+    }}
     
     override init() {}
     required convenience init?(map: Map) { self.init() }

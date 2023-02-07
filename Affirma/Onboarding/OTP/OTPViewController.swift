@@ -80,7 +80,7 @@ class OTPViewController: BaseViewController {
                 if isVerified {
                     DispatchQueue.main.async {
                         Task {
-                            _ = try? await SupabaseManager.shared.fetchUser(completion: { isUserSet in
+                            _ = try? await SupabaseManager.shared.fetchUser { isUserSet in
                                 if isUserSet {
                                     SupabaseManager.shared.isUserActive(completion: { isOnboardingComplete in
                                         DispatchQueue.main.async {
@@ -106,7 +106,7 @@ class OTPViewController: BaseViewController {
                                     nav.isNavigationBarHidden = true
                                     appDelegate.window?.rootViewController = nav
                                 }
-                            })
+                            }
                         }
                     }
                 } else {
