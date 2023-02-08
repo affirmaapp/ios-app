@@ -103,7 +103,7 @@
                                 </imageView>
                             </subviews>
                         </stackView>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-zs-3SY">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-zs-3SY" customClass="PhoneNumberTextField" customModule="PhoneNumberKit">
                             <rect key="frame" x="20" y="208.00000000000003" width="286.33333333333331" height="49.999999999999972"/>
                             <color key="backgroundColor" name="White_D8D8D8"/>
                             <constraints>
@@ -115,6 +115,7 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </textField>
                     </subviews>
@@ -155,7 +156,7 @@
                 <outlet property="bottomStackView" destination="6T1-OZ-OoV" id="Gq3-99-oFr"/>
                 <outlet property="pickFromContactButton" destination="zqw-bl-hkd" id="7cB-Sl-wdT"/>
                 <outlet property="sendButton" destination="NTs-iN-PQd" id="QDt-Te-vL6"/>
-                <outlet property="textField" destination="U7g-zs-3SY" id="0gV-hH-xWx"/>
+                <outlet property="textField" destination="U7g-zs-3SY" id="KD5-vU-2KP"/>
             </connections>
             <point key="canvasLocation" x="-14.503816793893129" y="19.718309859154932"/>
         </view>

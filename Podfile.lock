@@ -10,6 +10,12 @@ PODS:
   - NVActivityIndicatorView/Base (5.1.1)
   - ObjectMapper (4.2.0)
   - OTPFieldView (1.0.1)
+  - PhoneNumberKit (3.5.6):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.5.6)
+    - PhoneNumberKit/UIKit (= 3.5.6)
+  - PhoneNumberKit/PhoneNumberKitCore (3.5.6)
+  - PhoneNumberKit/UIKit (3.5.6):
+    - PhoneNumberKit/PhoneNumberKitCore
   - Player (0.14.0)
   - SwiftToast (1.1.3)
   - WatchLayout (1.1.0)
@@ -24,6 +30,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ObjectMapper
   - OTPFieldView
+  - PhoneNumberKit (from `https://github.com/marmelroy/PhoneNumberKit`)
   - Player
   - SwiftToast
   - WatchLayout
@@ -43,6 +50,15 @@ SPEC REPOS:
     - SwiftToast
     - WatchLayout
 
+EXTERNAL SOURCES:
+  PhoneNumberKit:
+    :git: https://github.com/marmelroy/PhoneNumberKit
+
+CHECKOUT OPTIONS:
+  PhoneNumberKit:
+    :commit: 4766ff8089c49b4af0206ab82ff3117613b82972
+    :git: https://github.com/marmelroy/PhoneNumberKit
+
 SPEC CHECKSUMS:
   Anchorage: 1961bc81c84aeed54ad7ffc697c50cd9de748ba6
   AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
@@ -53,10 +69,11 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  PhoneNumberKit: c3b942a9e8adde6a404d13da1283f275391fe108
   Player: 37e0acc16ea1495fc241df88fe9f089367513331
   SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   WatchLayout: f25fbd1c49726249f6f8e513616be8b2d636f06c
 
-PODFILE CHECKSUM: dc8402d9b3e8aff5884de93db9b14f3e2c84e571
+PODFILE CHECKSUM: 1aa9d0e1027445dcef967a674a1e9fa6e2bf05fa
 
 COCOAPODS: 1.11.3

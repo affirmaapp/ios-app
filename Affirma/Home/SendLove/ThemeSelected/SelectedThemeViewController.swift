@@ -92,8 +92,8 @@ class SelectedThemeViewController: BaseViewController {
         }
         
         sendAffirmationPopup.sendPressed = { number in
-            if let number = number?.replacingOccurrences(of: "+", with: "") {
-                SupabaseManager.shared.doesUserExist(forNumber: number) { doesExist, userId in
+            if let number = number {
+                SupabaseManager.shared.doesUserExist(forNumber: number.replacingOccurrences(of: "+", with: "")) { doesExist, userId in
                     BranchLinkManager.shared.createLink(forModel: self.modelToShare,
                                                         shouldAdd: !(doesExist)) { link in
                         if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {

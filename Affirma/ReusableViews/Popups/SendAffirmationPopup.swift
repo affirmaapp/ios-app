@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PhoneNumberKit
 import UIKit
 
 class SendAffirmationPopup: UIView {
@@ -13,7 +14,8 @@ class SendAffirmationPopup: UIView {
     @IBOutlet weak var pickFromContactButton: UIButton!
     @IBOutlet weak var bottomStackView: UIStackView!
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var textField: UITextField!    
+//    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: PhoneNumberTextField!
     
     var phoneNumber: String?
     
@@ -33,6 +35,10 @@ class SendAffirmationPopup: UIView {
         
         textField.setLeftPaddingPoints(10)
         
+        textField.withFlag = true
+        textField.withPrefix = true
+        textField.withExamplePlaceholder = true 
+        
     }
     
     func render(withNumber number: String) {
@@ -50,7 +56,16 @@ class SendAffirmationPopup: UIView {
     }
     
     @IBAction func sendButtonPressed(_ sender: Any) {
-        self.sendPressed?(self.phoneNumber)
+        let phoneNumberKit = PhoneNumberKit()
+//        phoneNumberKit.format(number.va, toType: .e164)
+        do {
+            var phone = try phoneNumberKit.parse(self.phoneNumber ?? "")
+            let formatted = phoneNumberKit.format(phone, toType: .e164)
+            print("FINAL PHONE: \(formatted)")
+            self.sendPressed?(formatted)
+        } catch {
+            print("error: \(error)")
+        }
     }
     
     @IBAction func pickFromContactPressed(_ sender: Any) {
