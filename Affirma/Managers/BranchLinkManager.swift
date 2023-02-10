@@ -25,7 +25,6 @@ class BranchLinkManager: NSObject {
         
         buo.title = "A Little Reminder of Your Incredible Strength and Potential"
         buo.contentDescription = ""
-        buo.imageUrl = model.affirmation_image
         
         var metaTags: [String: String] = [:]
         var modelToShare = ReceivedMessagesDataModel(withSenderId: AffirmaStateManager.shared.activeUser?.userId?.uuidString,
@@ -37,7 +36,7 @@ class BranchLinkManager: NSObject {
         
         let linkProperties = BranchLinkProperties()
         linkProperties.addControlParam("$custom_meta_tags", withValue: modelToShare.toJSONString())
-        
+
         let link = "affirmaapp.com/messagesReceived?shouldAdd=\(shouldAdd)"
         linkProperties.addControlParam("$deeplink_path", withValue: link)
         

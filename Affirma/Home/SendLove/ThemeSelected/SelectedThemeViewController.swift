@@ -33,6 +33,15 @@ class SelectedThemeViewController: BaseViewController {
     let contactPicker = CNContactPickerViewController()
     var modelToShare: SelectedThemeModel?
     
+    var messageContent = ["Affirmations delivered! Time to power up your positive vibes 🖤",
+                          "Today's dose of self-love, compliments of yours truly 🖤",
+                          "A little reminder from me to you: You've got this and more 🖤",
+                          "Affirmations incoming! Get ready to feel unstoppable 🖤",
+                          "These affirmations are like a warm hug for your soul. Enjoy! 🖤",
+                          "Affirmations with a side of sarcasm and a sprinkle of humor 🖤",
+                          "Affirmations to make you smile, nod in agreement, and feel amazing 🖤",
+                          "Your positive affirmations, express delivered with love 🖤"]
+    
     private var choicePopup: ChoicesOverPopup = Bundle.main
         .loadNibNamed("ChoicesOverPopup",
                       owner: self,
@@ -96,7 +105,9 @@ class SelectedThemeViewController: BaseViewController {
                 SupabaseManager.shared.doesUserExist(forNumber: number.replacingOccurrences(of: "+", with: "")) { doesExist, userId in
                     BranchLinkManager.shared.createLink(forModel: self.modelToShare,
                                                         shouldAdd: !(doesExist)) { link in
-                        if let supportUrl = URL(string: "https://api.whatsapp.com/send/?phone=\(number)&text=\(link ?? "")") {
+                        let message = self.messageContent.randomElement() ?? ""
+                        let link = "https://api.whatsapp.com/send/?phone=\(number)&text=\(message)\n\(link ?? "")".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                        if let supportUrl = URL(string: link) {
                             UIApplication.shared.open(supportUrl)
                             
                             self.sendAffirmationPopup.dismiss()
