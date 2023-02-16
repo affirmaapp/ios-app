@@ -151,7 +151,7 @@ extension ReceivedMessagesViewController: UITableViewDelegate, UITableViewDataSo
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height * 0.65
+        return UIScreen.main.bounds.height * 0.7
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

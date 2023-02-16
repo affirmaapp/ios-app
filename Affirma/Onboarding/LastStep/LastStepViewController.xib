@@ -40,16 +40,13 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nht-gV-LDU" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
-                    <rect key="frame" x="-68.666666666666686" y="0.0" width="530.33333333333348" height="530"/>
+                    <rect key="frame" x="-68.666666666666686" y="0.0" width="530.33333333333337" height="511.33333333333331"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="530" id="R2s-tM-eiP"/>
-                        <constraint firstAttribute="height" constant="530" id="Wx1-kK-11O"/>
-                    </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additionally,  Send your friends some positive affirmations and pretend they're not rolling their eyes at you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-CN-qta">
-                    <rect key="frame" x="20" y="560" width="353" height="143.66666666666663"/>
-                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-CN-qta">
+                    <rect key="frame" x="20" y="521.33333333333337" width="353" height="221.33333333333337"/>
+                    <string key="text">Ready to be a superhero of love and encouragement?   Send personalized affirmations to your friends and watch them conquer the world. ❤️‍🔥  When we lift each other up, there's no limit to what we can achieve. 🫶</string>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                     <color key="textColor" name="White_E5E5E5"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -61,14 +58,16 @@
                 <constraint firstAttribute="trailing" secondItem="qQc-n8-G09" secondAttribute="trailing" id="AjQ-Yj-xYR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cut-CN-qta" secondAttribute="trailing" constant="20" id="BQA-zJ-3JY"/>
                 <constraint firstItem="W48-U0-Svl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Dpm-AR-61t"/>
-                <constraint firstItem="cut-CN-qta" firstAttribute="top" secondItem="nht-gV-LDU" secondAttribute="bottom" constant="30" id="JRF-Iz-tUg"/>
+                <constraint firstItem="cut-CN-qta" firstAttribute="top" secondItem="nht-gV-LDU" secondAttribute="bottom" constant="10" id="JRF-Iz-tUg"/>
                 <constraint firstItem="nht-gV-LDU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Onn-YS-hHP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W48-U0-Svl" secondAttribute="bottom" constant="20" id="RSF-jd-SVM"/>
                 <constraint firstItem="qQc-n8-G09" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WrC-EQ-CU2"/>
                 <constraint firstAttribute="trailing" secondItem="W48-U0-Svl" secondAttribute="trailing" constant="20" id="aCQ-xf-obX"/>
                 <constraint firstItem="nht-gV-LDU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eYJ-eg-0lm"/>
+                <constraint firstItem="nht-gV-LDU" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1.34945" id="lUY-Xc-PvN"/>
                 <constraint firstAttribute="bottom" secondItem="qQc-n8-G09" secondAttribute="bottom" id="pJV-6h-bAl"/>
                 <constraint firstItem="cut-CN-qta" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="tZH-Mz-qPF"/>
+                <constraint firstItem="nht-gV-LDU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.6" id="y9g-rh-OoT"/>
             </constraints>
             <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>

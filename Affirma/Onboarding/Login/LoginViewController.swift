@@ -68,8 +68,9 @@ class LoginViewController: BaseViewController {
  
         cta.primaryCtaClicked = {
             Task {
+                self.showFullScreenLoader()
                 try await self.signIn { fullNumber in
-                    
+                    self.hideFullScreenLoader()
                     let otpVC = OTPViewControllerFactory.produce(withNumber: fullNumber)
                     self.navigationController?.pushViewController(otpVC, animated: true)
                 }

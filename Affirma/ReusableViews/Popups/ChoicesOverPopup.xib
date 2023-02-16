@@ -55,8 +55,9 @@
                                 <constraint firstAttribute="trailing" secondItem="qgz-we-mTn" secondAttribute="trailing" constant="20" id="bmx-OA-haf"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These affirmations are so powerful, you can't go wrong with any of them.  They deserve to be shared" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rua-47-cgQ">
-                            <rect key="frame" x="20" y="219.00000000000003" width="286.33333333333331" height="87.666666666666657"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rua-47-cgQ">
+                            <rect key="frame" x="20" y="197.33333333333331" width="286.33333333333331" height="131.33333333333331"/>
+                            <string key="text">These affirmations are so powerful, you can't go wrong with any of them.  They deserve to be shared.  So go ahead, hit send, and watch the magic happen!</string>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

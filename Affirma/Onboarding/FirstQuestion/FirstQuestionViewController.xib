@@ -56,10 +56,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drG-n3-zCH" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="46.666666666666657" y="60" width="300" height="300"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="300" id="1tB-9w-V2M"/>
-                        <constraint firstAttribute="width" constant="300" id="AcS-Wy-AED"/>
-                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXy-ks-bvZ">
                     <rect key="frame" x="20" y="459.66666666666669" width="353" height="57.666666666666686"/>
@@ -86,9 +82,11 @@
                 <constraint firstItem="iXy-ks-bvZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aw7-Kj-62d"/>
                 <constraint firstItem="iXy-ks-bvZ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="jlz-bu-QEv"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iXy-ks-bvZ" secondAttribute="trailing" constant="20" id="m2i-VT-h1e"/>
+                <constraint firstItem="drG-n3-zCH" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.763359" id="s6z-6c-yDw"/>
                 <constraint firstItem="drG-n3-zCH" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="sbj-12-oZ7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HeC-Hu-f5Y" secondAttribute="trailing" id="tR3-5u-yBQ"/>
                 <constraint firstItem="vTG-Xo-HLD" firstAttribute="trailing" secondItem="pLh-T3-a60" secondAttribute="trailing" id="tjs-Ye-NcF"/>
+                <constraint firstItem="drG-n3-zCH" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.352113" id="wSx-xY-08A"/>
                 <constraint firstAttribute="bottom" secondItem="HeC-Hu-f5Y" secondAttribute="bottom" id="ytJ-ZV-BYc"/>
                 <constraint firstItem="pLh-T3-a60" firstAttribute="leading" secondItem="iXy-ks-bvZ" secondAttribute="leading" constant="10" id="zaF-Mp-u9w"/>
             </constraints>

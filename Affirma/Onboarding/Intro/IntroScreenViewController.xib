@@ -35,10 +35,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faW-CN-aaj" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="-18.666666666666657" y="-20" width="430.33333333333326" height="430"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="430" id="1zq-wi-63A"/>
-                        <constraint firstAttribute="width" constant="430" id="mSO-UO-zDH"/>
-                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have affirmations for every person!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCr-4C-I8L">
                     <rect key="frame" x="20" y="450" width="353" height="57.666666666666686"/>
@@ -102,6 +98,7 @@
                 <constraint firstAttribute="bottom" secondItem="QZF-NG-rgT" secondAttribute="bottom" id="4PY-Ly-6NA"/>
                 <constraint firstItem="QZF-NG-rgT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5ns-aC-30H"/>
                 <constraint firstItem="DD5-Hm-ksj" firstAttribute="top" secondItem="VCr-4C-I8L" secondAttribute="bottom" constant="10" id="CLX-aH-K9D"/>
+                <constraint firstItem="faW-CN-aaj" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1.095" id="EAx-qD-wbR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xlk-oZ-ENs" secondAttribute="trailing" constant="20" id="JaJ-b9-sxC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QZF-NG-rgT" secondAttribute="trailing" id="MEY-9r-G2b"/>
                 <constraint firstItem="faW-CN-aaj" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="O0l-ly-zvc"/>
@@ -109,6 +106,7 @@
                 <constraint firstItem="faW-CN-aaj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-20" id="ZMW-1J-zgZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xlk-oZ-ENs" secondAttribute="bottom" constant="10" id="ahY-S9-zxk"/>
                 <constraint firstItem="VCr-4C-I8L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="bIK-yx-Uwo"/>
+                <constraint firstItem="faW-CN-aaj" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.504695" id="dHL-2f-8At"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VCr-4C-I8L" secondAttribute="trailing" constant="20" id="l8c-pS-Rza"/>
                 <constraint firstItem="61K-uK-q3a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="sQv-17-kFq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="61K-uK-q3a" secondAttribute="trailing" constant="20" id="spW-XU-YZc"/>

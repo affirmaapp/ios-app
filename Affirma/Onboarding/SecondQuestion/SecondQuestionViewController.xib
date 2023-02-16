@@ -38,10 +38,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1j-5I-wns" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="21.666666666666657" y="60" width="350" height="350"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="350" id="Ut6-2Y-faw"/>
-                        <constraint firstAttribute="height" constant="350" id="t9g-Pa-pvW"/>
-                    </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQI-1a-coy" customClass="GenericButtonView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="223" y="743" width="150" height="55"/>
@@ -111,12 +107,14 @@
                 <constraint firstAttribute="bottom" secondItem="hzZ-2v-Maz" secondAttribute="bottom" id="g1e-U1-Y9f"/>
                 <constraint firstItem="hzZ-2v-Maz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hBA-Sg-peS"/>
                 <constraint firstItem="v1j-5I-wns" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="hFZ-qK-V0M"/>
+                <constraint firstItem="v1j-5I-wns" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.410798" id="hMj-UG-R2b"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TQN-C2-z2U" secondAttribute="trailing" constant="20" id="meZ-H7-sDl"/>
                 <constraint firstItem="2tQ-c5-Lqw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="r4c-fg-4bm"/>
                 <constraint firstItem="hzZ-2v-Maz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rlZ-st-Meo"/>
                 <constraint firstAttribute="trailing" secondItem="AQI-1a-coy" secondAttribute="trailing" constant="20" id="sLo-0N-SeY"/>
                 <constraint firstItem="v1j-5I-wns" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="tN2-9b-FYi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2tQ-c5-Lqw" secondAttribute="trailing" constant="20" id="vKP-QC-Z5H"/>
+                <constraint firstItem="v1j-5I-wns" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.890585" id="xdX-JT-zTG"/>
             </constraints>
             <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
         </view>

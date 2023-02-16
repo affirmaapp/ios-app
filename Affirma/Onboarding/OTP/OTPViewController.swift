@@ -22,6 +22,7 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var mediaView: GenericMediaView!
     @IBOutlet weak var otpView: OTPFieldView!
+    @IBOutlet weak var incorrectLabel: UILabel!
     @IBOutlet weak var cta: GenericButtonView!
     
     fileprivate var number: String?
@@ -64,7 +65,7 @@ class OTPViewController: BaseViewController {
         self.otpView.tintColor = Colors.white_E5E5E5.value
 //        self.otpView.errorBorderColor = Colors.abRed.value
         self.otpView.delegate = self
-        
+        self.incorrectLabel.isHidden = true
         
         mediaView.render(withImage: nil,
                          withVideo: nil,
@@ -73,10 +74,13 @@ class OTPViewController: BaseViewController {
     }
     
     private func verifyOTP(withNumber number: String?, otp: String?) async {
+        showFullScreenLoader()
         if let number = number,
            let otp = otp {
             await SupabaseManager.shared.verify(withPhoneNumber: number,
                                                 witToken: otp) { isVerified in
+                
+                self.hideFullScreenLoader()
                 if isVerified {
                     DispatchQueue.main.async {
                         Task {
@@ -111,6 +115,9 @@ class OTPViewController: BaseViewController {
                     }
                 } else {
                     print("error in logging in")
+                    DispatchQueue.main.async {
+                        self.incorrectLabel.isHidden = false
+                    }
                 }
             }
         }
@@ -140,7 +147,7 @@ class OTPViewController: BaseViewController {
 
 extension OTPViewController: OTPFieldViewDelegate {
     func shouldBecomeFirstResponderForOTP(otpTextFieldIndex index: Int) -> Bool {
-        
+        self.incorrectLabel.isHidden = true 
         return true
     }
     

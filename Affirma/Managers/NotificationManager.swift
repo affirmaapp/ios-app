@@ -36,9 +36,10 @@ class NotificationManager: NSObject {
         }
     }
     
-    func askForUsersPermission() {
+    func askForUsersPermission(completion: @escaping ((Bool) -> Void)) {
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.alert, .sound, .badge]) {[weak self] granted, _ in
+                completion(true)
                 print("Permission granted: \(granted)")
                 guard granted else {
                     return }

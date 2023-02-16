@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="cta" destination="Mxr-RS-Vv7" id="j6a-4g-V7E"/>
                 <outlet property="gradientView" destination="Ap2-9D-Wqj" id="bYi-b4-b68"/>
+                <outlet property="incorrectLabel" destination="IyY-WY-kKk" id="RnD-oe-UTc"/>
                 <outlet property="mediaView" destination="R2S-Ow-0Zi" id="9tR-5h-2iP"/>
                 <outlet property="otpView" destination="arC-7n-Q5Z" id="Jk5-hR-1QM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1YO-ew-cF3"/>
@@ -30,10 +31,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2S-Ow-0Zi" customClass="GenericMediaView" customModule="Affirma" customModuleProvider="target">
                     <rect key="frame" x="71.666666666666686" y="60" width="250" height="250"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="ub2-4g-yiS"/>
-                        <constraint firstAttribute="height" constant="250" id="xFp-3n-yZU"/>
-                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHM-kb-rL5">
                     <rect key="frame" x="10" y="409" width="373" height="29"/>
@@ -54,6 +51,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops, looks like the OTP you entered is incorrect." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-WY-kKk">
+                    <rect key="frame" x="56.666666666666657" y="523.66666666666663" width="316.33333333333337" height="19.333333333333371"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                    <color key="textColor" red="0.92156862750000001" green="0.23137254900000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arC-7n-Q5Z" customClass="OTPFieldView" customModule="OTPFieldView">
                     <rect key="frame" x="56.666666666666657" y="458" width="280" height="61"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,19 +69,24 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="R2S-Ow-0Zi" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.293427" id="0qR-uj-pzm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dHM-kb-rL5" secondAttribute="trailing" constant="10" id="2rA-TS-Ntq"/>
                 <constraint firstItem="Ap2-9D-Wqj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3Kv-nn-KNh"/>
+                <constraint firstItem="IyY-WY-kKk" firstAttribute="leading" secondItem="arC-7n-Q5Z" secondAttribute="leading" id="4SR-R9-eMf"/>
                 <constraint firstItem="Mxr-RS-Vv7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="A3i-Wj-Ty4"/>
                 <constraint firstItem="Ap2-9D-Wqj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bqg-nO-MIy"/>
                 <constraint firstAttribute="bottom" secondItem="Ap2-9D-Wqj" secondAttribute="bottom" id="IjO-Az-Vh7"/>
                 <constraint firstItem="Mxr-RS-Vv7" firstAttribute="top" secondItem="arC-7n-Q5Z" secondAttribute="bottom" constant="40" id="OTX-fZ-Ug5"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="Pds-OI-8de"/>
+                <constraint firstItem="IyY-WY-kKk" firstAttribute="bottom" secondItem="arC-7n-Q5Z" secondAttribute="bottom" constant="24" id="Uzw-ag-5Oa"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Z7k-ft-jp7"/>
                 <constraint firstItem="R2S-Ow-0Zi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="aXR-ik-65I"/>
                 <constraint firstItem="arC-7n-Q5Z" firstAttribute="top" secondItem="dHM-kb-rL5" secondAttribute="bottom" constant="20" id="bHf-Gh-TFv"/>
                 <constraint firstItem="R2S-Ow-0Zi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dOd-rN-t37"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IyY-WY-kKk" secondAttribute="trailing" constant="20" id="jl9-q8-NHt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ap2-9D-Wqj" secondAttribute="trailing" id="k9c-ej-KaT"/>
                 <constraint firstItem="dHM-kb-rL5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="x6X-0Z-yaK"/>
+                <constraint firstItem="R2S-Ow-0Zi" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.636132" id="ynb-wi-4H2"/>
             </constraints>
             <point key="canvasLocation" x="116.79389312977099" y="20.422535211267608"/>
         </view>

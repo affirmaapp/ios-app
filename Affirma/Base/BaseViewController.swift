@@ -29,16 +29,20 @@ class BaseViewController: UIViewController {
     }
     
     func showFullScreenLoader() {
-        loader.startAnimating()
-        self.view.addSubview(loaderView)
-        loaderView.horizontalAnchors == view.horizontalAnchors
-        loaderView.verticalAnchors == view.verticalAnchors
-        view.bringSubviewToFront(loaderView)
+        DispatchQueue.main.async {
+            self.loader.startAnimating()
+            self.view.addSubview(self.loaderView)
+            self.loaderView.horizontalAnchors == self.view.horizontalAnchors
+            self.loaderView.verticalAnchors == self.view.verticalAnchors
+            self.view.bringSubviewToFront(self.loaderView)
+        }
     }
     
     func hideFullScreenLoader() {
-        loader.stopAnimating()
-        loaderView.removeFromSuperview()
+        DispatchQueue.main.async {
+            self.loader.stopAnimating()
+            self.loaderView.removeFromSuperview()
+        }
     }
     
     func hideKeyboardWhenTappedOrSwiped() {
