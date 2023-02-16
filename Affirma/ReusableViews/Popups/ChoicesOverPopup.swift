@@ -10,6 +10,7 @@ import UIKit
 
 class ChoicesOverPopup: UIView {
     
+    @IBOutlet weak var textLabel: UILabel!
     @IBOutlet var choiceOverPopup: UIView!
     @IBOutlet weak var heartIcon: UIImageView!
     
@@ -22,6 +23,10 @@ class ChoicesOverPopup: UIView {
             self.removeFromSuperview()
             self.popupDismissed?()
         }
+    }
+    
+    func render(withText text: String) {
+        self.textLabel.text = text
     }
     
 }

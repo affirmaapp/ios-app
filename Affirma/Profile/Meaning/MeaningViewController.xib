@@ -15,6 +15,7 @@
                 <outlet property="gradientView" destination="iN0-l3-epB" id="ioC-qQ-q9k"/>
                 <outlet property="headerHeight" destination="QSx-lF-w73" id="zWw-77-08l"/>
                 <outlet property="topHeader" destination="Gje-eY-L5Q" id="Jaf-fk-C7U"/>
+                <outlet property="topHeaderLabel" destination="SxQ-Qy-3A3" id="Ukl-Lq-chx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gwe-DW-yMY"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fca-AO-xnd">
-                    <rect key="frame" x="0.0" y="200" width="393" height="652"/>
+                    <rect key="frame" x="0.0" y="450" width="393" height="402"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="bfT-tB-FXc">
                         <size key="itemSize" width="128" height="128"/>
@@ -34,7 +35,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-eY-L5Q">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="450"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meanings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-UU-ZYX">
                             <rect key="frame" x="130.66666666666669" y="80" width="131.66666666666669" height="41"/>
@@ -42,8 +43,15 @@
                             <color key="textColor" name="White_E5E5E5"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxQ-Qy-3A3">
+                            <rect key="frame" x="20" y="139" width="353" height="255.66666666666663"/>
+                            <mutableString key="text">Welcome to the decoding chamber, where the symbols come to life and reveal their hidden meanings!🔮  Here, you can discover the significance of the symbols you've encountered in the app and understand why they've appeared in your journey.   Who knows, maybe they're trying to tell you something? 🫶</mutableString>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                            <color key="textColor" name="White_D8D8D8"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meaning" translatesAutoresizingMaskIntoConstraints="NO" id="qAZ-Rk-mXc">
-                            <rect key="frame" x="171.66666666666666" y="175" width="50" height="50"/>
+                            <rect key="frame" x="171.66666666666666" y="425" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="djX-68-8tV"/>
                                 <constraint firstAttribute="height" constant="50" id="uNS-Sa-rrE"/>
@@ -67,10 +75,13 @@
                         <constraint firstAttribute="bottom" secondItem="qAZ-Rk-mXc" secondAttribute="bottom" constant="-25" id="2gw-UK-oJB"/>
                         <constraint firstItem="ofu-e3-T0d" firstAttribute="top" secondItem="uo1-UU-ZYX" secondAttribute="top" id="2xm-ej-5i8"/>
                         <constraint firstItem="qAZ-Rk-mXc" firstAttribute="centerX" secondItem="Gje-eY-L5Q" secondAttribute="centerX" id="AOl-Cm-FfF"/>
-                        <constraint firstAttribute="height" constant="200" id="QSx-lF-w73"/>
+                        <constraint firstAttribute="height" constant="450" id="QSx-lF-w73"/>
+                        <constraint firstAttribute="trailing" secondItem="SxQ-Qy-3A3" secondAttribute="trailing" constant="20" id="RDz-Zl-UH3"/>
+                        <constraint firstItem="SxQ-Qy-3A3" firstAttribute="leading" secondItem="Gje-eY-L5Q" secondAttribute="leading" constant="20" id="Vsk-0W-lCc"/>
                         <constraint firstItem="uo1-UU-ZYX" firstAttribute="centerX" secondItem="Gje-eY-L5Q" secondAttribute="centerX" id="YyT-Xc-Yzc"/>
                         <constraint firstItem="uo1-UU-ZYX" firstAttribute="top" secondItem="Gje-eY-L5Q" secondAttribute="top" constant="80" id="cG9-Kw-afa"/>
                         <constraint firstItem="ofu-e3-T0d" firstAttribute="leading" secondItem="Gje-eY-L5Q" secondAttribute="leading" constant="20" id="cae-CN-3ns"/>
+                        <constraint firstItem="SxQ-Qy-3A3" firstAttribute="top" secondItem="uo1-UU-ZYX" secondAttribute="bottom" constant="18" id="suM-YJ-cOy"/>
                     </constraints>
                 </view>
             </subviews>
@@ -85,7 +96,7 @@
                 <constraint firstAttribute="bottom" secondItem="fca-AO-xnd" secondAttribute="bottom" id="rIE-jO-cW4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gje-eY-L5Q" secondAttribute="trailing" id="sGB-RR-p9B"/>
             </constraints>
-            <point key="canvasLocation" x="118" y="21"/>
+            <point key="canvasLocation" x="116.79389312977099" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
@@ -93,6 +104,9 @@
         <image name="meaning" width="19" height="19"/>
         <namedColor name="Black_18181C">
             <color red="0.093999996781349182" green="0.093999996781349182" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White_D8D8D8">
+            <color red="0.84700000286102295" green="0.84700000286102295" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White_E5E5E5">
             <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

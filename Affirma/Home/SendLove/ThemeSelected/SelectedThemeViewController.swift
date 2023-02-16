@@ -166,6 +166,10 @@ class SelectedThemeViewController: BaseViewController {
         viewModel?.showChancesOverPopup = {
             self.addChoicePopup() 
         }
+        
+        viewModel?.showLessOptionsPopup = {
+            self.addLessOptionsPopup()
+        }
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -197,10 +201,26 @@ class SelectedThemeViewController: BaseViewController {
         self.view.addSubview(choicePopup)
         choicePopup.verticalAnchors == self.view.verticalAnchors
         choicePopup.horizontalAnchors == self.view.horizontalAnchors
+        let text = "These affirmations are so powerful, you can't go wrong with any of them.\n\n" +
+        "They deserve to be shared. So go ahead, hit send, and watch the magic happen!"
+        choicePopup.render(withText: text)
         UIView.animate(withDuration: 0.5) {
             self.choicePopup.alpha = 1
         }
     }
+    func addLessOptionsPopup() {
+        self.choicePopup.alpha = 0
+        self.view.addSubview(choicePopup)
+        choicePopup.verticalAnchors == self.view.verticalAnchors
+        choicePopup.horizontalAnchors == self.view.horizontalAnchors
+        let text = "At the moment, this is all we have available in this category.✨\n\n" +
+        "Stay tuned, as we're constantly updating our collection with fresh affirmations.\n\n"
+        choicePopup.render(withText: text)
+        UIView.animate(withDuration: 0.5) {
+            self.choicePopup.alpha = 1
+        }
+    }
+    
     
     func addSendAffirmationPopup() {
         self.sendAffirmationPopup.alpha = 0

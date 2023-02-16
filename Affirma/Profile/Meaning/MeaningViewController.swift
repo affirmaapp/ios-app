@@ -23,6 +23,7 @@ class MeaningViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     @IBOutlet weak var topHeader: UIView!
+    @IBOutlet weak var topHeaderLabel: UILabel!
     
     var viewModel: MeaningViewModel?
     var dataFetched: Bool = false
@@ -79,25 +80,25 @@ class MeaningViewController: BaseViewController {
     }
     
     func hideTopHeader() {
-        if headerHeight.constant == 200 {
+        if headerHeight.constant == 450 {
             headerHeight.constant = 0
-            self.topHeader.isHidden = true
-            UIView.animate(withDuration: 0.5, delay: 0) {
+            self.topHeaderLabel.isHidden = true
+            UIView.animate(withDuration: 1, delay: 0) {
                 self.view.layoutIfNeeded()
             } completion: { _ in
-//                self.topHeader.isHidden = true
+                self.topHeader.isHidden = true
             }
         }
     }
     
     func showTopHeader() {
         if headerHeight.constant == 0 {
+            headerHeight.constant = 450
             self.topHeader.isHidden = false
-            headerHeight.constant = 200
-            UIView.animate(withDuration: 0.5, delay: 0) {
+            UIView.animate(withDuration: 1, delay: 0) {
                 self.view.layoutIfNeeded()
             } completion: { _ in
-                
+                self.topHeaderLabel.isHidden = false
             }
         }
     }
@@ -138,7 +139,7 @@ extension MeaningViewController: UICollectionViewDelegate,
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if dataFetched {
-            if scrollView.contentOffset.y > 100 {
+            if scrollView.contentOffset.y > 200 {
                 hideTopHeader()
             } else {
                 showTopHeader()

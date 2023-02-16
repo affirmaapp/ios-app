@@ -55,9 +55,8 @@
                                 <constraint firstAttribute="trailing" secondItem="qgz-we-mTn" secondAttribute="trailing" constant="20" id="bmx-OA-haf"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rua-47-cgQ">
-                            <rect key="frame" x="20" y="197.33333333333331" width="286.33333333333331" height="131.33333333333331"/>
-                            <string key="text">These affirmations are so powerful, you can't go wrong with any of them.  They deserve to be shared.  So go ahead, hit send, and watch the magic happen!</string>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rua-47-cgQ">
+                            <rect key="frame" x="20" y="220.00000000000003" width="286.33333333333331" height="0.0"/>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -76,7 +75,7 @@
                         <constraint firstItem="S3L-35-RMk" firstAttribute="leading" secondItem="Hqt-Ol-yT7" secondAttribute="leading" id="2Zv-6D-PCe"/>
                         <constraint firstItem="mzg-35-2zh" firstAttribute="centerX" secondItem="Hqt-Ol-yT7" secondAttribute="centerX" id="5YF-1c-LCz"/>
                         <constraint firstAttribute="trailing" secondItem="S3L-35-RMk" secondAttribute="trailing" id="7Ta-b6-bay"/>
-                        <constraint firstItem="Rua-47-cgQ" firstAttribute="centerY" secondItem="Hqt-Ol-yT7" secondAttribute="centerY" constant="50" id="Qz3-hZ-jsw"/>
+                        <constraint firstItem="Rua-47-cgQ" firstAttribute="top" secondItem="S3L-35-RMk" secondAttribute="bottom" constant="70" id="anu-tJ-8EE"/>
                         <constraint firstAttribute="bottom" secondItem="mzg-35-2zh" secondAttribute="bottom" constant="10" id="hTt-JI-n23"/>
                         <constraint firstItem="Rua-47-cgQ" firstAttribute="leading" secondItem="Hqt-Ol-yT7" secondAttribute="leading" constant="20" id="ulM-NC-KKG"/>
                         <constraint firstAttribute="trailing" secondItem="Rua-47-cgQ" secondAttribute="trailing" constant="20" id="xBp-do-aWx"/>
@@ -100,6 +99,7 @@
             <connections>
                 <outlet property="choiceOverPopup" destination="Hqt-Ol-yT7" id="sGj-Ol-pTP"/>
                 <outlet property="heartIcon" destination="mzg-35-2zh" id="KQJ-Fv-Gga"/>
+                <outlet property="textLabel" destination="Rua-47-cgQ" id="DP4-Bx-zB5"/>
             </connections>
             <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
         </view>

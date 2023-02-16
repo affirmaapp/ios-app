@@ -20,7 +20,7 @@ class SelectedThemeViewModel: BaseViewModel {
     var generatedCards: [SelectedThemeModel] = []
     
     var showChancesOverPopup: (() -> Void)?
-    
+    var showLessOptionsPopup: (() -> Void)?
     var scrollToItem: ((Int) -> Void)?
     
     // MARK: Init
@@ -61,6 +61,12 @@ class SelectedThemeViewModel: BaseViewModel {
             self.showChancesOverPopup?()
             return 
         }
+        
+        if selectedThemeCards.count < 3 {
+            self.showLessOptionsPopup?()
+            return
+        }
+        
         var card = pickAnElement()
         while generatedCards.contains(card) {
             card = pickAnElement()
