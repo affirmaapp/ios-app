@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Affirma-AffirmaUITests/Pods-Affirma-AffirmaUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Amplitude-iOS/Amplitude_iOS.framework
 ${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework
 ${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework
 ${BUILT_PRODUCTS_DIR}/Branch/Branch.framework

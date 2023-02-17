@@ -34,6 +34,8 @@ class SecondQuestionViewController: BaseViewController {
         
         setUI()
         handleTap()
+        
+        EventManager.shared.trackEvent(event: .landedOnNotificationScreen)
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,6 +79,9 @@ class SecondQuestionViewController: BaseViewController {
         await SupabaseManager.shared.setUserNotificationTime(hour: hour,
                                                              minute: minute) { isSaved in
             if isSaved {
+                let properties: [String: Any] = ["hour": hour , "minute": minute]
+                EventManager.shared.trackEvent(event: .notificationTimeEntered,
+                                               properties: properties)
                 DispatchQueue.main.async {
                     let introVC = IntroScreenViewControllerFactory.produce()
                     self.navigationController?.pushViewController(introVC, animated: true)
@@ -94,6 +99,10 @@ class SecondQuestionViewController: BaseViewController {
         let minute = components.minute
         
         print("Hour: \(String(describing: hour)), \(String(describing: minute))")
+        
+        let properties: [String: Any] = ["hour": hour ?? 0, "minute": minute ?? 0]
+        EventManager.shared.trackEvent(event: .notificationTimeChanged,
+                                       properties: properties)
         self.notificationHour = hour ?? 16
         self.notificationMinute = minute ?? 0
     }

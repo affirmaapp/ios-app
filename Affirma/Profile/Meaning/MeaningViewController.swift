@@ -42,6 +42,8 @@ class MeaningViewController: BaseViewController {
         Task {
             _ = try? await handleViewModelCallbacks()
         }
+        
+        EventManager.shared.trackEvent(event: .landedOnMeaningScreen)
     }
     
     func handleViewModelCallbacks() async {

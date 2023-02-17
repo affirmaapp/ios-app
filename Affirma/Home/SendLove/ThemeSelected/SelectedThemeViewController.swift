@@ -72,6 +72,9 @@ class SelectedThemeViewController: BaseViewController {
         registerCells()
         setUI()
         handlePopupCallbacks()
+        
+        EventManager.shared.trackEvent(event: .landedOnSelectedTheme)
+
     }
     
     
@@ -93,6 +96,7 @@ class SelectedThemeViewController: BaseViewController {
     func handlePopupCallbacks() {
         
         sendAffirmationPopup.pickFromContactsPressed = {
+            EventManager.shared.trackEvent(event: .pickFromContactsTapped)
             self.contactPicker.delegate = self
             self.contactPicker.displayedPropertyKeys =
             [CNContactGivenNameKey
@@ -109,7 +113,10 @@ class SelectedThemeViewController: BaseViewController {
                         let link = "https://api.whatsapp.com/send/?phone=\(number)&text=\(message)\n\(link ?? "")".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
                         if let supportUrl = URL(string: link) {
                             UIApplication.shared.open(supportUrl)
-                            
+                            let properties: [String: Any] = ["theme": self.themeData?.theme_text ?? "",
+                                                             "cardId": self.modelToShare?.id ?? 0]
+                            EventManager.shared.trackEvent(event: .sendPressed, properties: properties)
+
                             self.sendAffirmationPopup.dismiss()
                         }
                     }
@@ -178,6 +185,8 @@ class SelectedThemeViewController: BaseViewController {
     
     @IBAction func pickAnotherPressed(_ sender: Any) {
         
+        let properties: [String: Any] = ["theme": themeData?.theme_text ?? ""]
+        EventManager.shared.trackEvent(event: .generateAnotherTapped, properties: properties)
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
         
@@ -207,7 +216,10 @@ class SelectedThemeViewController: BaseViewController {
         UIView.animate(withDuration: 0.5) {
             self.choicePopup.alpha = 1
         }
+        
+        EventManager.shared.trackEvent(event: .choicesOverPopupShown)
     }
+    
     func addLessOptionsPopup() {
         self.choicePopup.alpha = 0
         self.view.addSubview(choicePopup)
@@ -219,6 +231,9 @@ class SelectedThemeViewController: BaseViewController {
         UIView.animate(withDuration: 0.5) {
             self.choicePopup.alpha = 1
         }
+        
+        EventManager.shared.trackEvent(event: .lessOptionsPopupShown)
+
     }
     
     
@@ -251,6 +266,9 @@ extension SelectedThemeViewController: UICollectionViewDelegate,
             cell.sharePressed = { model in
                 self.modelToShare = model
                 self.addSendAffirmationPopup()
+                
+                EventManager.shared.trackEvent(event: .sharePressed)
+
             }
             cell.render(withModel: card)
         }

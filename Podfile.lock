@@ -1,4 +1,5 @@
 PODS:
+  - Amplitude-iOS (4.10.0)
   - Anchorage (4.5.0)
   - AnimatedCollectionViewLayout (1.1.0)
   - Branch (1.44.0)
@@ -21,6 +22,7 @@ PODS:
   - WatchLayout (1.1.0)
 
 DEPENDENCIES:
+  - Amplitude-iOS
   - Anchorage
   - AnimatedCollectionViewLayout
   - Branch
@@ -37,6 +39,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Amplitude-iOS
     - Anchorage
     - AnimatedCollectionViewLayout
     - Branch
@@ -60,6 +63,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/marmelroy/PhoneNumberKit
 
 SPEC CHECKSUMS:
+  Amplitude-iOS: 7d8cdc3408ba35c2e68368fc7c692cd104606b94
   Anchorage: 1961bc81c84aeed54ad7ffc697c50cd9de748ba6
   AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
   Branch: 7ef075130253915439cec12fa99027f587a72d00
@@ -74,6 +78,6 @@ SPEC CHECKSUMS:
   SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   WatchLayout: f25fbd1c49726249f6f8e513616be8b2d636f06c
 
-PODFILE CHECKSUM: 1aa9d0e1027445dcef967a674a1e9fa6e2bf05fa
+PODFILE CHECKSUM: a08d534c0e3aea0c06202b8e8d9d2b7173d259ad
 
 COCOAPODS: 1.11.3

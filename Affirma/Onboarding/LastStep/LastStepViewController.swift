@@ -27,6 +27,8 @@ class LastStepViewController: BaseViewController {
         
         setUI()
         handleTap()
+        
+        EventManager.shared.trackEvent(event: .landedOnLastStep)
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,6 +54,11 @@ class LastStepViewController: BaseViewController {
     
     private func handleTap() {
         cta.primaryCtaClicked = {
+            
+            let properties: [String: Any] = ["screen": "Last Step Screen"]
+            EventManager.shared.trackEvent(event: .ctaTapped,
+                                           properties: properties)
+            
             let homeVC = HomeViewControllerFactory.produce()
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

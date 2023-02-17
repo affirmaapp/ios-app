@@ -48,6 +48,7 @@ class SettingsViewController: BaseViewController {
                          selector: #selector(appMovedToForeground),
                          name: UIApplication.willEnterForegroundNotification,
                          object: nil)
+        EventManager.shared.trackEvent(event: .landedOnSettingsScreen)
         
     }
     
@@ -116,6 +117,7 @@ class SettingsViewController: BaseViewController {
         }
         
         viewModel?.detailsSaved = {
+            EventManager.shared.trackEvent(event: .savePressed)
             self.notifyUser()
             self.hideFullScreenLoader()
         }

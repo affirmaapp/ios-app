@@ -40,6 +40,11 @@ class ReceivedMessagesViewController: BaseViewController {
         tableView.dataSource = self
         
         self.tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 100, right: 0)
+
+        let properties: [String: Any] = ["source":  AffirmaStateManager.shared.source]
+        EventManager.shared.trackEvent(event: .landedOnMessageReceived, properties: properties)
+        
+        AffirmaStateManager.shared.source = "tab"
     }
     
     override func viewWillAppear(_ animated: Bool) {

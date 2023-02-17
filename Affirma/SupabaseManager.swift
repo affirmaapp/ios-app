@@ -168,6 +168,7 @@ extension SupabaseManager {
 
             AffirmaStateManager.shared.activeUser?.metaData = metaData
             AffirmaStateManager.shared.saveActiveUser()
+            EventManager.shared.updateUserTrackingProfile()
             if let userID = AffirmaStateManager.shared.activeUser?.userId {
                 let query = client?.database.from("user_metadata")
                     .update(values: try JSONEncoder().encode(data))

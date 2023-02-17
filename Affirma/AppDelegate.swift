@@ -5,6 +5,7 @@
 //  Created by Airblack on 26/12/22.
 //
 
+import Amplitude_iOS
 import Branch
 import IQKeyboardManagerSwift
 import UIKit
@@ -24,6 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
+        
+//        Amplitude.instance().initializeApiKey("76255ff2f253a047f347e4ae3818b674")
+       
+        
+        Amplitude.instance().initializeApiKey("")
         
         // TODO: REMOVE FOR PROD
         Branch.setUseTestBranchKey(true)
@@ -61,7 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                  let baseModel = ReceivedMessagesBaseModel(withData: [dataModel])
                                  AffirmaStateManager.shared.messageToAdd = baseModel
                                  AffirmaStateManager.shared.deeplinkToExecute = deeplink
+                                 AffirmaStateManager.shared.source = "deeplink"
                                  
+                                 EventManager.shared.trackEvent(event: .landedFromBranchLink)
                                  DeeplinkManager.shared.handle(deeplink: AffirmaStateManager.shared.deeplinkToExecute,
                                                                shouldPresent: false,
                                                                affirmationToAdd: AffirmaStateManager.shared.messageToAdd)
@@ -113,10 +121,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
         if let notification = response.notification.request.content.userInfo as? [String: Any] {
-            if let affirmation = notification["affirmation"] as? String,
-               let affirmation_image = notification["affirmation_image"] as? String {
+            if let affirmation = notification["affirmation"] as? String {
                 NotificationManager.shared.affirmationText = affirmation
-                NotificationManager.shared.affirmationImage = affirmation_image
                 
                 NotificationCenter.default.post(name: AffirmaNotification.reloadExplore,
                                                 object: nil,

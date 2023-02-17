@@ -20,6 +20,7 @@ target 'Affirma' do
  pod 'NVActivityIndicatorView'
  pod "SwiftToast"
  pod 'PhoneNumberKit', :git => 'https://github.com/marmelroy/PhoneNumberKit'
+ pod 'Amplitude-iOS'
 
   target 'AffirmaTests' do
     inherit! :search_paths

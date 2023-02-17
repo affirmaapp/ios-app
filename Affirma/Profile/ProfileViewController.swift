@@ -37,6 +37,7 @@ class ProfileViewController: BaseViewController {
         tableView.dataSource = self
         
         tableView.reloadData()
+        EventManager.shared.trackEvent(event: .landedOnProfileScreen)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,8 +149,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 } else {
                   // show alert for not available
                 }
+                EventManager.shared.trackEvent(event: .sharePressed)
             case .logout:
                 self.askForLogout()
+                EventManager.shared.trackEvent(event: .logoutPressed)
                 
             }
         }

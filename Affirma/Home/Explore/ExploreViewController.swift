@@ -31,6 +31,8 @@ class ExploreViewController: BaseViewController {
         }
         
         addObservers()
+        
+        EventManager.shared.trackEvent(event: .landedOnSelfAffirmationScreen)
 
     }
     
@@ -158,6 +160,7 @@ class ExploreViewController: BaseViewController {
     }
     
     @IBAction func profileTapped(_ sender: Any) {
+        EventManager.shared.trackEvent(event: .profileButtonTapped)
         let profileVC = ProfileViewControllerFactory.produce()
         self.navigationController?.pushViewController(profileVC, animated: true)
     }
@@ -172,6 +175,11 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         NotificationManager.shared.resetNotificationData()
+
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        EventManager.shared.trackEvent(event: .selfAffirmationSwiped)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -179,7 +187,7 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
         if NotificationManager.shared.affirmationText != nil
             && !(NotificationManager.shared.affirmationText?.isEmpty ?? true) {
             cell.render(withText: NotificationManager.shared.affirmationText,
-                        withImage: NotificationManager.shared.affirmationImage)
+                        withImage: viewModel?.chooseAffirmationImage())
         } else {
             cell.render(withText: viewModel?.chooseAffirmationText(),
                         withImage: viewModel?.chooseAffirmationImage())
@@ -189,6 +197,9 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             self.prepareForScreenshot()
             cell.prepareForScreenshot()
             self.takeScreenshot { _ in
+                
+                EventManager.shared.trackEvent(event: .selfAffirmationDownloaded)
+
                 self.showToast()
                 cell.handleAfterScreenshotUI()
                 self.handleAfterScreenshotUI()

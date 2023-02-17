@@ -37,6 +37,8 @@ class IntroScreenViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        EventManager.shared.trackEvent(event: .landedOnIntroScreen)
+        
         Task {
             try await self.updateState(withState: "ACTIVE")
         }
@@ -116,6 +118,10 @@ class IntroScreenViewController: BaseViewController {
     
     private func handleTap() {
         genericButton.primaryCtaClicked = {
+            
+            let properties: [String: Any] = ["screen": "Intro Screen"]
+            EventManager.shared.trackEvent(event: .ctaTapped,
+                                           properties: properties)
             let lastStepVC = LastStepViewControllerFactory.produce()
             self.navigationController?.pushViewController(lastStepVC, animated: true)
         }

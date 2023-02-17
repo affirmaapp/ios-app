@@ -32,7 +32,6 @@ class HomeViewController: UITabBarController {
         
         addObservers()
         
-        NotificationManager.shared.fetchNotificationData()
     }
     
     override func viewWillAppear(_ animated: Bool) {

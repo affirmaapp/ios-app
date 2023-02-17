@@ -101,6 +101,8 @@
 		A5B29CEC298B9C3F00AEEC05 /* GenericLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B29CEB298B9C3F00AEEC05 /* GenericLoader.swift */; };
 		A5B29CEE298B9C4800AEEC05 /* GenericLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B29CED298B9C4800AEEC05 /* GenericLoader.xib */; };
 		A5B29CF0298CD8C000AEEC05 /* energy.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B29CEF298CD8C000AEEC05 /* energy.png */; };
+		A5B724C0299EBCCD00D8461A /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B724BF299EBCCD00D8461A /* EventManager.swift */; };
+		A5B724C2299EBCF600D8461A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B724C1299EBCF600D8461A /* Event.swift */; };
 		A5B9AA5A2988F84900FBC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */; };
 		A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */; };
 		A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */; };
@@ -261,6 +263,8 @@
 		A5B29CEB298B9C3F00AEEC05 /* GenericLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericLoader.swift; sourceTree = "<group>"; };
 		A5B29CED298B9C4800AEEC05 /* GenericLoader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericLoader.xib; sourceTree = "<group>"; };
 		A5B29CEF298CD8C000AEEC05 /* energy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = energy.png; sourceTree = "<group>"; };
+		A5B724BF299EBCCD00D8461A /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		A5B724C1299EBCF600D8461A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -583,6 +587,8 @@
 				A5B0F59E2980EE7700A69AF0 /* AffirmaNotification.swift */,
 				A5B0F5AF298688E300A69AF0 /* BranchLinkManager.swift */,
 				A5B0F5B12987B31200A69AF0 /* NotificationManager.swift */,
+				A5B724BF299EBCCD00D8461A /* EventManager.swift */,
+				A5B724C1299EBCF600D8461A /* Event.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1058,6 +1064,8 @@
 				A5B0F5A829839EF600A69AF0 /* ReceivedMessagesModel.swift in Sources */,
 				A5A4639B297E392400BAB044 /* TextFieldExtensions.swift in Sources */,
 				A5B9AA702989488800FBC1A5 /* MeaningViewController.swift in Sources */,
+				A5B724C2299EBCF600D8461A /* Event.swift in Sources */,
+				A5B724C0299EBCCD00D8461A /* EventManager.swift in Sources */,
 				A53EE953297C31B30038A09D /* SelectedThemeModel.swift in Sources */,
 				A5FF7F2E297404BD00754178 /* CountryListViewModel.swift in Sources */,
 				A5A9BAE9295C8FBB0033E65A /* GenericImageView.swift in Sources */,

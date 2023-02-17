@@ -43,14 +43,14 @@ class SelfAffirmationTableViewCell: UITableViewCell {
     }
     
     func render(withText text: String?,
-                withImage image: String?) {
+                withImage image: AffirmationImage?) {
         
         if let text = text {
             self.label.text = text
         }
         
         if let image = image {
-            mediaView.render(withImage: image,
+            mediaView.render(withImage: image.image_url,
                              withVideo: nil,
                              withGif: nil)
         }

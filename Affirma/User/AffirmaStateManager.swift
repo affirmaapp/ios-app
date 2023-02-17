@@ -13,7 +13,7 @@ class AffirmaStateManager: NSObject {
     
     var deeplinkToExecute: String?
     var messageToAdd: ReceivedMessagesBaseModel?
-    
+    var source: String = "tab"
     var activeUser: AffirmaUser? {
         didSet {
             saveActiveUser()

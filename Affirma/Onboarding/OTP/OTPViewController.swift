@@ -33,6 +33,8 @@ class OTPViewController: BaseViewController {
         
         setUI()
         handleTap()
+        
+        EventManager.shared.trackEvent(event: .landedOnOtpScreen)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,6 +85,7 @@ class OTPViewController: BaseViewController {
                 self.hideFullScreenLoader()
                 if isVerified {
                     DispatchQueue.main.async {
+                        EventManager.shared.trackEvent(event: .otpVerified)
                         Task {
                             _ = try? await SupabaseManager.shared.fetchUser { isUserSet in
                                 if isUserSet {

@@ -24,6 +24,7 @@ class FirstQuestionViewController: BaseViewController {
     @IBOutlet weak var cta: GenericButtonView!
     
     fileprivate var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +32,7 @@ class FirstQuestionViewController: BaseViewController {
         handleTap()
         disableCTA()
         nameTextField.delegate = self
+        EventManager.shared.trackEvent(event: .landedOnNameScreen)
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,6 +61,9 @@ class FirstQuestionViewController: BaseViewController {
     private func handleTap() {
         cta.customCtaCtaClicked = { tag in
             Task {
+                let properties = ["name": self.name ?? ""]
+                EventManager.shared.trackEvent(event: .nameEntered,
+                                               properties: properties)
                 try await self.updateName(withName:self.name?
                     .trimmingCharacters(in: .whitespacesAndNewlines))
             }

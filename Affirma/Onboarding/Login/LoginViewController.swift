@@ -35,6 +35,8 @@ class LoginViewController: BaseViewController {
         setUI()
         handleTap()
         textField.delegate = self
+        
+        EventManager.shared.trackEvent(event: .landedOnLoginScreen)
     }
     
     override func viewDidLayoutSubviews() {
@@ -70,6 +72,7 @@ class LoginViewController: BaseViewController {
             Task {
                 self.showFullScreenLoader()
                 try await self.signIn { fullNumber in
+                    EventManager.shared.trackEvent(event: .otpSent)
                     self.hideFullScreenLoader()
                     let otpVC = OTPViewControllerFactory.produce(withNumber: fullNumber)
                     self.navigationController?.pushViewController(otpVC, animated: true)
@@ -91,6 +94,12 @@ class LoginViewController: BaseViewController {
     private func openBottomSheet() {
         let countryVC = CountryListViewControllerFactory.produce(title: "Select Country")
         countryVC.selectedCountry = { model in
+            
+            let properties: [String: Any] = ["code": model?.phoneCode ?? "+91"]
+            EventManager.shared.trackEvent(event: .countryCodeChanged,
+                                           properties: properties)
+            
+            
             self.countryCode = model?.phoneCode ?? "+91"
             print("selected code: \(self.countryCode)")
             self.countryCodeButton.setTitle(" \(self.countryCode)", for: .normal)

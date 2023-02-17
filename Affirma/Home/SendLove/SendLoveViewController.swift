@@ -43,6 +43,8 @@ class SendLoveViewController: BaseViewController {
 
         collectionView.collectionViewLayout = layout
         
+        EventManager.shared.trackEvent(event: .landedOnSendLoveScreen)
+        
     }
     
     func handleViewModelCallbacks() async {
@@ -98,6 +100,8 @@ extension SendLoveViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = viewModel?.themes[indexPath.row]
+        let properties: [String: Any] = ["theme": item?.theme_text ?? ""]
+        EventManager.shared.trackEvent(event: .themeSelected, properties: properties)
         let selectedThemeVC = SelectedThemeViewControllerFactory.produce(withThemeData: item)
         self.navigationController?.pushViewController(selectedThemeVC, animated: true)
     }
