@@ -103,6 +103,8 @@
 		A5B29CF0298CD8C000AEEC05 /* energy.png in Resources */ = {isa = PBXBuildFile; fileRef = A5B29CEF298CD8C000AEEC05 /* energy.png */; };
 		A5B724C0299EBCCD00D8461A /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B724BF299EBCCD00D8461A /* EventManager.swift */; };
 		A5B724C2299EBCF600D8461A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B724C1299EBCF600D8461A /* Event.swift */; };
+		A5B724C429A1160300D8461A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B724C329A1160300D8461A /* ImageCollectionViewCell.swift */; };
+		A5B724C629A1162800D8461A /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B724C529A1162800D8461A /* ImageCollectionViewCell.xib */; };
 		A5B9AA5A2988F84900FBC1A5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */; };
 		A5B9AA5C2988F85300FBC1A5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */; };
 		A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */; };
@@ -265,6 +267,8 @@
 		A5B29CEF298CD8C000AEEC05 /* energy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = energy.png; sourceTree = "<group>"; };
 		A5B724BF299EBCCD00D8461A /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		A5B724C1299EBCF600D8461A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A5B724C329A1160300D8461A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A5B724C529A1162800D8461A /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		A5B9AA592988F84900FBC1A5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A5B9AA5B2988F85300FBC1A5 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		A5B9AA5E2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileItemTableViewCell.xib; sourceTree = "<group>"; };
@@ -718,6 +722,8 @@
 			children = (
 				A5B9AA7829894B7100FBC1A5 /* MeaningCollectionViewCell.swift */,
 				A5B9AA7A29894B9400FBC1A5 /* MeaningCollectionViewCell.xib */,
+				A5B724C329A1160300D8461A /* ImageCollectionViewCell.swift */,
+				A5B724C529A1162800D8461A /* ImageCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -917,6 +923,7 @@
 				A5B9AA5F2988FD8400FBC1A5 /* ProfileItemTableViewCell.xib in Resources */,
 				A53EE95E297D0CB90038A09D /* AffirmationCardCollectionViewCell.xib in Resources */,
 				A5A9BAED295C8FE60033E65A /* GenericVideoView.xib in Resources */,
+				A5B724C629A1162800D8461A /* ImageCollectionViewCell.xib in Resources */,
 				A5B06A79297150F400DFE95D /* lastStep.gif in Resources */,
 				A53EE94F297C06AF0038A09D /* SelectedThemeViewController.xib in Resources */,
 				A5A9BB2F2960D3940033E65A /* OTPViewController.xib in Resources */,
@@ -1100,6 +1107,7 @@
 				A5B0F5AA29839F0900A69AF0 /* ReceivedMessagesManager.swift in Sources */,
 				A53EE932297A6E400038A09D /* ReceivedMessagesViewController.swift in Sources */,
 				A5B29CE7298B75B700AEEC05 /* SettingsViewModel.swift in Sources */,
+				A5B724C429A1160300D8461A /* ImageCollectionViewCell.swift in Sources */,
 				A5A9BAFA295C973E0033E65A /* AudioManager.swift in Sources */,
 				A5A9BAFE295CDD300033E65A /* GenericMediaView.swift in Sources */,
 				A5B9AA80298A2C9C00FBC1A5 /* SettingsViewController.swift in Sources */,

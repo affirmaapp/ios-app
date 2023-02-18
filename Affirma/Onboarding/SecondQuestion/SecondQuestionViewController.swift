@@ -76,8 +76,10 @@ class SecondQuestionViewController: BaseViewController {
     
     private func updateNotificationTime(withHour hour: Int,
                                         withMinute minute: Int) async {
+        self.showFullScreenLoader()
         await SupabaseManager.shared.setUserNotificationTime(hour: hour,
                                                              minute: minute) { isSaved in
+            self.hideFullScreenLoader()
             if isSaved {
                 let properties: [String: Any] = ["hour": hour , "minute": minute]
                 EventManager.shared.trackEvent(event: .notificationTimeEntered,

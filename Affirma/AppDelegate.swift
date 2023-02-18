@@ -122,6 +122,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
         if let notification = response.notification.request.content.userInfo as? [String: Any] {
             if let affirmation = notification["affirmation"] as? String {
+                let properties: [String: Any] = ["affirmation": affirmation]
+                EventManager.shared.trackEvent(event: .launchedFromNotification, properties: properties)
                 NotificationManager.shared.affirmationText = affirmation
                 
                 NotificationCenter.default.post(name: AffirmaNotification.reloadExplore,

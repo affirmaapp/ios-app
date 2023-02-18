@@ -110,8 +110,8 @@
             filePath = "Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "handleViewModelCallbacks()"
             landmarkType = "7">
          </BreakpointContent>
@@ -369,7 +369,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3e54"
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3d5c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -379,12 +379,12 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "212">
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "188">
                </Location>
                <Location
-                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3e54"
+                  uuid = "BE14DF33-6CAB-4DAF-B680-B339C21D6B7C - 64eb24b9afad3d5c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -394,9 +394,9 @@
                   urlString = "file:///Users/airblack/Desktop/Affirma/Affirma/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "596">
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "572">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -665,8 +665,8 @@
             filePath = "Affirma/Home/SendLove/ThemeSelected/SelectedThemeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "handlePopupCallbacks()"
             landmarkType = "7">
          </BreakpointContent>

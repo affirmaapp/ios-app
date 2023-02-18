@@ -56,18 +56,24 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqw-bl-hkd">
-                            <rect key="frame" x="20" y="266" width="286.33333333333331" height="34"/>
+                            <rect key="frame" x="20" y="270" width="286.33333333333331" height="34"/>
+                            <color key="backgroundColor" name="Black_2E302F"/>
                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Pick from contacts">
-                                <color key="titleColor" name="Black_1A1B1C"/>
+                                <color key="titleColor" name="White_E5E5E5"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="pickFromContactPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="7zq-97-xKQ"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTs-iN-PQd">
-                            <rect key="frame" x="125.66666666666666" y="320" width="75" height="35"/>
+                            <rect key="frame" x="125.66666666666666" y="324" width="75" height="35"/>
                             <color key="backgroundColor" name="Black_18181C"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="SZQ-wA-4aq"/>
@@ -127,7 +133,7 @@
                         <constraint firstItem="6T1-OZ-OoV" firstAttribute="centerX" secondItem="0aF-99-vXA" secondAttribute="centerX" id="BIs-Ug-51J"/>
                         <constraint firstItem="ezg-b9-WrA" firstAttribute="leading" secondItem="0aF-99-vXA" secondAttribute="leading" id="HnS-Nd-QBe"/>
                         <constraint firstAttribute="trailing" secondItem="U7g-zs-3SY" secondAttribute="trailing" constant="20" id="Moo-Qu-A3C"/>
-                        <constraint firstItem="zqw-bl-hkd" firstAttribute="top" secondItem="U7g-zs-3SY" secondAttribute="bottom" constant="8" id="OXY-Nx-3B7"/>
+                        <constraint firstItem="zqw-bl-hkd" firstAttribute="top" secondItem="U7g-zs-3SY" secondAttribute="bottom" constant="12" id="OXY-Nx-3B7"/>
                         <constraint firstItem="ezg-b9-WrA" firstAttribute="top" secondItem="0aF-99-vXA" secondAttribute="top" id="TqM-hL-S5P"/>
                         <constraint firstItem="NTs-iN-PQd" firstAttribute="centerX" secondItem="0aF-99-vXA" secondAttribute="centerX" id="UuH-CE-Fso"/>
                         <constraint firstItem="zqw-bl-hkd" firstAttribute="leading" secondItem="0aF-99-vXA" secondAttribute="leading" constant="20" id="Vpi-d3-rIj"/>
@@ -173,6 +179,9 @@
         </namedColor>
         <namedColor name="Black_1A1B1C">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.10999999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black_2E302F">
+            <color red="0.18000000715255737" green="0.18799999356269836" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White_D8D8D8">
             <color red="0.84700000286102295" green="0.84700000286102295" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

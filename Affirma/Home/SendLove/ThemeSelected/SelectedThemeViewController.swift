@@ -42,6 +42,14 @@ class SelectedThemeViewController: BaseViewController {
                           "Affirmations to make you smile, nod in agreement, and feel amazing 🖤",
                           "Your positive affirmations, express delivered with love 🖤"]
     
+    var downloadContent = ["PS: There's more to this message than meets the eye. Uncover its true meaning with Affirma.",
+                           "PS: The secrets of the universe are waiting for you. To begin your journey, download Affirma.",
+                           "PS: We're not saying these affirmations will change your life, but they just might. Download Affirma and find out.",
+                           "PS: This affirmation is hot off the press. Like, really hot. Don't miss out, download Affirma now",
+                           "PS: Want to know the meaning of life? Us too. In the meantime, here's an affirmation to keep you going. Download Affirma for more.",
+                           "PS: Ready for some mind-blowing affirmations? We thought so. Download Affirma and hold on tight",
+                           "PS: Feeling a little meh? Let's change that. Download Affirma and let the affirmations work their magic."]
+    
     private var choicePopup: ChoicesOverPopup = Bundle.main
         .loadNibNamed("ChoicesOverPopup",
                       owner: self,
@@ -105,13 +113,20 @@ class SelectedThemeViewController: BaseViewController {
         }
         
         sendAffirmationPopup.sendPressed = { number in
+            self.showFullScreenLoader()
             if let number = number {
                 SupabaseManager.shared.doesUserExist(forNumber: number.replacingOccurrences(of: "+", with: "")) { doesExist, userId in
                     BranchLinkManager.shared.createLink(forModel: self.modelToShare,
                                                         shouldAdd: !(doesExist)) { link in
+                        self.hideFullScreenLoader()
                         let message = self.messageContent.randomElement() ?? ""
-                        let link = "https://api.whatsapp.com/send/?phone=\(number)&text=\(message)\n\(link ?? "")".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-                        if let supportUrl = URL(string: link) {
+                        let downloadContent = self.downloadContent.randomElement() ?? ""
+                        var messageToSend = "https://api.whatsapp.com/send/?phone=\(number)&text=\(message)\n\(link ?? "")".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                        if !(doesExist) {
+                            messageToSend = "https://api.whatsapp.com/send/?phone=\(number)&text=\(message)\n\(link ?? "")\n\n\(downloadContent)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                        }
+                        
+                        if let supportUrl = URL(string: messageToSend) {
                             UIApplication.shared.open(supportUrl)
                             let properties: [String: Any] = ["theme": self.themeData?.theme_text ?? "",
                                                              "cardId": self.modelToShare?.id ?? 0]

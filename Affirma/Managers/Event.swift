@@ -56,4 +56,7 @@ enum Event: String {
     // MARK: Deeplink
     case landedFromBranchLink = "landed from branch link"
     
+    // MARK: Notification
+    case launchedFromNotification = "launched from notification"
+    
 }

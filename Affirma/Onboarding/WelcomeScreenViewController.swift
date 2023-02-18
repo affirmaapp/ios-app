@@ -23,6 +23,7 @@ class WelcomeScreenViewController: BaseViewController {
     @IBOutlet weak var mediaView: GenericMediaView!
     @IBOutlet weak var gradientView: UIView!
     
+    @IBOutlet weak var bottomLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +45,10 @@ class WelcomeScreenViewController: BaseViewController {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeUp.direction = UISwipeGestureRecognizer.Direction.up
             self.view.addGestureRecognizer(swipeUp)
+        
+        UIView.animate(withDuration: 1, delay: 2) {
+            self.bottomLabel.alpha = 1.0
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -139,8 +144,13 @@ class WelcomeScreenViewController: BaseViewController {
         
         UIView.animate(withDuration: 1, delay: 0, options: [.curveLinear, .repeat, .autoreverse]) {
             
-            self.arrowDownImage.frame = self.arrowDownImage.frame.insetBy(dx: 2, dy: 2)
+            self.arrowDownImage.frame = self.arrowDownImage.frame.insetBy(dx: 4, dy: 4)
             
         }
     }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        self.checkAndOpen()
+    }
+    
 }

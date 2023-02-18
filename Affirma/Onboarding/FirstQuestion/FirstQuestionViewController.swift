@@ -73,7 +73,9 @@ class FirstQuestionViewController: BaseViewController {
     
     private func updateName(withName name: String?) async {
         if let name = name {
+            self.showFullScreenLoader()
             await SupabaseManager.shared.setUserName(name: name) { isSaved in
+                self.hideFullScreenLoader()
                 if isSaved {
                     DispatchQueue.main.async {
                         let secondQuesVC = SecondQuestionViewControllerFactory.produce(withName: name)

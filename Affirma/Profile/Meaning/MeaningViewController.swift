@@ -25,6 +25,11 @@ class MeaningViewController: BaseViewController {
     @IBOutlet weak var topHeader: UIView!
     @IBOutlet weak var topHeaderLabel: UILabel!
     
+    enum Rows: Int {
+        case image
+        case meaning
+    }
+    
     var viewModel: MeaningViewModel?
     var dataFetched: Bool = false
     
@@ -35,7 +40,9 @@ class MeaningViewController: BaseViewController {
         
         collectionView.register(UINib(nibName: "MeaningCollectionViewCell", bundle: nil),
                                 forCellWithReuseIdentifier: "MeaningCollectionViewCell")
-        
+
+        collectionView.register(UINib(nibName: "ImageCollectionViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: "ImageCollectionViewCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         showFullScreenLoader()
@@ -111,37 +118,80 @@ class MeaningViewController: BaseViewController {
 extension MeaningViewController: UICollectionViewDelegate,
                                        UICollectionViewDataSource,
                                        UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return viewModel?.meanings.count ?? 0
+        if let row = Rows(rawValue:  section) {
+            switch row {
+            case .image:
+                return 1
+            case .meaning:
+                return viewModel?.meanings.count ?? 0
+            }
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MeaningCollectionViewCell = collectionView.dequeue(cellForItemAt: indexPath)
-        if let meanings = viewModel?.meanings, meanings.count > indexPath.item {
-            let meaning = meanings[indexPath.item]
-            cell.render(withImageUrl: meaning.image_url, withLabel: meaning.meaning)
+        if let row = Rows(rawValue:  indexPath.section) {
+            switch row {
+            case .image:
+                let cell: ImageCollectionViewCell = collectionView.dequeue(cellForItemAt: indexPath)
+                cell.render(withImageName: "silence")
+                return cell
+            case .meaning:
+                let cell: MeaningCollectionViewCell = collectionView.dequeue(cellForItemAt: indexPath)
+                if let meanings = viewModel?.meanings, meanings.count > indexPath.item {
+                    let meaning = meanings[indexPath.item]
+                    cell.render(withImageUrl: meaning.image_url, withLabel: meaning.meaning)
+                }
+                return cell
+            }
         }
-        return cell
+        
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width - 60) / 2,
-                      height: 220)
+        if let row = Rows(rawValue:  indexPath.section) {
+            switch row {
+            case .image:
+                return CGSize(width: UIScreen.main.bounds.width, height: 250)
+            case .meaning:
+                return CGSize(width: (UIScreen.main.bounds.width - 60) / 2,
+                              height: 220)
+            }
+        }
+        
+        return CGSize(width: 0, height: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 100, left: 20, bottom: 0, right: 20)
+        if let row = Rows(rawValue:  section) {
+            switch row {
+            case .image:
+                return UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
+            case .meaning:
+                return UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20)
+
+            }
+        }
+        
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if dataFetched {
-            if scrollView.contentOffset.y > 200 {
+            if scrollView.contentOffset.y > 250 {
                 hideTopHeader()
             } else {
                 showTopHeader()
