@@ -92,7 +92,9 @@ extension SupabaseManager {
                     }
                 }
                 
-                completion(true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    completion(true)
+                }
             }
         } catch {
             print("error in sign in: \(error)")
@@ -150,9 +152,9 @@ extension SupabaseManager {
                 let query = client?.database.from("user_metadata").insert(values: try JSONEncoder().encode(data))
                 Task {
                     let _ = try? await query?.execute()
+                    completion(true)
                 }
             }
-            completion(true)
         } catch {
             completion(false)
         }

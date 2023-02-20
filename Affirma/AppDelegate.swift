@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Amplitude.instance().initializeApiKey("")
         
         // TODO: REMOVE FOR PROD
-        Branch.setUseTestBranchKey(true)
+//        Branch.setUseTestBranchKey(true)
           
         
         let branch: Branch = Branch.getInstance()

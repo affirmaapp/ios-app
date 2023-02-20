@@ -98,7 +98,7 @@ class ReceivedMessagesManager: NSObject {
                                             }
                                         }
                                         
-                                        existingMessages.messages?.append(message)
+                                        existingMessages.messages?.insert(message, at: 0)
 
                                     }
                                     

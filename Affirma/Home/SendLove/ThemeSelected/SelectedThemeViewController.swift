@@ -38,7 +38,6 @@ class SelectedThemeViewController: BaseViewController {
                           "A little reminder from me to you: You've got this and more 🖤",
                           "Affirmations incoming! Get ready to feel unstoppable 🖤",
                           "These affirmations are like a warm hug for your soul. Enjoy! 🖤",
-                          "Affirmations with a side of sarcasm and a sprinkle of humor 🖤",
                           "Affirmations to make you smile, nod in agreement, and feel amazing 🖤",
                           "Your positive affirmations, express delivered with love 🖤"]
     

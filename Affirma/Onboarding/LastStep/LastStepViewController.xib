@@ -44,8 +44,8 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-CN-qta">
-                    <rect key="frame" x="20" y="521.33333333333337" width="353" height="221.33333333333337"/>
-                    <string key="text">Ready to be a superhero of love and encouragement?   Send personalized affirmations to your friends and watch them conquer the world. ❤️‍🔥  When we lift each other up, there's no limit to what we can achieve. 🫶</string>
+                    <rect key="frame" x="20" y="521.33333333333337" width="353" height="147.66666666666663"/>
+                    <string key="text">Ready to be a superhero of love and encouragement?   Send personalized affirmations to your friends and watch them conquer the world. ❤️‍🔥</string>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                     <color key="textColor" name="White_E5E5E5"/>
                     <nil key="highlightedColor"/>

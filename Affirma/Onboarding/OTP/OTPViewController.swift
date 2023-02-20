@@ -119,6 +119,7 @@ class OTPViewController: BaseViewController {
                 } else {
                     print("error in logging in")
                     DispatchQueue.main.async {
+                        self.hideFullScreenLoader()
                         self.incorrectLabel.isHidden = false
                     }
                 }

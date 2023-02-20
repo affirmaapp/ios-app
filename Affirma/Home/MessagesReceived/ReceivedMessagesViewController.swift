@@ -20,6 +20,8 @@ class ReceivedMessagesViewController: BaseViewController {
     var viewModel: ReceivedMessagesViewModel?
     var dataFetched: Bool = false
 
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,11 +42,22 @@ class ReceivedMessagesViewController: BaseViewController {
         tableView.dataSource = self
         
         self.tableView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 100, right: 0)
-
+        
         let properties: [String: Any] = ["source":  AffirmaStateManager.shared.source]
         EventManager.shared.trackEvent(event: .landedOnMessageReceived, properties: properties)
         
         AffirmaStateManager.shared.source = "tab"
+        
+        refreshControl.tintColor = Colors.white_E5E5E5.value
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl) // not required when using UITableViewController
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+       // Code to refresh table view
+        Task {
+            _ = try? await viewModel?.fetchMessages()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +113,7 @@ class ReceivedMessagesViewController: BaseViewController {
         
         viewModel?.reloadData = {
             DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
                 self.dataFetched = true 
                 self.hideFullScreenLoader()
                 self.headerLabel.text = "Wow, it seems like your positive vibes are attracting a lot of affirmations!"
