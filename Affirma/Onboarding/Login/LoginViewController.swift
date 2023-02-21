@@ -120,7 +120,7 @@ class LoginViewController: BaseViewController {
     }
     
     func checkToEnableCTA(withLength length: Int) {
-        if length >= 10 {
+        if length >= 8 {
             enableCta()
         } else {
             disableCTA()

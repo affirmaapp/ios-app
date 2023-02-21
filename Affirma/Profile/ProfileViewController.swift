@@ -25,7 +25,6 @@ class ProfileViewController: BaseViewController {
     enum Rows: Int {
         case meaning
         case settings
-        case shareApp
         case logout
     }
     
@@ -140,7 +139,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
+            return 3
         } else {
             return 1
         }
@@ -159,9 +158,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 case .settings:
                     titleString = "Settings"
                     iconName = UIImage(named: "setting")
-                case .shareApp:
-                    titleString = "Share App"
-                    iconName = UIImage(named: "upload")
+//                case .shareApp:
+//                    titleString = "Share App"
+//                    iconName = UIImage(named: "upload")
                 case .logout:
                     iconName = UIImage(named: "logout")
                     titleString = "Logout"
@@ -195,17 +194,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                     print("")
                     let settingsVC = SettingsViewControllerFactory.produce()
                     self.navigationController?.pushViewController(settingsVC, animated: true)
-                case .shareApp:
-                    print("")
-                    // TODO: replace app id and add a message
-                    if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
-                      let objectsToShare = [name]
-                      let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                      self.present(activityVC, animated: true, completion: nil)
-                    } else {
-                      // show alert for not available
-                    }
-                    EventManager.shared.trackEvent(event: .sharePressed)
+//                case .shareApp:
+//                    print("")
+//                    // TODO: replace app id and add a message
+//                    if let name = URL(string: "https://itunes.apple.com/us/app/id1673126845?ls=1&mt=8"), !name.absoluteString.isEmpty {
+//                      let objectsToShare = [name]
+//                      let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+//                      self.present(activityVC, animated: true, completion: nil)
+//                    } else {
+//                      // show alert for not available
+//                    }
+//                    EventManager.shared.trackEvent(event: .sharePressed)
                 case .logout:
                     self.askForLogout()
                     EventManager.shared.trackEvent(event: .logoutPressed)

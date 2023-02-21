@@ -82,9 +82,9 @@ class OTPViewController: BaseViewController {
             await SupabaseManager.shared.verify(withPhoneNumber: number,
                                                 witToken: otp) { isVerified in
                 
-                self.hideFullScreenLoader()
                 if isVerified {
                     DispatchQueue.main.async {
+                        self.hideFullScreenLoader()
                         EventManager.shared.trackEvent(event: .otpVerified)
                         Task {
                             _ = try? await SupabaseManager.shared.fetchUser { isUserSet in
@@ -107,11 +107,13 @@ class OTPViewController: BaseViewController {
                                         }
                                     })
                                 } else {
-                                    let firstQuesVC = FirstQuestionViewControllerFactory.produce()
-                                    let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
-                                    let nav = UINavigationController(rootViewController: firstQuesVC)
-                                    nav.isNavigationBarHidden = true
-                                    appDelegate.window?.rootViewController = nav
+                                    DispatchQueue.main.async {
+                                        let firstQuesVC = FirstQuestionViewControllerFactory.produce()
+                                        let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                                        let nav = UINavigationController(rootViewController: firstQuesVC)
+                                        nav.isNavigationBarHidden = true
+                                        appDelegate.window?.rootViewController = nav
+                                    }
                                 }
                             }
                         }
