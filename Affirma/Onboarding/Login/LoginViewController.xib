@@ -38,25 +38,28 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bo-3K-Z4f">
-                    <rect key="frame" x="20" y="388.66666666666669" width="353" height="0.0"/>
+                    <rect key="frame" x="20" y="378.66666666666669" width="353" height="0.0"/>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                     <color key="textColor" name="White_E5E5E5"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your mobile number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw1-pw-H1o">
-                    <rect key="frame" x="30" y="480.33333333333331" width="140" height="16.666666666666686"/>
+                    <rect key="frame" x="30" y="475.33333333333331" width="140" height="16.666666666666686"/>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                     <color key="textColor" name="White_E5E5E5"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="012345678" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9xd-In-38L">
-                    <rect key="frame" x="106.33333333333334" y="505" width="266.66666666666663" height="35"/>
+                    <rect key="frame" x="106.33333333333334" y="500" width="266.66666666666663" height="40"/>
                     <color key="textColor" name="White_E5E5E5"/>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                     <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ8-Uo-5k1">
-                    <rect key="frame" x="29.999999999999993" y="505" width="72.333333333333314" height="35"/>
+                    <rect key="frame" x="29.999999999999993" y="500" width="72.333333333333314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="85v-ne-Jhl"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                     <color key="tintColor" name="White_E5E5E5"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -75,7 +78,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrS-VU-rI4" customClass="GenericButtonView" customModule="Affirma" customModuleProvider="target">
-                    <rect key="frame" x="96.666666666666686" y="583" width="200" height="55"/>
+                    <rect key="frame" x="96.666666666666686" y="593" width="200" height="55"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="Nuh-85-Jbf"/>
@@ -96,17 +99,16 @@
                 <constraint firstItem="Zd0-bG-DMO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="542" id="Ahd-fL-CDb"/>
                 <constraint firstItem="NDT-CW-jMX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="B8b-gi-JSu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9xd-In-38L" secondAttribute="trailing" constant="20" id="Btw-Kb-pTj"/>
-                <constraint firstItem="7Bo-3K-Z4f" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-50" id="EeZ-Eo-HA5"/>
+                <constraint firstItem="7Bo-3K-Z4f" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-60" id="EeZ-Eo-HA5"/>
                 <constraint firstItem="EWk-Uf-env" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="GZU-3i-KFq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7Bo-3K-Z4f" secondAttribute="trailing" constant="20" id="HUQ-Yg-kt9"/>
                 <constraint firstAttribute="bottom" secondItem="NDT-CW-jMX" secondAttribute="bottom" id="Hnz-K0-edY"/>
                 <constraint firstItem="9xd-In-38L" firstAttribute="top" secondItem="Nw1-pw-H1o" secondAttribute="bottom" constant="8" id="NOW-Gr-xOk"/>
                 <constraint firstItem="Zd0-bG-DMO" firstAttribute="leading" secondItem="HJ8-Uo-5k1" secondAttribute="leading" id="RjV-k7-8UY"/>
-                <constraint firstItem="Nw1-pw-H1o" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="50" id="S5T-dQ-Krc"/>
                 <constraint firstItem="HJ8-Uo-5k1" firstAttribute="centerY" secondItem="9xd-In-38L" secondAttribute="centerY" id="ZOU-ou-Jlw"/>
                 <constraint firstItem="7Bo-3K-Z4f" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="arZ-Eh-U9g"/>
                 <constraint firstItem="NDT-CW-jMX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="glo-BE-tWN"/>
-                <constraint firstItem="KrS-VU-rI4" firstAttribute="top" secondItem="Zd0-bG-DMO" secondAttribute="bottom" constant="40" id="iUk-of-Lbg"/>
+                <constraint firstItem="KrS-VU-rI4" firstAttribute="top" secondItem="Zd0-bG-DMO" secondAttribute="bottom" constant="50" id="iUk-of-Lbg"/>
                 <constraint firstItem="HJ8-Uo-5k1" firstAttribute="top" secondItem="Nw1-pw-H1o" secondAttribute="bottom" constant="8" id="iq4-wu-ZXD"/>
                 <constraint firstItem="Nw1-pw-H1o" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="kgn-mF-yA6"/>
                 <constraint firstItem="HJ8-Uo-5k1" firstAttribute="leading" secondItem="Nw1-pw-H1o" secondAttribute="leading" id="kpp-fl-1vG"/>
@@ -115,6 +117,7 @@
                 <constraint firstItem="7Bo-3K-Z4f" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tnq-ar-8Wp"/>
                 <constraint firstItem="KrS-VU-rI4" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="uj1-St-DYb"/>
                 <constraint firstItem="NDT-CW-jMX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vo6-ZT-teT"/>
+                <constraint firstItem="9xd-In-38L" firstAttribute="height" secondItem="HJ8-Uo-5k1" secondAttribute="height" id="zmz-08-6Vu"/>
             </constraints>
             <point key="canvasLocation" x="61.832061068702288" y="20.422535211267608"/>
         </view>

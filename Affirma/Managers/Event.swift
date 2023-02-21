@@ -50,8 +50,11 @@ enum Event: String {
     case landedOnMeaningScreen = "landed on meaning screen"
     case shareAppPressed = "share app pressed"
     case logoutPressed = "logout pressed"
+    case logoutConfirmed = "logout confirmed"
     case landedOnSettingsScreen = "landed on settings screen"
     case savePressed = "save pressed"
+    case deleteTapped = "delete tapped"
+    case deleteConfirmed = "delete confirmed"
     
     // MARK: Deeplink
     case landedFromBranchLink = "landed from branch link"

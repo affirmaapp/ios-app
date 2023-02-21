@@ -331,4 +331,26 @@ extension SupabaseManager {
             completion(false)
         }
     }
+    
+    func deleteUser(completion: @escaping ((Bool) -> Void)) async {
+        do {
+            let data: [String: Bool] = ["flagged_for_deletion": true]
+
+            if let userID = AffirmaStateManager.shared.activeUser?.userId {
+                let query = client?.database.from("user_metadata")
+                    .update(values: try JSONEncoder().encode(data))
+                    .equals(column: "user_id", value: "\(userID)")
+                
+                Task {
+                    let _ = try? await query?.execute()
+                    completion(true)
+                    
+                    _ = try? await SupabaseManager.shared.logout()
+                }
+            }
+           
+        } catch {
+            completion(false)
+        }
+    }
 }

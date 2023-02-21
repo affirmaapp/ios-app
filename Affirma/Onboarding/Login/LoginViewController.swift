@@ -64,6 +64,8 @@ class LoginViewController: BaseViewController {
                                  color: Colors.white_E5E5E5.withAlpha(0.5),
                                  text: "0123456789")
         
+        textField.addDoneButtonOnKeyboard()
+        
     }
     
     private func handleTap() {

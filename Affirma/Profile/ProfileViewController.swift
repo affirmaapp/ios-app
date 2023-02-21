@@ -75,17 +75,54 @@ class ProfileViewController: BaseViewController {
         }
     }
     
+    func askForDelete() {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Do you want to delete?",
+                                          message: "You're about to delete your account - that means no more daily affirmations and motivational messages. Is that really what you want?",
+                                          preferredStyle: .alert)
+            
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) { _ in
+                self.delete()
+            })
+            
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default) { _ in
+                print("dismiss")
+            })
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func logout() {
         Task {
             _ = try? await SupabaseManager.shared.logout()
             AffirmaStateManager.shared.logout()
             DispatchQueue.main.async {
+                EventManager.shared.trackEvent(event: .logoutConfirmed)
                 let loginVC = LoginViewControllerFactory.produce()
                 let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
                 let nav = UINavigationController(rootViewController: loginVC)
                 nav.isNavigationBarHidden = true
                 appDelegate.window?.rootViewController = nav
             }
+        }
+    }
+    
+    func delete() {
+        Task {
+            _ = try? await SupabaseManager.shared.deleteUser(completion: { _ in
+                AffirmaStateManager.shared.logout()
+                DispatchQueue.main.async {
+                    EventManager.shared.trackEvent(event: .logoutConfirmed)
+                    let loginVC = LoginViewControllerFactory.produce()
+                    let appDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+                    let nav = UINavigationController(rootViewController: loginVC)
+                    nav.isNavigationBarHidden = true
+                    appDelegate.window?.rootViewController = nav
+                }
+            })
         }
     }
     
@@ -97,69 +134,110 @@ class ProfileViewController: BaseViewController {
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var titleString: String?
-        var iconName: UIImage?
-        if let row = Rows(rawValue:  indexPath.row) {
-            switch row {
-            case .meaning:
-                titleString = "Meaning"
-                iconName = UIImage(named: "meaning")
-            case .settings:
-                titleString = "Settings"
-                iconName = UIImage(named: "setting")
-            case .shareApp:
-                titleString = "Share App"
-                iconName = UIImage(named: "upload")
-            case .logout:
-                iconName = UIImage(named: "logout")
-                titleString = "Logout"
-            }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return 4
+        } else {
+            return 1
         }
-        
-        let cell: ProfileItemTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
-        cell.render(withTitle: titleString, witIcon: iconName ?? UIImage())
-        cell.selectionStyle = .none
-        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            var titleString: String?
+            var iconName: UIImage?
+            if let row = Rows(rawValue:  indexPath.row) {
+                switch row {
+                case .meaning:
+                    titleString = "Meaning"
+                    iconName = UIImage(named: "meaning")
+                case .settings:
+                    titleString = "Settings"
+                    iconName = UIImage(named: "setting")
+                case .shareApp:
+                    titleString = "Share App"
+                    iconName = UIImage(named: "upload")
+                case .logout:
+                    iconName = UIImage(named: "logout")
+                    titleString = "Logout"
+                }
+            }
+            
+            let cell: ProfileItemTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
+            cell.render(withTitle: titleString, witIcon: iconName ?? UIImage())
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            
+            let cell: ProfileItemTableViewCell = tableView.dequeue(cellForRowAt: indexPath)
+            cell.render(withTitle: "Delete Account", witIcon:  UIImage(named: "delete") ?? UIImage())
+            cell.selectionStyle = .none
+            return cell
+        }
+
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let row = Rows(rawValue:  indexPath.row) {
-            switch row {
-            case .meaning:
-                print("")
-                let meaningVC = MeaningViewControllerFactory.produce()
-                self.navigationController?.pushViewController(meaningVC, animated: true)
-            case .settings:
-                print("")
-                let settingsVC = SettingsViewControllerFactory.produce()
-                self.navigationController?.pushViewController(settingsVC, animated: true)
-            case .shareApp:
-                print("")
-                // TODO: replace app id and add a message
-                if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
-                  let objectsToShare = [name]
-                  let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                  self.present(activityVC, animated: true, completion: nil)
-                } else {
-                  // show alert for not available
+        if indexPath.section == 0 {
+            if let row = Rows(rawValue:  indexPath.row) {
+                switch row {
+                case .meaning:
+                    print("")
+                    let meaningVC = MeaningViewControllerFactory.produce()
+                    self.navigationController?.pushViewController(meaningVC, animated: true)
+                case .settings:
+                    print("")
+                    let settingsVC = SettingsViewControllerFactory.produce()
+                    self.navigationController?.pushViewController(settingsVC, animated: true)
+                case .shareApp:
+                    print("")
+                    // TODO: replace app id and add a message
+                    if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
+                      let objectsToShare = [name]
+                      let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                      self.present(activityVC, animated: true, completion: nil)
+                    } else {
+                      // show alert for not available
+                    }
+                    EventManager.shared.trackEvent(event: .sharePressed)
+                case .logout:
+                    self.askForLogout()
+                    EventManager.shared.trackEvent(event: .logoutPressed)
                 }
-                EventManager.shared.trackEvent(event: .sharePressed)
-            case .logout:
-                self.askForLogout()
-                EventManager.shared.trackEvent(event: .logoutPressed)
-                
             }
+        } else {
+            self.askForDelete()
+            EventManager.shared.trackEvent(event: .deleteTapped)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 40
+        } else {
+            return 0
         }
     }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            return UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 40))
+        } else {
+            return UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 0))
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        if indexPath.section == 0 {
+            return 60
+        } else {
+            return 60
+        }
     }
     
 }
