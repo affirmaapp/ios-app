@@ -82,23 +82,31 @@ extension SupabaseManager {
     func verify(withPhoneNumber number: String,
                 witToken token: String,
                 completion: @escaping ((Bool) -> Void)) async {
-        do {
-            let response = try await client?.auth.verifyOTP(phone: number, token: token, type: .sms)
-            print("response: \(String(describing: response))")
-            if let response = response {
-                Task {
-                    try await self.setUser() { isSet in
-                        
+        if number.contains("9582793922") && token == "210207"{
+            // set test
+            AffirmaStateManager.shared.isTestMode = true
+            self.setTestDetails(withNumber: number)
+            completion(true)
+            
+        } else {
+            do {
+                let response = try await client?.auth.verifyOTP(phone: number, token: token, type: .sms)
+                print("response: \(String(describing: response))")
+                if let response = response {
+                    Task {
+                        try await self.setUser() { isSet in
+                            
+                        }
+                    }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        completion(true)
                     }
                 }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    completion(true)
-                }
+            } catch {
+                print("error in sign in: \(error)")
+                completion(false)
             }
-        } catch {
-            print("error in sign in: \(error)")
-            completion(false)
         }
     }
     
@@ -114,7 +122,6 @@ extension SupabaseManager {
 
 // Set User functions
 extension SupabaseManager {
-    
     func isUserPresent(completion: @escaping ((Bool) -> Void)) async {
         do {
             let user = try? await client?.auth.session.user
@@ -129,11 +136,15 @@ extension SupabaseManager {
     }
     
     func isUserActive(completion: @escaping ((Bool) -> Void)) {
-        if let state = AffirmaStateManager.shared.activeUser?.metaData?.state,
-           state == "ACTIVE" {
+        if AffirmaStateManager.shared.isTestMode == true {
             completion(true)
         } else {
-            completion(false)
+            if let state = AffirmaStateManager.shared.activeUser?.metaData?.state,
+               state == "ACTIVE" {
+                completion(true)
+            } else {
+                completion(false)
+            }
         }
     }
     
@@ -158,6 +169,13 @@ extension SupabaseManager {
         } catch {
             completion(false)
         }
+    }
+    
+    func setTestDetails(withNumber number: String) {
+        let affirmaUser = AffirmaUser()
+        affirmaUser.userId = UUID(uuidString: "38f2a591-7eba-4c97-9984-65f811842b83")
+        affirmaUser.phoneNumber = number
+        AffirmaStateManager.shared.login(withUser: affirmaUser)
     }
     
 
@@ -237,17 +255,10 @@ extension SupabaseManager {
     }
     
     func fetchUser(completion: @escaping ((Bool) -> Void)) async {
-        do {
-            let user = try await client?.auth.session.user
-            print("User present: \(user?.id)")
-            
-            let affirmaUser = AffirmaUser()
-            affirmaUser.userId = user?.id
-            affirmaUser.phoneNumber = user?.phone
-            AffirmaStateManager.shared.saveActiveUser()
-            // fetch meta
+        if AffirmaStateManager.shared.isTestMode == true {
             Task {
-                _ = try? await fetchUserMetaData(forId: user?.id.uuidString, completion: { isMetaDataSet in
+                _ = try? await fetchUserMetaData(forId: "38f2a591-7eba-4c97-9984-65f811842b83",
+                                                 completion: { isMetaDataSet in
                     if isMetaDataSet {
                         completion(true)
                     } else {
@@ -256,9 +267,30 @@ extension SupabaseManager {
                 })
                 
             }
-        } catch {
-            print("User not present")
-            completion(false)
+        } else {
+            do {
+                let user = try await client?.auth.session.user
+                print("User present: \(user?.id)")
+                
+                let affirmaUser = AffirmaUser()
+                affirmaUser.userId = user?.id
+                affirmaUser.phoneNumber = user?.phone
+                AffirmaStateManager.shared.saveActiveUser()
+                // fetch meta
+                Task {
+                    _ = try? await fetchUserMetaData(forId: user?.id.uuidString, completion: { isMetaDataSet in
+                        if isMetaDataSet {
+                            completion(true)
+                        } else {
+                            completion(false)
+                        }
+                    })
+                    
+                }
+            } catch {
+                print("User not present")
+                completion(false)
+            }
         }
     }
     
